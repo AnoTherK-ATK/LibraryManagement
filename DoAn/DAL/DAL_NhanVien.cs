@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DoAn.DTO;
+using MySqlConnector;
 
 namespace DoAn.DAL
 {
@@ -36,9 +37,55 @@ namespace DoAn.DAL
             return listNhanVien;
         }
 
-        internal void ThemNhanVien(DTO_NhanVien)
+        internal int ThemNhanVien(DTO_NhanVien dto_NhanVien)
         {
+            string query = @"
+            INSERT INTO NHANVIEN (
+                MaNhanVien, 
+                HoTen, 
+                DiaChi, 
+                NgaySinh, 
+                DienThoai, 
+                MaBangCap, 
+                MaBoPhan, 
+                MaChucVu
+            ) VALUES (
+                @MaNhanVien, 
+                @HoTen, 
+                @DiaChi, 
+                @NgaySinh, 
+                @DienThoai, 
+                @MaBangCap, 
+                @MaBoPhan, 
+                @MaChucVu
+            )";
 
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("@MaNhanVien", dto_NhanVien.MaNhanVien);
+                        cmd.Parameters.AddWithValue("@HoTen", dto_NhanVien.TenNhanVien);
+                        cmd.Parameters.AddWithValue("@DiaChi", dto_NhanVien.DiaChiNhanVien);
+                        cmd.Parameters.AddWithValue("@NgaySinh", dto_NhanVien.ngaySinhNhanVien);
+                        cmd.Parameters.AddWithValue("@DienThoai", dto_NhanVien.SoDienThoaiNhanVien);
+                        cmd.Parameters.AddWithValue("@MaBangCap", dto_NhanVien.MaBangCapNhanVien);
+                        cmd.Parameters.AddWithValue("@MaBoPhan", dto_NhanVien.MaBoPhanNhanVien);
+                        cmd.Parameters.AddWithValue("@MaChucVu", dto_NhanVien.MaChucVuNhanVien);
+
+                        return cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle or throw exception as per your needs
+                throw new Exception("Error inserting employee: " + ex.Message);
+            }
         }
 
     }

@@ -15,5 +15,28 @@ namespace DoAn.BUS
         {
             return DAL_NhanVien.LayDanhSachNhanVien();
         }
+
+        public bool ThemNhanVien(DTO_NhanVien dto_NhanVien)
+        {
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(dto_NhanVien.MaNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.TenNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.DiaChiNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.SoDienThoaiNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.MaBangCapNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.MaBoPhanNhanVien) ||
+                string.IsNullOrWhiteSpace(dto_NhanVien.MaChucVuNhanVien))
+            {
+                throw new Exception("Các trường không được để trống");
+            }
+
+            int tmp;
+            if (dto_NhanVien.SoDienThoaiNhanVien[0] != '0' || int.TryParse(dto_NhanVien.SoDienThoaiNhanVien.Substring(1), out tmp) == false)
+            {
+                throw new Exception("Số điện thoại không hợp lệ");
+            }
+            return DAL_NhanVien.ThemNhanVien(dto_NhanVien) > 0;
+        }
     }
+
 }

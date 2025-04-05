@@ -9,7 +9,7 @@ namespace DoAn.DTO
     public class DTO_NhanVien
     {
         string maNhanVien;
-        public string MaLoaiNhanVien { get => maNhanVien; set => maNhanVien = value; }
+        public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
         
         string tenNhanVien;
         public string TenNhanVien { get => tenNhanVien; set => tenNhanVien = value; }

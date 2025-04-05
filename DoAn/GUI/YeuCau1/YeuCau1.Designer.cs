@@ -182,7 +182,6 @@
             // 
             // SDTTxt
             // 
-            this.SDTTxt.Enabled = false;
             this.SDTTxt.Location = new System.Drawing.Point(26, 404);
             this.SDTTxt.MaxLength = 10;
             this.SDTTxt.Name = "SDTTxt";

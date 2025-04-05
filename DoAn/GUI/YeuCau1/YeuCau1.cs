@@ -31,14 +31,41 @@ namespace DoAn
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
+            DTO_NhanVien nhanVien = new DTO_NhanVien(
+                MaNhanVienTxt.Text,
+                TenNhanVienTxt.Text,
+                DiaChiTxt.Text,
+                NgaySinhSelector.Text,
+                SDTTxt.Text,
+                BangCapCombo.SelectedValue.ToString(),
+                BoPhanCombo.SelectedValue.ToString(),
+                ChucVuCombo.SelectedValue.ToString()
+            );
 
+            try
+            {
+                if (BUS_NhanVien.ThemNhanVien(nhanVien))
+                {
+                    MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm nhân viên thất bại");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void YeuCau1_Load(object sender, EventArgs e)
         {
             HienThiDanhSachLoaiBangCap();
             HienThiDanhSachLoaiBoPhan();
             HienThiDanhSachLoaiChucVu();
+            HienThiMaNhanVienMoi();
         }
 
         private void HienThiDanhSachLoaiBangCap()
@@ -63,6 +90,21 @@ namespace DoAn
             ChucVuCombo.DataSource = listLoaiChucVu;
             ChucVuCombo.DisplayMember = "TenLoaiChucVu";
             ChucVuCombo.ValueMember = "MaLoaiChucVu";
+        }
+
+        private void HienThiMaNhanVienMoi()
+        {
+            List<DTO_NhanVien> listNhanVien = BUS_NhanVien.LayDanhSachNhanVien();
+            if (listNhanVien.Count == 0)
+            {
+                MaNhanVienTxt.Text = "NV001";
+            }
+            else
+            {
+                string maNVCuoi = listNhanVien.Last().MaNhanVien;
+                int soCuoi = int.Parse(maNVCuoi.Substring(2)) + 1;
+                MaNhanVienTxt.Text = "NV" + soCuoi.ToString("D3");
+            }
         }
     }
 }

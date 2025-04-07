@@ -15,5 +15,10 @@ namespace DoAn.BUS
         {
             return DAL_LoaiChucVu.LayDanhSachLoaiChucVu();
         }
+
+        internal string LayTenChucVu(string maChucVu)
+        {
+            return DAL_LoaiChucVu.LayTenChucVu(maChucVu);
+        }
     }
 }

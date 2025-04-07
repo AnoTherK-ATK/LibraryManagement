@@ -24,5 +24,18 @@ namespace DoAn.DAL
             }
             return listLoaiBoPhan;
         }
+
+        internal string LayTenBoPhan(string maBoPhan)
+        {
+            List<DTO_LoaiBoPhan> listLoaiBoPhan = LayDanhSachLoaiBoPhan();
+            foreach (DTO_LoaiBoPhan bangCap in listLoaiBoPhan)
+            {
+                if (bangCap.MaLoaiBoPhan == maBoPhan)
+                {
+                    return bangCap.TenLoaiBoPhan;
+                }
+            }
+            return null;
+        }
     }
 }

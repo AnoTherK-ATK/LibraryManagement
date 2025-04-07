@@ -15,5 +15,10 @@ namespace DoAn.BUS
         {
             return DAL_LoaiBangCap.LayDanhSachLoaiBangCap();
         }
+
+        internal string LayTenBangCap(string maBangCap)
+        {
+            return DAL_LoaiBangCap.LayTenBangCap(maBangCap);
+        }
     }
 }

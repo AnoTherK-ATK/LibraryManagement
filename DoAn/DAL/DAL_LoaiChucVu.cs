@@ -24,5 +24,18 @@ namespace DoAn.DAL
             }
             return listLoaiChucVu;
         }
+
+        internal string LayTenChucVu(string maChucVu)
+        {
+            List<DTO_LoaiChucVu> listLoaiChucVu = LayDanhSachLoaiChucVu();
+            foreach (DTO_LoaiChucVu bangCap in listLoaiChucVu)
+            {
+                if (bangCap.MaLoaiChucVu == maChucVu)
+                {
+                    return bangCap.TenLoaiChucVu;
+                }
+            }
+            return null;
+        }
     }
 }

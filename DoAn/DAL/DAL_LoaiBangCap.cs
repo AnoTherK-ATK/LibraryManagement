@@ -24,5 +24,18 @@ namespace DoAn.DAL
             }
             return listLoaiBangCap;
         }
+
+        internal string LayTenBangCap(string maBangCap)
+        {
+            List<DTO_LoaiBangCap> listLoaiBangCap = LayDanhSachLoaiBangCap();
+            foreach (DTO_LoaiBangCap bangCap in listLoaiBangCap)
+            {
+                if (bangCap.MaLoaiBangCap == maBangCap)
+                {
+                    return bangCap.TenLoaiBangCap;
+                }
+            }
+            return null;
+        }
     }
 }

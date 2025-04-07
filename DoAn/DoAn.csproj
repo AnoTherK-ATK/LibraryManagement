@@ -97,6 +97,24 @@
     <Compile Include="GUI\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_CapNhatNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_CapNhatNhanVien.Designer.cs">
+      <DependentUpon>GUI_CapNhatNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_TimNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_TimNhanVien.Designer.cs">
+      <DependentUpon>GUI_TimNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_XoaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau1\GUI_XoaNhanVien.Designer.cs">
+      <DependentUpon>GUI_XoaNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\YeuCau1\YeuCau1.cs">
@@ -107,6 +125,15 @@
     </Compile>
     <EmbeddedResource Include="GUI\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau1\GUI_CapNhatNhanVien.resx">
+      <DependentUpon>GUI_CapNhatNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau1\GUI_TimNhanVien.resx">
+      <DependentUpon>GUI_TimNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau1\GUI_XoaNhanVien.resx">
+      <DependentUpon>GUI_XoaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\createSchema-S1.sql" />
+    <Content Include="DB\generate-nhanvien.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.GUI.YeuCau1;
 
 namespace DoAn
 {
@@ -20,6 +21,21 @@ namespace DoAn
         private void YC1btn_Click(object sender, EventArgs e)
         {
             new YeuCau1().Show();
+        }
+
+        private void TimNhanVienBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_TimNhanVien().Show();
+        }
+
+        private void UpdateNhanVienBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_CapNhatNhanVien().Show();
+        }
+
+        private void DelNhanVienBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_XoaNhanVien().Show();
         }
     }
 }

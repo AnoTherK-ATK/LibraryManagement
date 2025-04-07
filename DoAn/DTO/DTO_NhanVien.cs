@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,10 +37,11 @@ namespace DoAn.DTO
             get => ngaySinhNhanVien.ToString("dd/MM/yyyy");
             set
             {
-                if(DateTime.TryParseExact(value, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+                if (DateTime.TryParseExact(value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
                 {
                     ngaySinhNhanVien = parsedDate;
                 }
+                //ngaySinhNhanVien = DateTime.ParseExact(value, "dd/MM/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
             }
         }
 

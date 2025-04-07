@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAn.BUS;
 using DoAn.DTO;
+using DoAn.GUI.YeuCau1;
 
 namespace DoAn
 {
@@ -48,7 +49,7 @@ namespace DoAn
                 {
                     MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    ClearContent();
                 }
                 else
                 {
@@ -66,6 +67,9 @@ namespace DoAn
             HienThiDanhSachLoaiBoPhan();
             HienThiDanhSachLoaiChucVu();
             HienThiMaNhanVienMoi();
+            BangCapCombo.SelectedIndex = -1;
+            BoPhanCombo.SelectedIndex = -1;
+            ChucVuCombo.SelectedIndex = -1;
         }
 
         private void HienThiDanhSachLoaiBangCap()
@@ -97,7 +101,7 @@ namespace DoAn
             List<DTO_NhanVien> listNhanVien = BUS_NhanVien.LayDanhSachNhanVien();
             if (listNhanVien.Count == 0)
             {
-                MaNhanVienTxt.Text = "NV001";
+                MaNhanVienTxt.Text = "NV0001";
             }
             else
             {
@@ -105,6 +109,28 @@ namespace DoAn
                 int soCuoi = int.Parse(maNVCuoi.Substring(2)) + 1;
                 MaNhanVienTxt.Text = "NV" + soCuoi.ToString("D3");
             }
+        }
+
+        private void ClearContent()
+        {
+            HienThiMaNhanVienMoi();
+            TenNhanVienTxt.Clear();
+            DiaChiTxt.Clear();
+            SDTTxt.Clear();
+            NgaySinhSelector.Value = DateTime.Now;
+            BangCapCombo.SelectedIndex = -1;
+            BoPhanCombo.SelectedIndex = -1;
+            ChucVuCombo.SelectedIndex = -1;
+        }
+
+        private void NhanVienMoiBtn_Click(object sender, EventArgs e)
+        {
+            ClearContent();
+        }
+
+        private void TimNhanVienBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_TimNhanVien().Show();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace DoAn.DAL
 {
     class DataHelper
     {
-        private string connectionString = "server=localhost;database=ThuVienDB;user=root;password=123456;";
+        private string connectionString = "server=localhost;database=ThuVienDB;user=thuvien;password=123456;";
 
         public MySqlConnection GetConnection() 
         {

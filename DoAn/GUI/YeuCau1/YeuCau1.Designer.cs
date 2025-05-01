@@ -153,6 +153,7 @@
             this.NgaySinhSelector.Name = "NgaySinhSelector";
             this.NgaySinhSelector.Size = new System.Drawing.Size(312, 29);
             this.NgaySinhSelector.TabIndex = 11;
+            this.NgaySinhSelector.Value = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             // 
             // BoPhanCombo
             // 

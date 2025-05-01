@@ -87,6 +87,7 @@
     <Compile Include="DAL\DAL_LoaiChucVu.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\Secret.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
     <Compile Include="DTO\DTO_LoaiBoPhan.cs" />
     <Compile Include="DTO\DTO_LoaiChucVu.cs" />
@@ -163,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\createSchema-S1.sql" />
+    <Content Include="DB\createSchema-S2.sql" />
     <Content Include="DB\generate-nhanvien.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

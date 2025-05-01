@@ -15,6 +15,23 @@ namespace DoAn.BUS
         {
             return DAL_NhanVien.LayDanhSachNhanVien();
         }
+        Dictionary<string, string> chucVuMap = new Dictionary<string, string>
+        {
+            { "CV01", "Giám Đốc" },
+            { "CV02", "Phó Giám Đốc" },
+            { "CV03", "Trưởng Phòng" },
+            { "CV04", "Phó Phòng" },
+            { "CV05", "Nhân Viên" }
+        };
+
+        // Map for BOPHAN (Department ID to Department Name)
+        Dictionary<string, string> boPhanMap = new Dictionary<string, string>
+        {
+            { "BP01", "Thủ Thư" },
+            { "BP02", "Thủ Kho" },
+            { "BP03", "Thủ Quỹ" },
+            { "BP04", "Ban Giám Đốc" }
+        };
 
         public bool ThemNhanVien(DTO_NhanVien dto_NhanVien)
         {
@@ -28,6 +45,17 @@ namespace DoAn.BUS
                 string.IsNullOrWhiteSpace(dto_NhanVien.MaChucVuNhanVien))
             {
                 throw new Exception("Các trường không được để trống");
+            }
+
+            //Ban giám đốc
+            if(dto_NhanVien.MaBoPhanNhanVien == "BP04" && (dto_NhanVien.MaChucVuNhanVien != "CV01" || dto_NhanVien.MaChucVuNhanVien != "CV02"))
+            {
+                throw new Exception("Chức vụ " + chucVuMap[dto_NhanVien.MaChucVuNhanVien] + " không phù hợp với Bộ phận Ban giám đốc");
+            }
+
+            if (dto_NhanVien.MaBoPhanNhanVien != "BP04" && (dto_NhanVien.MaChucVuNhanVien == "CV01" || dto_NhanVien.MaChucVuNhanVien == "CV02"))
+            {
+                throw new Exception("Chức vụ " + chucVuMap[dto_NhanVien.MaChucVuNhanVien] + " không phù hợp với Bộ phận " + boPhanMap[dto_NhanVien.MaBoPhanNhanVien]);
             }
 
             int tmp;

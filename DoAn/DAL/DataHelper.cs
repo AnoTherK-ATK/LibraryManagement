@@ -11,7 +11,8 @@ namespace DoAn.DAL
     class DataHelper
     {
         private string connectionString = "server=localhost;database=ThuVienDB;user=thuvien;password=123456;";
-
+        //private string connectionString = new Secret().connectionString;
+        //change this if you want to use another database
         public MySqlConnection GetConnection() 
         {
             return new MySqlConnection(connectionString);

@@ -63,3 +63,35 @@ INSERT INTO CHUCVU (MaChucVu, TenChucVu) VALUES
 ('CV03', 'Trưởng Phòng'),
 ('CV04', 'Phó Phòng'),
 ('CV05', 'Nhân Viên');
+
+-- Create the LOAIDOCGIA (Reader Types) table
+CREATE TABLE LOAIDOCGIA (
+    MaLoaiDocGia VARCHAR(10) PRIMARY KEY,
+    TenLoaiDocGia VARCHAR(50) NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Create the THEDOCGIA (Reader Cards) table with foreign keys
+CREATE TABLE THEDOCGIA (
+    MaDocGia VARCHAR(10) PRIMARY KEY,
+    HoTen VARCHAR(50) NOT NULL,
+    NgaySinh DATE,
+    DiaChi VARCHAR(200),
+    Email VARCHAR(100),
+    NgayLapThe DATE NOT NULL,
+    NgayHetHan DATE NOT NULL,
+    MaLoaiDocGia VARCHAR(10) NOT NULL,
+    MaNhanVien VARCHAR(10) NOT NULL,
+    FOREIGN KEY (MaLoaiDocGia) REFERENCES LOAIDOCGIA(MaLoaiDocGia),
+    FOREIGN KEY (MaNhanVien) REFERENCES NHANVIEN(MaNhanVien)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Create the THAMSO (Parameters) table
+CREATE TABLE THAMSO (
+    TuoiToiThieu INT NOT NULL,
+    TuoiToiDa INT NOT NULL,
+    GiaTriThe INT NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Insert sample data into THAMSO (Parameters)
+INSERT INTO THAMSO (TuoiToiThieu, TuoiToiDa, GiaTriThe) VALUES
+(18, 55, 6);

@@ -122,5 +122,10 @@ namespace DoAn.GUI.YeuCau1
                 MessageBox.Show("Cập nhật nhân viên thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void MaNhanVienTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

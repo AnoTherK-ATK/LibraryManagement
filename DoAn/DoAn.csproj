@@ -80,17 +80,24 @@
   <ItemGroup>
     <Compile Include="BUS\BUS_LoaiBangCap.cs" />
     <Compile Include="BUS\BUS_LoaiBoPhan.cs" />
+    <Compile Include="BUS\BUS_LoaiDocGia.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_LoaiChucVu.cs" />
+    <Compile Include="BUS\BUS_ThamSo.cs" />
+    <Compile Include="BUS\BUS_TheDocGia.cs" />
+    <Compile Include="DAL\DAL_ThamSo.cs" />
+    <Compile Include="DAL\DAL_TheDocGia.cs" />
     <Compile Include="DAL\DAL_LoaiBangCap.cs" />
     <Compile Include="DAL\DAL_LoaiBoPhan.cs" />
     <Compile Include="DAL\DAL_LoaiChucVu.cs" />
+    <Compile Include="DAL\DAL_LoaiDocGia.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DataHelper.cs" />
-    <Compile Include="DAL\Secret.cs" />
+    <Compile Include="DTO\DTO_TheDocGia.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
     <Compile Include="DTO\DTO_LoaiBoPhan.cs" />
     <Compile Include="DTO\DTO_LoaiChucVu.cs" />
+    <Compile Include="DTO\DTO_LoaiDocGia.cs" />
     <Compile Include="DTO\DTO_NhanVien.cs" />
     <Compile Include="GUI\MainMenu.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,30 @@
     <Compile Include="GUI\YeuCau1\GUI_XoaNhanVien.Designer.cs">
       <DependentUpon>GUI_XoaNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_CapNhatTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_CapNhatTheDocGia.Designer.cs">
+      <DependentUpon>GUI_CapNhatTheDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_TimTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_TimTheDocGia.Designer.cs">
+      <DependentUpon>GUI_TimTheDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_XoaTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\GUI_XoaTheDocGia.Designer.cs">
+      <DependentUpon>GUI_XoaTheDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\YeuCau2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau2\YeuCau2.Designer.cs">
+      <DependentUpon>YeuCau2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\YeuCau1\YeuCau1.cs">
@@ -135,6 +166,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau1\GUI_XoaNhanVien.resx">
       <DependentUpon>GUI_XoaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau2\GUI_CapNhatTheDocGia.resx">
+      <DependentUpon>GUI_CapNhatTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau2\GUI_TimTheDocGia.resx">
+      <DependentUpon>GUI_TimTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau2\GUI_XoaTheDocGia.resx">
+      <DependentUpon>GUI_XoaTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau2\YeuCau2.resx">
+      <DependentUpon>YeuCau2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

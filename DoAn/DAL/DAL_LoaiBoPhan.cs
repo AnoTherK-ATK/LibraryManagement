@@ -19,7 +19,11 @@ namespace DoAn.DAL
             List<DTO_LoaiBoPhan> listLoaiBoPhan = new List<DTO_LoaiBoPhan>();
             foreach (DataRow dr in dtLoaiBoPhan.Rows)
             {
-                DTO_LoaiBoPhan BoPhanTemp = new DTO_LoaiBoPhan(dr["MaBoPhan"].ToString(), dr["TenBoPhan"].ToString());
+                DTO_LoaiBoPhan BoPhanTemp = new DTO_LoaiBoPhan(
+                    dr["MaBoPhan"].ToString(),
+                    dr["TenBoPhan"].ToString(),
+                    Convert.ToBoolean(dr["QuyenLapThe"])
+                );
                 listLoaiBoPhan.Add(BoPhanTemp);
             }
             return listLoaiBoPhan;
@@ -37,5 +41,19 @@ namespace DoAn.DAL
             }
             return null;
         }
+
+        internal bool LayQuyenLapThe(string maBoPhan)
+        {
+            List<DTO_LoaiBoPhan> listLoaiBoPhan = LayDanhSachLoaiBoPhan();
+            foreach (DTO_LoaiBoPhan boPhan in listLoaiBoPhan)
+            {
+                if (boPhan.MaLoaiBoPhan == maBoPhan)
+                {
+                    return boPhan.QuyenLapThe;
+                }
+            }
+            return false;
+        }
+
     }
 }

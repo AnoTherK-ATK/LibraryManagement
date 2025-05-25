@@ -111,6 +111,20 @@ namespace DoAn.DAL
             return listNhanVien;
         }
 
+        internal List<string> LayTatCaMaNhanVien()
+        {
+           string query = "SELECT MaNhanVien FROM NHANVIEN";
+            DataTable dtMaNhanVien = helper.ExecuteQuery(query);
+            List<string> listMaNhanVien = new List<string>();
+            foreach (DataRow dr in dtMaNhanVien.Rows)
+            {
+                listMaNhanVien.Add(dr["MaNhanVien"].ToString());
+            }
+            return listMaNhanVien;
+        }
+
+       
+
         internal DTO_NhanVien LayThongTinNhanVien(string maNV)
         {
             string query = $"SELECT MaNhanVien, HoTen, DiaChi, DATE_FORMAT(NgaySinh, '%d/%m/%Y') AS NgaySinh, DienThoai, MaBangCap, MaBoPhan, MaChucVu FROM NHANVIEN WHERE MaNhanVien = '{maNV}'";
@@ -167,7 +181,7 @@ namespace DoAn.DAL
             catch (Exception ex)
             {
                 // Handle or throw exception as per your needs
-                throw new Exception("Error updating employee: " + ex.Message);
+                throw new Exception("Lỗi khi thêm nhân viên mới: " + ex.Message);
             }
         }
 
@@ -188,7 +202,7 @@ namespace DoAn.DAL
             catch (Exception ex)
             {
                 // Handle or throw exception as per your needs
-                throw new Exception("Error deleting employee: " + ex.Message);
+                throw new Exception("Lỗi khi xóa nhân viên: " + ex.Message);
             }
         }
     }

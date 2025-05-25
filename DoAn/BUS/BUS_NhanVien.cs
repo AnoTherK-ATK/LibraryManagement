@@ -78,6 +78,11 @@ namespace DoAn.BUS
             return DAL_NhanVien.TimKiemNhanVien(maNV, tenNV, sdtNV, bangCapNV, boPhanNV, chucVuNV);
         }
 
+        internal List<string> LayTatCaMaNhanVien()
+        {
+            return DAL_NhanVien.LayTatCaMaNhanVien();
+        }
+
         internal DTO_NhanVien LayThongTinNhanVien(string maNV)
         {
             return DAL_NhanVien.LayThongTinNhanVien(maNV);

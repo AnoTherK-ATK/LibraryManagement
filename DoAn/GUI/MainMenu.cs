@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAn.GUI.YeuCau1;
+using DoAn.GUI.YeuCau2;
 
 namespace DoAn
 {
@@ -36,6 +37,28 @@ namespace DoAn
         private void DelNhanVienBtn_Click(object sender, EventArgs e)
         {
             new GUI_XoaNhanVien().Show();
+        }
+
+        private void YeuCau2Btn_Click(object sender, EventArgs e)
+        {
+            new YeuCau2().Show();
+        }
+
+        private void TimTheDocGiaBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_TimTheDocGia().Show();
+
+        }
+
+        private void UpdateTheDocGiaBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_CapNhatTheDocGia().Show();
+
+        }
+
+        private void DelDocGiaBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_XoaTheDocGia().Show();
         }
     }
 }

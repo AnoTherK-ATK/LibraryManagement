@@ -131,13 +131,16 @@ namespace DoAn.GUI.YeuCau1
         public string MaNVReturn { get; set; }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MaNVReturn = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            Clipboard.SetText(MaNVReturn);
-            MessageBox.Show("Đã sao chép mã nhân viên vào bộ nhớ tạm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.DialogResult = DialogResult.OK;
-            if (this.Modal)
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
             {
-                this.Close();
+                MaNVReturn = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Clipboard.SetText(MaNVReturn);
+                MessageBox.Show("Đã sao chép mã nhân viên vào bộ nhớ tạm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                if (this.Modal)
+                {
+                    this.Close();
+                }
             }
         }
 

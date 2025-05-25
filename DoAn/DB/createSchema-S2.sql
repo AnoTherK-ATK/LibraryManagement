@@ -16,7 +16,8 @@ CREATE TABLE BANGCAP (
 -- Create the BOPHAN (Departments) table
 CREATE TABLE BOPHAN (
     MaBoPhan VARCHAR(10) PRIMARY KEY,
-    TenBoPhan VARCHAR(50) NOT NULL
+    TenBoPhan VARCHAR(50) NOT NULL,
+    QuyenLapThe BOOLEAN NOT NULL DEFAULT FALSE
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Create the CHUCVU (Positions) table
@@ -50,11 +51,11 @@ INSERT INTO BANGCAP (MaBangCap, TenBangCap) VALUES
 ('BC06', 'Tiến Sĩ');
 
 -- Insert sample data into BOPHAN (4 departments)
-INSERT INTO BOPHAN (MaBoPhan, TenBoPhan) VALUES
-('BP01', 'Thủ Thư'),
-('BP02', 'Thủ Kho'),
-('BP03', 'Thủ Quỹ'),
-('BP04', 'Ban Giám Đốc');
+INSERT INTO BOPHAN (MaBoPhan, TenBoPhan, QuyenLapThe) VALUES
+('BP01', 'Thủ Thư', TRUE),
+('BP02', 'Thủ Kho', FALSE),
+('BP03', 'Thủ Quỹ', FALSE),
+('BP04', 'Ban Giám Đốc', FALSE);
 
 -- Insert sample data into CHUCVU (5 positions)
 INSERT INTO CHUCVU (MaChucVu, TenChucVu) VALUES
@@ -72,7 +73,7 @@ CREATE TABLE LOAIDOCGIA (
 
 -- Create the THEDOCGIA (Reader Cards) table with foreign keys
 CREATE TABLE THEDOCGIA (
-    MaDocGia VARCHAR(10) PRIMARY KEY,
+    MaTheDocGia VARCHAR(10) PRIMARY KEY,
     HoTen VARCHAR(50) NOT NULL,
     NgaySinh DATE,
     DiaChi VARCHAR(200),
@@ -85,6 +86,12 @@ CREATE TABLE THEDOCGIA (
     FOREIGN KEY (MaNhanVien) REFERENCES NHANVIEN(MaNhanVien)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+-- Insert sample data into LOAIDOCGIA (Reader Types)
+Insert INTO LOAIDOCGIA (MaLoaiDocGia, TenLoaiDocGia) VALUES
+('LDG01', 'X'),
+('LDG02', 'Y'),
+;)
+
 -- Create the THAMSO (Parameters) table
 CREATE TABLE THAMSO (
     TuoiToiThieu INT NOT NULL,
@@ -95,3 +102,4 @@ CREATE TABLE THAMSO (
 -- Insert sample data into THAMSO (Parameters)
 INSERT INTO THAMSO (TuoiToiThieu, TuoiToiDa, GiaTriThe) VALUES
 (18, 55, 6);
+

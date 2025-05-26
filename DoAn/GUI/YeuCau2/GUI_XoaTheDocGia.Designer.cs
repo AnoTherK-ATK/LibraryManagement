@@ -59,7 +59,7 @@
             // DelBtn
             // 
             this.DelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DelBtn.Location = new System.Drawing.Point(348, 80);
+            this.DelBtn.Location = new System.Drawing.Point(348, 78);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(105, 38);
             this.DelBtn.TabIndex = 77;
@@ -79,7 +79,7 @@
             // exitBtn
             // 
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(479, 80);
+            this.exitBtn.Location = new System.Drawing.Point(479, 78);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(105, 38);
             this.exitBtn.TabIndex = 79;

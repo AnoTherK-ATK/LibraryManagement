@@ -93,6 +93,7 @@
     <Compile Include="DAL\DAL_LoaiDocGia.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\Secret.cs" />
     <Compile Include="DTO\DTO_TheDocGia.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
     <Compile Include="DTO\DTO_LoaiBoPhan.cs" />

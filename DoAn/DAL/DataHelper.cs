@@ -10,9 +10,39 @@ namespace DoAn.DAL
 {
     class DataHelper
     {
-        private string connectionString = "server=14.225.198.143;database=ThuVienDB;user=thuvien;password=123456;";
-        //private string connectionString = new Secret().connectionString;
-        //change this if you want to use another database
+        // Example of class Secret.cs
+        // Remember to create the class in DAL Folder
+        //        using System;
+        //using System.Collections.Generic;
+        //using System.Linq;
+        //using System.Text;
+        //using System.Threading.Tasks;
+
+        //namespace DoAn.DAL
+        //    {
+        //        public class Secret
+        //        {
+
+        //            public string connectionString;
+
+        //            public Secret()
+        //            {
+        //                connectionString = "server=IP;database=ThuVienDB;user=User;password=Password;";
+        //            }
+        //        }
+        //    }
+
+
+
+
+
+        Secret secret = new Secret();
+        private string connectionString ;
+        public DataHelper()
+        {
+            connectionString = secret.connectionString;
+        }
+        
         public MySqlConnection GetConnection() 
         {
             return new MySqlConnection(connectionString);

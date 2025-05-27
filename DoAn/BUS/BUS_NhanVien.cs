@@ -48,7 +48,7 @@ namespace DoAn.BUS
             }
 
             //Ban giám đốc
-            if(dto_NhanVien.MaBoPhanNhanVien == "BP04" && (dto_NhanVien.MaChucVuNhanVien != "CV01" || dto_NhanVien.MaChucVuNhanVien != "CV02"))
+            if(dto_NhanVien.MaBoPhanNhanVien == "BP04" && !(dto_NhanVien.MaChucVuNhanVien == "CV01" || dto_NhanVien.MaChucVuNhanVien == "CV02"))
             {
                 throw new Exception("Chức vụ " + chucVuMap[dto_NhanVien.MaChucVuNhanVien] + " không phù hợp với Bộ phận Ban giám đốc");
             }

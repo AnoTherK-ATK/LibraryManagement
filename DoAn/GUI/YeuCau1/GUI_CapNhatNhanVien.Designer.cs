@@ -107,6 +107,7 @@
             this.NgaySinhSelector.Name = "NgaySinhSelector";
             this.NgaySinhSelector.Size = new System.Drawing.Size(312, 39);
             this.NgaySinhSelector.TabIndex = 33;
+            this.NgaySinhSelector.Value = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             // 
             // BangCapCombo
             // 

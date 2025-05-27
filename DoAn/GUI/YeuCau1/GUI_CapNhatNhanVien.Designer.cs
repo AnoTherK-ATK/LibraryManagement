@@ -73,11 +73,8 @@
             this.SDTTxt.Location = new System.Drawing.Point(33, 380);
             this.SDTTxt.MaxLength = 10;
             this.SDTTxt.Name = "SDTTxt";
-<<<<<<< Updated upstream
             this.SDTTxt.Size = new System.Drawing.Size(312, 34);
-=======
-            this.SDTTxt.Size = new System.Drawing.Size(312, 29);
->>>>>>> Stashed changes
+
             this.SDTTxt.TabIndex = 37;
             // 
             // ChucVuCombo
@@ -85,22 +82,14 @@
             this.ChucVuCombo.FormattingEnabled = true;
             this.ChucVuCombo.Location = new System.Drawing.Point(668, 271);
             this.ChucVuCombo.Name = "ChucVuCombo";
-<<<<<<< Updated upstream
             this.ChucVuCombo.Size = new System.Drawing.Size(228, 36);
-=======
-            this.ChucVuCombo.Size = new System.Drawing.Size(228, 29);
->>>>>>> Stashed changes
             this.ChucVuCombo.TabIndex = 36;
             // 
             // DiaChiTxt
             // 
             this.DiaChiTxt.Location = new System.Drawing.Point(33, 271);
             this.DiaChiTxt.Name = "DiaChiTxt";
-<<<<<<< Updated upstream
             this.DiaChiTxt.Size = new System.Drawing.Size(312, 34);
-=======
-            this.DiaChiTxt.Size = new System.Drawing.Size(312, 29);
->>>>>>> Stashed changes
             this.DiaChiTxt.TabIndex = 35;
             // 
             // BoPhanCombo
@@ -108,11 +97,7 @@
             this.BoPhanCombo.FormattingEnabled = true;
             this.BoPhanCombo.Location = new System.Drawing.Point(668, 157);
             this.BoPhanCombo.Name = "BoPhanCombo";
-<<<<<<< Updated upstream
             this.BoPhanCombo.Size = new System.Drawing.Size(228, 36);
-=======
-            this.BoPhanCombo.Size = new System.Drawing.Size(228, 29);
->>>>>>> Stashed changes
             this.BoPhanCombo.TabIndex = 34;
             // 
             // NgaySinhSelector
@@ -121,34 +106,23 @@
             this.NgaySinhSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgaySinhSelector.Location = new System.Drawing.Point(33, 157);
             this.NgaySinhSelector.Name = "NgaySinhSelector";
-<<<<<<< Updated upstream
             this.NgaySinhSelector.Size = new System.Drawing.Size(312, 34);
-=======
-            this.NgaySinhSelector.Size = new System.Drawing.Size(312, 29);
->>>>>>> Stashed changes
             this.NgaySinhSelector.TabIndex = 33;
+            this.NgaySinhSelector.Value = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             // 
             // BangCapCombo
             // 
             this.BangCapCombo.FormattingEnabled = true;
             this.BangCapCombo.Location = new System.Drawing.Point(668, 52);
             this.BangCapCombo.Name = "BangCapCombo";
-<<<<<<< Updated upstream
             this.BangCapCombo.Size = new System.Drawing.Size(228, 36);
-=======
-            this.BangCapCombo.Size = new System.Drawing.Size(228, 29);
->>>>>>> Stashed changes
             this.BangCapCombo.TabIndex = 32;
             // 
             // TenNhanVienTxt
             // 
             this.TenNhanVienTxt.Location = new System.Drawing.Point(340, 52);
             this.TenNhanVienTxt.Name = "TenNhanVienTxt";
-<<<<<<< Updated upstream
             this.TenNhanVienTxt.Size = new System.Drawing.Size(222, 34);
-=======
-            this.TenNhanVienTxt.Size = new System.Drawing.Size(222, 29);
->>>>>>> Stashed changes
             this.TenNhanVienTxt.TabIndex = 31;
             // 
             // MaNhanVienTxt
@@ -157,11 +131,8 @@
             this.MaNhanVienTxt.Location = new System.Drawing.Point(33, 52);
             this.MaNhanVienTxt.Name = "MaNhanVienTxt";
             this.MaNhanVienTxt.ReadOnly = true;
-<<<<<<< Updated upstream
             this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 34);
-=======
-            this.MaNhanVienTxt.Size = new System.Drawing.Size(170, 29);
->>>>>>> Stashed changes
+
             this.MaNhanVienTxt.TabIndex = 30;
             this.MaNhanVienTxt.TextChanged += new System.EventHandler(this.MaNhanVienTxt_TextChanged);
             this.MaNhanVienTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaNhanVienTxt_KeyDown);
@@ -171,11 +142,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(27, 346);
             this.label8.Name = "label8";
-<<<<<<< Updated upstream
             this.label8.Size = new System.Drawing.Size(128, 28);
-=======
-            this.label8.Size = new System.Drawing.Size(101, 21);
->>>>>>> Stashed changes
             this.label8.TabIndex = 29;
             this.label8.Text = "Số điện thoại";
             // 
@@ -184,11 +151,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(663, 237);
             this.label7.Name = "label7";
-<<<<<<< Updated upstream
             this.label7.Size = new System.Drawing.Size(113, 28);
-=======
-            this.label7.Size = new System.Drawing.Size(90, 21);
->>>>>>> Stashed changes
             this.label7.TabIndex = 28;
             this.label7.Text = "Tên chức vụ";
             // 
@@ -197,11 +160,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(27, 237);
             this.label6.Name = "label6";
-<<<<<<< Updated upstream
             this.label6.Size = new System.Drawing.Size(71, 28);
-=======
-            this.label6.Size = new System.Drawing.Size(57, 21);
->>>>>>> Stashed changes
             this.label6.TabIndex = 27;
             this.label6.Text = "Địa chỉ";
             // 
@@ -210,11 +169,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(663, 123);
             this.label5.Name = "label5";
-<<<<<<< Updated upstream
             this.label5.Size = new System.Drawing.Size(119, 28);
-=======
-            this.label5.Size = new System.Drawing.Size(94, 21);
->>>>>>> Stashed changes
             this.label5.TabIndex = 26;
             this.label5.Text = "Tên bộ phận";
             // 
@@ -223,11 +178,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(27, 123);
             this.label4.Name = "label4";
-<<<<<<< Updated upstream
             this.label4.Size = new System.Drawing.Size(99, 28);
-=======
-            this.label4.Size = new System.Drawing.Size(80, 21);
->>>>>>> Stashed changes
             this.label4.TabIndex = 25;
             this.label4.Text = "Ngày sinh";
             // 
@@ -236,11 +187,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(662, 18);
             this.label3.Name = "label3";
-<<<<<<< Updated upstream
             this.label3.Size = new System.Drawing.Size(127, 28);
-=======
-            this.label3.Size = new System.Drawing.Size(100, 21);
->>>>>>> Stashed changes
             this.label3.TabIndex = 24;
             this.label3.Text = "Tên bằng cấp";
             // 
@@ -249,11 +196,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(334, 18);
             this.label2.Name = "label2";
-<<<<<<< Updated upstream
             this.label2.Size = new System.Drawing.Size(96, 28);
-=======
-            this.label2.Size = new System.Drawing.Size(76, 21);
->>>>>>> Stashed changes
             this.label2.TabIndex = 23;
             this.label2.Text = "Họ và tên";
             // 
@@ -262,11 +205,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 18);
             this.label1.Name = "label1";
-<<<<<<< Updated upstream
             this.label1.Size = new System.Drawing.Size(129, 28);
-=======
-            this.label1.Size = new System.Drawing.Size(104, 21);
->>>>>>> Stashed changes
             this.label1.TabIndex = 22;
             this.label1.Text = "Mã nhân viên";
             // 
@@ -282,11 +221,7 @@
             // 
             // GUI_CapNhatNhanVien
             // 
-<<<<<<< Updated upstream
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
->>>>>>> Stashed changes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 727);
             this.Controls.Add(this.TimNhanVienBtn);

@@ -97,11 +97,8 @@
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DAL_TheLoai.cs" />
     <Compile Include="DAL\DataHelper.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="DAL\Secret.cs" />
     <Compile Include="DTO\DTO_Sach.cs" />
->>>>>>> Stashed changes
     <Compile Include="DTO\DTO_TheDocGia.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
     <Compile Include="DTO\DTO_LoaiBoPhan.cs" />

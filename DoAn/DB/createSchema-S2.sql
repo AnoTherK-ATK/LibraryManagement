@@ -26,7 +26,7 @@ CREATE TABLE CHUCVU (
     TenChucVu VARCHAR(50) NOT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Create the NHANVIEN (Employees) table with foreign keys
+-- Create the NHANVIEN (Employees) table
 CREATE TABLE NHANVIEN (
     MaNhanVien VARCHAR(10) PRIMARY KEY,
     HoTen VARCHAR(50) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE NHANVIEN (
     FOREIGN KEY (MaChucVu) REFERENCES CHUCVU(MaChucVu)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Insert sample data into BANGCAP (5 types of degrees)
+-- Insert sample data into BANGCAP
 INSERT INTO BANGCAP (MaBangCap, TenBangCap) VALUES
 ('BC01', 'Tú Tài'),
 ('BC02', 'Trung Cấp'),
@@ -50,14 +50,14 @@ INSERT INTO BANGCAP (MaBangCap, TenBangCap) VALUES
 ('BC05', 'Thạc Sĩ'),
 ('BC06', 'Tiến Sĩ');
 
--- Insert sample data into BOPHAN (4 departments)
+-- Insert sample data into BOPHAN
 INSERT INTO BOPHAN (MaBoPhan, TenBoPhan, QuyenLapThe) VALUES
 ('BP01', 'Thủ Thư', TRUE),
 ('BP02', 'Thủ Kho', FALSE),
 ('BP03', 'Thủ Quỹ', FALSE),
 ('BP04', 'Ban Giám Đốc', FALSE);
 
--- Insert sample data into CHUCVU (5 positions)
+-- Insert sample data into CHUCVU
 INSERT INTO CHUCVU (MaChucVu, TenChucVu) VALUES
 ('CV01', 'Giám Đốc'),
 ('CV02', 'Phó Giám Đốc'),
@@ -65,15 +65,15 @@ INSERT INTO CHUCVU (MaChucVu, TenChucVu) VALUES
 ('CV04', 'Phó Phòng'),
 ('CV05', 'Nhân Viên');
 
--- Create the LOAIDOCGIA (Reader Types) table
+-- Create the LOAIDOCGIA table
 CREATE TABLE LOAIDOCGIA (
     MaLoaiDocGia VARCHAR(10) PRIMARY KEY,
     TenLoaiDocGia VARCHAR(50) NOT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Create the THEDOCGIA (Reader Cards) table with foreign keys
+-- Create the THEDOCGIA table
 CREATE TABLE THEDOCGIA (
-    MaTheDocGia VARCHAR(10) PRIMARY KEY,
+    MaDocGia VARCHAR(10) PRIMARY KEY,
     HoTen VARCHAR(50) NOT NULL,
     NgaySinh DATE,
     DiaChi VARCHAR(200),
@@ -86,20 +86,18 @@ CREATE TABLE THEDOCGIA (
     FOREIGN KEY (MaNhanVien) REFERENCES NHANVIEN(MaNhanVien)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Insert sample data into LOAIDOCGIA (Reader Types)
-Insert INTO LOAIDOCGIA (MaLoaiDocGia, TenLoaiDocGia) VALUES
+-- Insert sample data into LOAIDOCGIA
+INSERT INTO LOAIDOCGIA (MaLoaiDocGia, TenLoaiDocGia) VALUES
 ('LDG01', 'X'),
-('LDG02', 'Y'),
-;)
+('LDG02', 'Y');
 
--- Create the THAMSO (Parameters) table
+-- Create the THAMSO table
 CREATE TABLE THAMSO (
     TuoiToiThieu INT NOT NULL,
     TuoiToiDa INT NOT NULL,
     GiaTriThe INT NOT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Insert sample data into THAMSO (Parameters)
+-- Insert sample data into THAMSO
 INSERT INTO THAMSO (TuoiToiThieu, TuoiToiDa, GiaTriThe) VALUES
 (18, 55, 6);
-

@@ -52,5 +52,19 @@ namespace DoAn.DAL
                 throw new InvalidOperationException("No data found for GIATRITHE in THAMSO.");
             }
         }
+
+        internal int LayThoiGianNhapSachToiDa()
+        {
+            DataTable dtLoaiDocGia = helper.ExecuteQuery("SELECT THOIGIANNHAPSACHTOIDA FROM THAMSO");
+            if (dtLoaiDocGia != null && dtLoaiDocGia.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dtLoaiDocGia.Rows[0]["THOIGIANNHAPSACHTOIDA"]);
+            }
+            else
+            {
+                // Return a default value or throw an exception if no data is found
+                throw new InvalidOperationException("No data found for THOIGIANNHAPSACHTOIDA in THAMSO.");
+            }
+        }
     }
 }

@@ -38,6 +38,9 @@
             this.TimTheDocGiaBtn = new System.Windows.Forms.Button();
             this.UpdateTheDocGiaBtn = new System.Windows.Forms.Button();
             this.DelDocGiaBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TiepNhanSachMoiBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // YC1btn
@@ -56,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 37);
+            this.label1.Size = new System.Drawing.Size(192, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý nhân viên";
             // 
@@ -96,13 +99,13 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(323, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 37);
+            this.label2.Size = new System.Drawing.Size(205, 30);
             this.label2.TabIndex = 23;
             this.label2.Text = "Quản lý thẻ độc giả";
             // 
             // YeuCau2Btn
             // 
-            this.YeuCau2Btn.Location = new System.Drawing.Point(355, 56);
+            this.YeuCau2Btn.Location = new System.Drawing.Point(328, 56);
             this.YeuCau2Btn.Name = "YeuCau2Btn";
             this.YeuCau2Btn.Size = new System.Drawing.Size(187, 30);
             this.YeuCau2Btn.TabIndex = 22;
@@ -112,7 +115,7 @@
             // 
             // TimTheDocGiaBtn
             // 
-            this.TimTheDocGiaBtn.Location = new System.Drawing.Point(355, 92);
+            this.TimTheDocGiaBtn.Location = new System.Drawing.Point(328, 92);
             this.TimTheDocGiaBtn.Name = "TimTheDocGiaBtn";
             this.TimTheDocGiaBtn.Size = new System.Drawing.Size(187, 30);
             this.TimTheDocGiaBtn.TabIndex = 24;
@@ -122,7 +125,7 @@
             // 
             // UpdateTheDocGiaBtn
             // 
-            this.UpdateTheDocGiaBtn.Location = new System.Drawing.Point(355, 128);
+            this.UpdateTheDocGiaBtn.Location = new System.Drawing.Point(328, 128);
             this.UpdateTheDocGiaBtn.Name = "UpdateTheDocGiaBtn";
             this.UpdateTheDocGiaBtn.Size = new System.Drawing.Size(187, 30);
             this.UpdateTheDocGiaBtn.TabIndex = 25;
@@ -132,7 +135,7 @@
             // 
             // DelDocGiaBtn
             // 
-            this.DelDocGiaBtn.Location = new System.Drawing.Point(355, 164);
+            this.DelDocGiaBtn.Location = new System.Drawing.Point(328, 164);
             this.DelDocGiaBtn.Name = "DelDocGiaBtn";
             this.DelDocGiaBtn.Size = new System.Drawing.Size(187, 30);
             this.DelDocGiaBtn.TabIndex = 26;
@@ -140,11 +143,43 @@
             this.DelDocGiaBtn.UseVisualStyleBackColor = true;
             this.DelDocGiaBtn.Click += new System.EventHandler(this.DelDocGiaBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(622, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 30);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Quản lý sách";
+            // 
+            // TiepNhanSachMoiBtn
+            // 
+            this.TiepNhanSachMoiBtn.Location = new System.Drawing.Point(627, 56);
+            this.TiepNhanSachMoiBtn.Name = "TiepNhanSachMoiBtn";
+            this.TiepNhanSachMoiBtn.Size = new System.Drawing.Size(162, 30);
+            this.TiepNhanSachMoiBtn.TabIndex = 28;
+            this.TiepNhanSachMoiBtn.Text = "Tiếp nhận sách mới";
+            this.TiepNhanSachMoiBtn.UseVisualStyleBackColor = true;
+            this.TiepNhanSachMoiBtn.Click += new System.EventHandler(this.TiepNhanSachMoiBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(627, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 30);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Tìm sách";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 821);
+            this.ClientSize = new System.Drawing.Size(985, 313);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TiepNhanSachMoiBtn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.DelDocGiaBtn);
             this.Controls.Add(this.UpdateTheDocGiaBtn);
             this.Controls.Add(this.TimTheDocGiaBtn);
@@ -176,6 +211,9 @@
         private System.Windows.Forms.Button TimTheDocGiaBtn;
         private System.Windows.Forms.Button UpdateTheDocGiaBtn;
         private System.Windows.Forms.Button DelDocGiaBtn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button TiepNhanSachMoiBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -25,5 +25,10 @@ namespace DoAn.BUS
             return DAL_ThamSo.LayGiaTriThe();
         }
 
+        internal int LayThoiGianNhapSachToiDa()
+        {
+            return DAL_ThamSo.LayThoiGianNhapSachToiDa();
+        }
+
     }
 }

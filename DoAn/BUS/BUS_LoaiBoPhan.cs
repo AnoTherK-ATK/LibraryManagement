@@ -25,5 +25,10 @@ namespace DoAn.BUS
         {
             return DAL_LoaiBoPhan.LayQuyenLapThe(maBoPhan);
         }
+
+        internal bool LayQuyenNhanSach(string maBoPhan)
+        {
+            return DAL_LoaiBoPhan.LayQuyenNhanSach(maBoPhan);
+        }
     }
 }

@@ -117,7 +117,7 @@ namespace DoAn
             TenNhanVienTxt.Clear();
             DiaChiTxt.Clear();
             SDTTxt.Clear();
-            NgaySinhSelector.Value = DateTime.Now;
+            NgaySinhSelector.Value = new DateTime(1980, 1, 1);
             BangCapCombo.SelectedIndex = -1;
             BoPhanCombo.SelectedIndex = -1;
             ChucVuCombo.SelectedIndex = -1;

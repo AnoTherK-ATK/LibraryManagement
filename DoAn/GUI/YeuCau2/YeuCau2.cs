@@ -183,7 +183,7 @@ namespace DoAn.GUI.YeuCau2
             MaDocGiaTxt.Text = string.Empty;
             HoTenDocGiaTxt.Text = string.Empty;
             DiaChiTxt.Text = string.Empty;
-            NgaySinhSelector.Value = DateTime.Now;
+            NgaySinhSelector.Value = new DateTime(1980, 1, 1);
             EmailTxt.Text = string.Empty;
             LoaiDocGiaCombo.SelectedIndex = -1;
             HienThiMaTheDocGiaMoi();

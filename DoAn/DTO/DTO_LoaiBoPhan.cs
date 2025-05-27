@@ -16,12 +16,15 @@ namespace DoAn.DTO
         bool quyenLapThe;
         public bool QuyenLapThe { get => quyenLapThe; set => quyenLapThe = value; }
 
-        public DTO_LoaiBoPhan(string maLoaiBoPhan, string tenLoaiBoPhan, bool quyenLapThe)
+        bool quyenNhanSach;
+        public bool QuyenNhanSach { get => quyenNhanSach; set => quyenNhanSach = value; }
+
+        public DTO_LoaiBoPhan(string maLoaiBoPhan, string tenLoaiBoPhan, bool quyenLapThe, bool quyenNhanSach)
         {
             this.maLoaiBoPhan = maLoaiBoPhan;
             this.tenLoaiBoPhan = tenLoaiBoPhan;
             this.quyenLapThe = quyenLapThe;
-
+            this.quyenNhanSach = quyenNhanSach;
         }
     }
 }

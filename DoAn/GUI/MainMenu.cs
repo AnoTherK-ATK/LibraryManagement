@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoAn.GUI.YeuCau1;
 using DoAn.GUI.YeuCau2;
+using DoAn.GUI.YeuCau3;
 
 namespace DoAn
 {
@@ -59,6 +60,11 @@ namespace DoAn
         private void DelDocGiaBtn_Click(object sender, EventArgs e)
         {
             new GUI_XoaTheDocGia().Show();
+        }
+
+        private void TiepNhanSachMoiBtn_Click(object sender, EventArgs e)
+        {
+            new YeuCau3().Show();
         }
     }
 }

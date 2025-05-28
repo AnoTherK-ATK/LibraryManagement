@@ -19,6 +19,8 @@ namespace DoAn.GUI.YeuCau2
         private BUS_LoaiDocGia busLoaiDocGia = new BUS_LoaiDocGia();
         private BUS_ThamSo busThamSo = new BUS_ThamSo();
         private BUS_TheDocGia busTheDocGia = new BUS_TheDocGia();
+        private bool check_Open = false; 
+
         public YeuCau2()
         {
             InitializeComponent();
@@ -41,8 +43,9 @@ namespace DoAn.GUI.YeuCau2
             var sortedList = listMaNhanVien
             .OrderBy(ma => int.Parse(ma.Substring(2))) 
             .ToList();
-
+            MaNhanVienCombo.DataSource = null;
             MaNhanVienCombo.DataSource = sortedList;
+            MaNhanVienCombo.SelectedIndex = -1; 
         }
 
         private void HienThiDanhSachMaLoaiDocGia()
@@ -65,7 +68,14 @@ namespace DoAn.GUI.YeuCau2
 
         private void MaNhanVienCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string maNhanVien = MaNhanVienCombo.SelectedItem.ToString();
+            
+            if (!check_Open || MaNhanVienCombo.SelectedIndex == -1)
+            {
+                check_Open = true;
+                return;
+            }
+            string maNhanVien = MaNhanVienCombo.Text;
+
             DTO_NhanVien nhanVien = busNhanVien.LayThongTinNhanVien(maNhanVien);
             if (nhanVien != null)
             {
@@ -186,6 +196,7 @@ namespace DoAn.GUI.YeuCau2
             NgaySinhSelector.Value = new DateTime(1980, 1, 1);
             EmailTxt.Text = string.Empty;
             LoaiDocGiaCombo.SelectedIndex = -1;
+            MaNhanVienCombo.SelectedIndex = -1;
             HienThiMaTheDocGiaMoi();
         }
 

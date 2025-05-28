@@ -201,7 +201,7 @@ namespace DoAn.DAL
                 (string.IsNullOrEmpty(maNhanVien) || s.MaNhanVien.Contains(maNhanVien)) &&
                 (string.IsNullOrEmpty(maTheLoai) || s.MaTheLoai.Contains(maTheLoai)) &&
                 (!ngayNhapTu.HasValue || DateCompare_ddMMyyyy(s.ngayNhap, ngayNhapTu.Value) >= 0) &&
-                (!ngayNhapDen.HasValue || DateCompare_ddMMyyyy(s.ngayNhap, ngayNhapTu.Value) <= 0) &&
+                (!ngayNhapDen.HasValue || DateCompare_ddMMyyyy(s.ngayNhap, ngayNhapDen.Value) <= 0) &&
                 (!triGiaTu.HasValue || s.TriGia >= triGiaTu.Value) &&
                 (!triGiaDen.HasValue || s.TriGia <= triGiaDen.Value)
             ).ToList();

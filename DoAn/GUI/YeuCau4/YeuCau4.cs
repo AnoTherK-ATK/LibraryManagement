@@ -22,7 +22,6 @@ namespace DoAn.GUI.YeuCau4
 
         private bool ngayNhapFromSelected = false;
         private bool ngayNhapToSelected = false;
-        private bool namXuatBanSelected = false;
         public YeuCau4()
         {
             InitializeComponent();
@@ -41,9 +40,7 @@ namespace DoAn.GUI.YeuCau4
         {
             ngayNhapFromSelected = false;
             ngayNhapToSelected = false;
-            namXuatBanSelected = false;
-            NamXuatBanSelector.Format = DateTimePickerFormat.Custom;
-            NamXuatBanSelector.CustomFormat = " ";
+         
             NgayNhapFromSelector.Format = DateTimePickerFormat.Custom;
             NgayNhapFromSelector.CustomFormat = " ";
             NgayNhapToSelector.Format = DateTimePickerFormat.Custom;
@@ -112,7 +109,7 @@ namespace DoAn.GUI.YeuCau4
             TenSachTxt.Clear();
             TacGiaTxt.Clear();
             NhaXuatBanTxt.Clear();
-            NamXuatBanSelector.Value = DateTime.Now;
+            NamXuatBanTxt.Text = "";
             NgayNhapFromSelector.Value = DateTime.Now;
             NgayNhapToSelector.Value = DateTime.Now;
             TriGiaTuTxt.Clear();
@@ -128,12 +125,11 @@ namespace DoAn.GUI.YeuCau4
             string maSach = MaSachTxt.Text.Trim();
             string tenSach = TenSachTxt.Text.Trim();
             string tacGia = TacGiaTxt.Text.Trim();
-            string nhaXuatBan = NhaXuatBanTxt.Text.Trim(); 
-            string namXuatBan = NamXuatBanSelector.CustomFormat == " " ? null : NamXuatBanSelector.Value.Year.ToString();
+            string nhaXuatBan = NhaXuatBanTxt.Text.Trim();
+            string namXuatBan = NamXuatBanTxt.Text.Trim();
             string maNhanVien = TenNhanVienCombo.SelectedValue?.ToString() ?? "";
             DateTime? ngayNhapTu = ngayNhapFromSelected ? (DateTime?)NgayNhapFromSelector.Value : null;
             DateTime? ngayNhapDen = ngayNhapToSelected ? (DateTime?)NgayNhapToSelector.Value : null;
-
             int? triGiaTu = string.IsNullOrEmpty(TriGiaTuTxt.Text) ? (int?)null : int.Parse(TriGiaTuTxt.Text);
             int? triGiaDen = string.IsNullOrEmpty(TriGiaDenTxt.Text) ? (int?)null : int.Parse(TriGiaDenTxt.Text);
             List<DTO_Sach> filteredList = BUS_Sach.TimKiemSach(
@@ -170,11 +166,7 @@ namespace DoAn.GUI.YeuCau4
 
         private void NamXuatBanSelector_ValueChanged(object sender, EventArgs e)
         {
-            if (!namXuatBanSelected)
-            {
-                NamXuatBanSelector.CustomFormat = "yyyy";
-                namXuatBanSelected = true;
-            }
+           
           
         }
 
@@ -198,6 +190,11 @@ namespace DoAn.GUI.YeuCau4
                 ngayNhapToSelected = true;
             }
            
-        }    
+        }
+
+        private void NamXuatBanTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

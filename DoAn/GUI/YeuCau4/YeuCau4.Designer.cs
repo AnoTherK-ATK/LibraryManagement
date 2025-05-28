@@ -55,11 +55,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NgayNhapFromSelector = new System.Windows.Forms.DateTimePicker();
-            this.NamXuatBanSelector = new System.Windows.Forms.DateTimePicker();
             this.NgayNhapToSelector = new System.Windows.Forms.DateTimePicker();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.ResetBtn = new System.Windows.Forms.Button();
+            this.NamXuatBanTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -283,17 +283,6 @@
             this.NgayNhapFromSelector.TabIndex = 93;
             this.NgayNhapFromSelector.ValueChanged += new System.EventHandler(this.NgayNhapFromSelector_ValueChanged);
             // 
-            // NamXuatBanSelector
-            // 
-            this.NamXuatBanSelector.CustomFormat = "yyyy";
-            this.NamXuatBanSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NamXuatBanSelector.Location = new System.Drawing.Point(699, 51);
-            this.NamXuatBanSelector.Name = "NamXuatBanSelector";
-            this.NamXuatBanSelector.ShowUpDown = true;
-            this.NamXuatBanSelector.Size = new System.Drawing.Size(103, 34);
-            this.NamXuatBanSelector.TabIndex = 94;
-            this.NamXuatBanSelector.ValueChanged += new System.EventHandler(this.NamXuatBanSelector_ValueChanged);
-            // 
             // NgayNhapToSelector
             // 
             this.NgayNhapToSelector.CustomFormat = "dd/MM/yyyy";
@@ -334,16 +323,24 @@
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
+            // NamXuatBanTxt
+            // 
+            this.NamXuatBanTxt.Location = new System.Drawing.Point(706, 51);
+            this.NamXuatBanTxt.Name = "NamXuatBanTxt";
+            this.NamXuatBanTxt.Size = new System.Drawing.Size(123, 34);
+            this.NamXuatBanTxt.TabIndex = 99;
+            this.NamXuatBanTxt.TextChanged += new System.EventHandler(this.NamXuatBanTxt_TextChanged);
+            // 
             // YeuCau4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 650);
+            this.Controls.Add(this.NamXuatBanTxt);
             this.Controls.Add(this.ResetBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.NgayNhapToSelector);
-            this.Controls.Add(this.NamXuatBanSelector);
             this.Controls.Add(this.NgayNhapFromSelector);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TenNhanVienCombo);
@@ -407,10 +404,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker NgayNhapFromSelector;
-        private System.Windows.Forms.DateTimePicker NamXuatBanSelector;
         private System.Windows.Forms.DateTimePicker NgayNhapToSelector;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.TextBox NamXuatBanTxt;
     }
 }

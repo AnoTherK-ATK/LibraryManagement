@@ -58,7 +58,6 @@ namespace DoAn.GUI.YeuCau2
                 MaDGReturn = row.Cells["MaDocGia"].Value.ToString();
                 MessageBox.Show("Đã sao chép mã độc giả vào bộ nhớ tạm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
-                this.Close();
             }
 
         }

@@ -41,7 +41,7 @@
             this.MaNhanVienTxt.Location = new System.Drawing.Point(23, 55);
             this.MaNhanVienTxt.Name = "MaNhanVienTxt";
             this.MaNhanVienTxt.ReadOnly = true;
-            this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 29);
+            this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 34);
             this.MaNhanVienTxt.TabIndex = 10;
             // 
             // label1
@@ -49,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 21);
+            this.label1.Size = new System.Drawing.Size(129, 28);
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã nhân viên";
             // 
@@ -57,7 +57,7 @@
             // 
             this.TimNhanVienBtn.Location = new System.Drawing.Point(212, 54);
             this.TimNhanVienBtn.Name = "TimNhanVienBtn";
-            this.TimNhanVienBtn.Size = new System.Drawing.Size(93, 29);
+            this.TimNhanVienBtn.Size = new System.Drawing.Size(102, 38);
             this.TimNhanVienBtn.TabIndex = 44;
             this.TimNhanVienBtn.Text = "Tìm";
             this.TimNhanVienBtn.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // DeleteBtb
             // 
-            this.DeleteBtb.Location = new System.Drawing.Point(423, 44);
+            this.DeleteBtb.Location = new System.Drawing.Point(320, 55);
             this.DeleteBtb.Name = "DeleteBtb";
-            this.DeleteBtb.Size = new System.Drawing.Size(156, 40);
+            this.DeleteBtb.Size = new System.Drawing.Size(154, 37);
             this.DeleteBtb.TabIndex = 45;
             this.DeleteBtb.Text = "Xoá nhân viên";
             this.DeleteBtb.UseVisualStyleBackColor = true;
@@ -75,18 +75,18 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(461, 119);
+            this.ExitBtn.Location = new System.Drawing.Point(480, 54);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(118, 29);
+            this.ExitBtn.Size = new System.Drawing.Size(117, 38);
             this.ExitBtn.TabIndex = 46;
             this.ExitBtn.Text = "Thoát";
             this.ExitBtn.UseVisualStyleBackColor = true;
             // 
             // GUI_XoaNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 164);
+            this.ClientSize = new System.Drawing.Size(642, 158);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.DeleteBtb);
             this.Controls.Add(this.TimNhanVienBtn);

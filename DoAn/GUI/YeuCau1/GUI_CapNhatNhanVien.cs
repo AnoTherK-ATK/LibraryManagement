@@ -121,11 +121,44 @@ namespace DoAn.GUI.YeuCau1
             {
                 MessageBox.Show("Cập nhật nhân viên thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            MaNhanVienTxt.Text = "";
+            TenNhanVienTxt.Text = "";
+            SDTTxt.Text = "";
+            DiaChiTxt.Text = "";
+            NgaySinhSelector.Value = new DateTime(1980, 1, 1); // Reset to a default date
+            BangCapCombo.SelectedIndex = -1;
+            BoPhanCombo.SelectedIndex = -1;
+            ChucVuCombo.SelectedIndex = -1;
+
+            MaNhanVienTxt.ReadOnly = true;
+            TenNhanVienTxt.ReadOnly = true;
+            SDTTxt.ReadOnly = true;
+            DiaChiTxt.ReadOnly = true;
+            NgaySinhSelector.Enabled = false;
+            BangCapCombo.Enabled = false;
+            BoPhanCombo.Enabled = false;
+            ChucVuCombo.Enabled = false;
+
+
         }
 
         private void MaNhanVienTxt_TextChanged(object sender, EventArgs e)
         {
+            TenNhanVienTxt.ReadOnly = false;
+            SDTTxt.ReadOnly = false;
+            DiaChiTxt.ReadOnly = false;
+            NgaySinhSelector.Enabled = true;
+            BangCapCombo.Enabled = true;
+            BoPhanCombo.Enabled = true;
+            ChucVuCombo.Enabled = true;
 
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

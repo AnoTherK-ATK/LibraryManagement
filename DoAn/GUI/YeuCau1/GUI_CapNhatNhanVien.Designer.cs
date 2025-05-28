@@ -57,6 +57,7 @@
             this.ExitBtn.TabIndex = 42;
             this.ExitBtn.Text = "Thoát";
             this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // CapNhatNhanVienBtn
             // 
@@ -73,8 +74,8 @@
             this.SDTTxt.Location = new System.Drawing.Point(33, 380);
             this.SDTTxt.MaxLength = 10;
             this.SDTTxt.Name = "SDTTxt";
+            this.SDTTxt.ReadOnly = true;
             this.SDTTxt.Size = new System.Drawing.Size(312, 34);
-
             this.SDTTxt.TabIndex = 37;
             // 
             // ChucVuCombo
@@ -89,11 +90,13 @@
             // 
             this.DiaChiTxt.Location = new System.Drawing.Point(33, 271);
             this.DiaChiTxt.Name = "DiaChiTxt";
+            this.DiaChiTxt.ReadOnly = true;
             this.DiaChiTxt.Size = new System.Drawing.Size(312, 34);
             this.DiaChiTxt.TabIndex = 35;
             // 
             // BoPhanCombo
             // 
+            this.BoPhanCombo.Enabled = false;
             this.BoPhanCombo.FormattingEnabled = true;
             this.BoPhanCombo.Location = new System.Drawing.Point(668, 157);
             this.BoPhanCombo.Name = "BoPhanCombo";
@@ -103,6 +106,7 @@
             // NgaySinhSelector
             // 
             this.NgaySinhSelector.CustomFormat = "dd/MM/yyyy";
+            this.NgaySinhSelector.Enabled = false;
             this.NgaySinhSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgaySinhSelector.Location = new System.Drawing.Point(33, 157);
             this.NgaySinhSelector.Name = "NgaySinhSelector";
@@ -112,6 +116,7 @@
             // 
             // BangCapCombo
             // 
+            this.BangCapCombo.Enabled = false;
             this.BangCapCombo.FormattingEnabled = true;
             this.BangCapCombo.Location = new System.Drawing.Point(668, 52);
             this.BangCapCombo.Name = "BangCapCombo";
@@ -122,6 +127,7 @@
             // 
             this.TenNhanVienTxt.Location = new System.Drawing.Point(340, 52);
             this.TenNhanVienTxt.Name = "TenNhanVienTxt";
+            this.TenNhanVienTxt.ReadOnly = true;
             this.TenNhanVienTxt.Size = new System.Drawing.Size(222, 34);
             this.TenNhanVienTxt.TabIndex = 31;
             // 
@@ -132,7 +138,6 @@
             this.MaNhanVienTxt.Name = "MaNhanVienTxt";
             this.MaNhanVienTxt.ReadOnly = true;
             this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 34);
-
             this.MaNhanVienTxt.TabIndex = 30;
             this.MaNhanVienTxt.TextChanged += new System.EventHandler(this.MaNhanVienTxt_TextChanged);
             this.MaNhanVienTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaNhanVienTxt_KeyDown);

@@ -258,7 +258,7 @@
             this.NgayHetHanSelector.CustomFormat = "dd/MM/yyyy";
             this.NgayHetHanSelector.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayHetHanSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayHetHanSelector.Location = new System.Drawing.Point(439, 178);
+            this.NgayHetHanSelector.Location = new System.Drawing.Point(439, 176);
             this.NgayHetHanSelector.Name = "NgayHetHanSelector";
             this.NgayHetHanSelector.Size = new System.Drawing.Size(140, 34);
             this.NgayHetHanSelector.TabIndex = 58;
@@ -269,7 +269,7 @@
             this.NgayLapTheSelector.CustomFormat = "dd/MM/yyyy";
             this.NgayLapTheSelector.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayLapTheSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayLapTheSelector.Location = new System.Drawing.Point(206, 178);
+            this.NgayLapTheSelector.Location = new System.Drawing.Point(206, 176);
             this.NgayLapTheSelector.Name = "NgayLapTheSelector";
             this.NgayLapTheSelector.Size = new System.Drawing.Size(142, 34);
             this.NgayLapTheSelector.TabIndex = 59;

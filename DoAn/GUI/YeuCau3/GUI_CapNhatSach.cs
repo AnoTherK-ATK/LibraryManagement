@@ -19,6 +19,9 @@ namespace DoAn.GUI.YeuCau3
         BUS_Sach BUS_Sach = new BUS_Sach();
         BUS_ThamSo BUS_ThamSo = new BUS_ThamSo();
         BUS_TheLoai BUS_TheLoai = new BUS_TheLoai();
+        private bool ngayNhapSelected = false;
+        private bool namXuatBanSelected = false;
+
         public GUI_CapNhatSach()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace DoAn.GUI.YeuCau3
             HienThiDanhSachMaNhanVien();
             HienThiDanhSachTheLoai();
             HienThiNamXuatBan();
+            ResetDate();
         }
 
         private void HienThiNamXuatBan()
@@ -65,6 +69,15 @@ namespace DoAn.GUI.YeuCau3
             TheLoaiCombo.DataSource = listTheLoai;
             TheLoaiCombo.DisplayMember = "TenTheLoai";
             TheLoaiCombo.ValueMember = "MaTheLoai";
+        }
+
+        void ResetDate()
+        {
+           NgayNhapSelector.Format = DateTimePickerFormat.Custom;
+           NgayNhapSelector.CustomFormat = "";
+
+           NamXuatBanSelector.Format = DateTimePickerFormat.Custom;
+           NamXuatBanSelector.CustomFormat = "";
         }
 
         private void MaNhanVienCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -196,5 +209,12 @@ namespace DoAn.GUI.YeuCau3
                 }
             }
         }
+
+        private void NgayNhapSelector_ValueChanged(object sender, EventArgs e)
+        {
+
+            NgayNhapSelector.CustomFormat = "dd/MM/yyyy";
+        }
+           
     }
 }

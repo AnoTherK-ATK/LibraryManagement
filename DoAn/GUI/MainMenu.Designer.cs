@@ -40,7 +40,9 @@
             this.DelDocGiaBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TiepNhanSachMoiBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TimSachBtn = new System.Windows.Forms.Button();
+            this.CapNhatSachBtn = new System.Windows.Forms.Button();
+            this.XoaSachBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // YC1btn
@@ -163,22 +165,44 @@
             this.TiepNhanSachMoiBtn.UseVisualStyleBackColor = true;
             this.TiepNhanSachMoiBtn.Click += new System.EventHandler(this.TiepNhanSachMoiBtn_Click);
             // 
-            // button1
+            // TimSachBtn
             // 
-            this.button1.Location = new System.Drawing.Point(627, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 30);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Tìm sách";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.TimSachBtn.Location = new System.Drawing.Point(627, 92);
+            this.TimSachBtn.Name = "TimSachBtn";
+            this.TimSachBtn.Size = new System.Drawing.Size(162, 30);
+            this.TimSachBtn.TabIndex = 29;
+            this.TimSachBtn.Text = "Tìm sách";
+            this.TimSachBtn.UseVisualStyleBackColor = true;
+            this.TimSachBtn.Click += new System.EventHandler(this.TimSachBtn_Click);
+            // 
+            // CapNhatSachBtn
+            // 
+            this.CapNhatSachBtn.Location = new System.Drawing.Point(627, 128);
+            this.CapNhatSachBtn.Name = "CapNhatSachBtn";
+            this.CapNhatSachBtn.Size = new System.Drawing.Size(162, 30);
+            this.CapNhatSachBtn.TabIndex = 30;
+            this.CapNhatSachBtn.Text = "Cập nhật sách";
+            this.CapNhatSachBtn.UseVisualStyleBackColor = true;
+            this.CapNhatSachBtn.Click += new System.EventHandler(this.CapNhatSachBtn_Click);
+            // 
+            // XoaSachBtn
+            // 
+            this.XoaSachBtn.Location = new System.Drawing.Point(627, 164);
+            this.XoaSachBtn.Name = "XoaSachBtn";
+            this.XoaSachBtn.Size = new System.Drawing.Size(162, 30);
+            this.XoaSachBtn.TabIndex = 31;
+            this.XoaSachBtn.Text = "Xoá sách";
+            this.XoaSachBtn.UseVisualStyleBackColor = true;
+            this.XoaSachBtn.Click += new System.EventHandler(this.XoaSachBtn_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 313);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.XoaSachBtn);
+            this.Controls.Add(this.CapNhatSachBtn);
+            this.Controls.Add(this.TimSachBtn);
             this.Controls.Add(this.TiepNhanSachMoiBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DelDocGiaBtn);
@@ -214,7 +238,9 @@
         private System.Windows.Forms.Button DelDocGiaBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button TiepNhanSachMoiBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button TimSachBtn;
+        private System.Windows.Forms.Button CapNhatSachBtn;
+        private System.Windows.Forms.Button XoaSachBtn;
     }
 }
 

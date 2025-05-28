@@ -29,16 +29,36 @@ namespace DoAn.GUI.YeuCau3
             HienThiDanhSachMaNhanVien();
             HienThiDanhSachTheLoai();
             HienThiMaSachMoi();
+            HienThiNamXuatBan();
+        }
+
+        private void HienThiNamXuatBan()
+        {
+            int namXuatBan = NamXuatBanSelector.Value.Year;
+            int thoiGianNhapSachToiDa = BUS_ThamSo.LayThoiGianNhapSachToiDa();
+            if (DateTime.Now.Year - namXuatBan > thoiGianNhapSachToiDa)
+            {
+                MessageBox.Show($"Sách có năm xuất bản quá cũ. Vui lòng nhập sách có năm xuất bản trong vòng {thoiGianNhapSachToiDa} năm qua.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SachQuaHanNhapTxt.Text = "Có";
+            }
+            else
+            {
+                SachQuaHanNhapTxt.Text = "Không";
+            }
         }
 
         private void HienThiDanhSachMaNhanVien()
         {
+            MaNhanVienCombo.SelectedIndexChanged -= MaNhanVienCombo_SelectedIndexChanged;
             List<string> listMaNhanVien = BUS_NhanVien.LayTatCaMaNhanVien();
             var sortedList = listMaNhanVien
             .OrderBy(ma => int.Parse(ma.Substring(2)))
             .ToList();
 
+            MaNhanVienCombo.DataSource = null;
             MaNhanVienCombo.DataSource = sortedList;
+            MaNhanVienCombo.SelectedIndex = -1;
+            MaNhanVienCombo.SelectedIndexChanged += MaNhanVienCombo_SelectedIndexChanged;
         }
 
         private void HienThiDanhSachTheLoai()
@@ -66,7 +86,7 @@ namespace DoAn.GUI.YeuCau3
 
         private void MaNhanVienCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string maNhanVien = MaNhanVienCombo.SelectedItem.ToString();
+            string maNhanVien = MaNhanVienCombo.Text;
             DTO_NhanVien nhanVien = BUS_NhanVien.LayThongTinNhanVien(maNhanVien);
             if (nhanVien != null)
             {
@@ -75,10 +95,13 @@ namespace DoAn.GUI.YeuCau3
                 QuyeNhanSachTxt.Text = BUS_LoaiBoPhan.LayQuyenNhanSach(nhanVien.MaBoPhanNhanVien) ? "Có" : "Không";
                 if(QuyeNhanSachTxt.Text == "Không")
                 {
-                    this.BeginInvoke(new Action(() =>
+                    if(maNhanVien != "")
                     {
-                        MessageBox.Show("Nhân viên hiện tại không có quyền nhận sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }));
+                        this.BeginInvoke(new Action(() =>
+                        {
+                            MessageBox.Show("Nhân viên hiện tại không có quyền nhận sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }));
+                    }
                     TenSachTxt.ReadOnly = true;
                     TacGiaTxt.ReadOnly = true;
                     NamXuatBanSelector.Enabled = false;

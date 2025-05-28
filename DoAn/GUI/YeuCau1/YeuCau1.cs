@@ -107,7 +107,7 @@ namespace DoAn
             {
                 string maNVCuoi = listNhanVien.Last().MaNhanVien;
                 int soCuoi = int.Parse(maNVCuoi.Substring(2)) + 1;
-                MaNhanVienTxt.Text = "NV" + soCuoi.ToString("D3");
+                MaNhanVienTxt.Text = "NV" + soCuoi.ToString("D4");
             }
         }
 

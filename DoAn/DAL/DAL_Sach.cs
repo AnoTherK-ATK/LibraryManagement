@@ -39,8 +39,8 @@ namespace DoAn.DAL
 
         internal bool ThemSach(DTO_Sach sach)
         {
-            string query = "INSERT INTO SACH (MaSach, TenSach, MaTheLoai, TacGia, NamXuatBan, NhaXuatBan, NgayNhap, TriGia, MaNhanVien) " +
-                           "VALUES (@MaSach, @TenSach, @MaTheLoai, @TacGia, @NamXuatBan, @NhaXuatBan, @NgayNhap @TriGia, @MaNhanVien)";
+            string query = "INSERT INTO SACH (MaSach, TenSach, MaTheLoai, TacGia, NamXuatBan, NhaXuatBan, NgayNhap, TriGia, MaNhanVien, TinhTrang) " +
+                           "VALUES (@MaSach, @TenSach, @MaTheLoai, @TacGia, @NamXuatBan, @NhaXuatBan, @NgayNhap, @TriGia, @MaNhanVien, 'Chưa mượn')";
             try
             {
                 using (var conn = helper.GetConnection())
@@ -54,7 +54,7 @@ namespace DoAn.DAL
                         cmd.Parameters.AddWithValue("@TacGia", sach.TacGia);
                         cmd.Parameters.AddWithValue("@NamXuatBan", sach.NamXuatBan);
                         cmd.Parameters.AddWithValue("@NhaXuatBan", sach.NhaXuatBan);
-                        cmd.Parameters.AddWithValue("@NgayNhap", sach.ngayNhapStr);
+                        cmd.Parameters.AddWithValue("@NgayNhap", sach.ngayNhap);
                         cmd.Parameters.AddWithValue("@TriGia", sach.TriGia);
                         cmd.Parameters.AddWithValue("@MaNhanVien", sach.MaNhanVien);
                         return cmd.ExecuteNonQuery() > 0;
@@ -165,6 +165,48 @@ namespace DoAn.DAL
             {
                 throw new Exception("Lỗi khi xóa sách: " + ex.Message);
             }
+        }
+
+        private int DateCompare_ddMMyyyy(DateTime a, DateTime b)
+        {
+            if (a.Year != b.Year)
+                return a.Year.CompareTo(b.Year);
+            if (a.Month != b.Month)
+                return a.Month.CompareTo(b.Month);
+            return a.Day.CompareTo(b.Day);
+        }
+
+        internal List<DTO_Sach> TimKiemSach(
+            string maSach,
+            string tenSach,
+            string tacGia,
+            string namXuatBan,
+            string nhaXuatBan,
+            string maNhanVien,
+            string maTheLoai,
+            DateTime? ngayNhapTu,
+            DateTime? ngayNhapDen,
+            int? triGiaTu,
+            int? triGiaDen
+        )
+        {
+            List<DTO_Sach> danhSachSach = LayDanhSachSach();
+
+            var ketQua = danhSachSach.Where(s =>
+                (string.IsNullOrEmpty(maSach) || s.MaSach.Contains(maSach)) &&
+                (string.IsNullOrEmpty(tenSach) || s.TenSach.Contains(tenSach)) &&
+                (string.IsNullOrEmpty(tacGia) || s.TacGia.Contains(tacGia)) &&
+                (string.IsNullOrEmpty(namXuatBan) || s.NamXuatBan.Contains(namXuatBan)) &&
+                (string.IsNullOrEmpty(nhaXuatBan) || s.NhaXuatBan.Contains(nhaXuatBan)) &&
+                (string.IsNullOrEmpty(maNhanVien) || s.MaNhanVien.Contains(maNhanVien)) &&
+                (string.IsNullOrEmpty(maTheLoai) || s.MaTheLoai.Contains(maTheLoai)) &&
+                (!ngayNhapTu.HasValue || DateCompare_ddMMyyyy(s.ngayNhap, ngayNhapTu.Value) >= 0) &&
+                (!ngayNhapDen.HasValue || DateCompare_ddMMyyyy(s.ngayNhap, ngayNhapTu.Value) <= 0) &&
+                (!triGiaTu.HasValue || s.TriGia >= triGiaTu.Value) &&
+                (!triGiaDen.HasValue || s.TriGia <= triGiaDen.Value)
+            ).ToList();
+
+            return ketQua;
         }
     }
 }

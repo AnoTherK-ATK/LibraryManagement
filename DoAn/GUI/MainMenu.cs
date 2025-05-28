@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DoAn.GUI.YeuCau1;
 using DoAn.GUI.YeuCau2;
 using DoAn.GUI.YeuCau3;
+using DoAn.GUI.YeuCau4;
 
 namespace DoAn
 {
@@ -67,9 +68,19 @@ namespace DoAn
             new YeuCau3().Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TimSachBtn_Click(object sender, EventArgs e)
+        {
+            new YeuCau4().Show();
+        }
+
+        private void CapNhatSachBtn_Click(object sender, EventArgs e)
         {
             new GUI_CapNhatSach().Show();
+        }
+
+        private void XoaSachBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_XoaSach().Show();
         }
     }
 }

@@ -82,5 +82,34 @@ namespace DoAn.BUS
             }
             return DAL_Sach.XoaSach(maSach);
         }
+
+        internal List<DTO_Sach> TimKiemSach(
+            string maSach,
+            string tenSach,
+            string tacGia,
+            string namXuatBan,
+            string nhaXuatBan,
+            string maNhanVien,
+            string maTheLoai,
+            DateTime? ngayNhapTu,
+            DateTime? ngayNhapDen,
+            int? triGiaTu,
+            int? triGiaDen
+        )
+        {
+            return DAL_Sach.TimKiemSach(
+                maSach,
+                tenSach,
+                tacGia,
+                namXuatBan,
+                nhaXuatBan,
+                maNhanVien,
+                maTheLoai,
+                ngayNhapTu,
+                ngayNhapDen,
+                triGiaTu,
+                triGiaDen
+            );
+        }
     }
 }

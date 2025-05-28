@@ -118,6 +118,21 @@ namespace DoAn.BUS
             }
             return DAL_NhanVien.XoaNhanVien(maNV);
         }
+
+        internal string LayTenNhanVien(string maNV)
+        {
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(maNV))
+            {
+                throw new Exception("Mã nhân viên không được để trống");
+            }
+            DTO_NhanVien nhanVien = DAL_NhanVien.LayThongTinNhanVien(maNV);
+            if (nhanVien == null)
+            {
+                throw new Exception("Không tìm thấy thông tin nhân viên với mã: " + maNV);
+            }
+            return nhanVien.TenNhanVien;
+        }
     }
 
 }

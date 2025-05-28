@@ -34,12 +34,53 @@ namespace DoAn.BUS
             }
 
             int ThoiGianNhapSachToiDa = DAL_ThamSo.LayThoiGianNhapSachToiDa();
-            if(DateTime.Now.Year - int.Parse(sach.NamXuatBan) > ThoiGianNhapSachToiDa)
+            if (DateTime.Now.Year - int.Parse(sach.NamXuatBan) > ThoiGianNhapSachToiDa)
             {
                 throw new Exception("Chỉ nhận các sách xuất bản trong vòng " + ThoiGianNhapSachToiDa + " năm");
             }
 
             return DAL_Sach.ThemSach(sach);
+        }
+
+        public DTO_Sach LayThongTinSach(string maSach)
+        {
+            if (string.IsNullOrWhiteSpace(maSach))
+            {
+                throw new Exception("Mã sách không được để trống");
+            }
+            return DAL_Sach.LayThongTinSach(maSach);
+        }
+
+        public bool CapNhatSach(DTO_Sach sach)
+        {
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(sach.MaSach) ||
+                string.IsNullOrWhiteSpace(sach.TenSach) ||
+                string.IsNullOrWhiteSpace(sach.MaTheLoai) ||
+                string.IsNullOrWhiteSpace(sach.TacGia) ||
+                string.IsNullOrWhiteSpace(sach.NamXuatBan) ||
+                string.IsNullOrWhiteSpace(sach.NhaXuatBan) ||
+                string.IsNullOrWhiteSpace(sach.ngayNhapStr) ||
+                sach.TriGia <= 0 ||
+                string.IsNullOrWhiteSpace(sach.MaNhanVien))
+            {
+                throw new Exception("Các trường không được để trống và Trị giá phải lớn hơn 0");
+            }
+            int ThoiGianNhapSachToiDa = DAL_ThamSo.LayThoiGianNhapSachToiDa();
+            if (DateTime.Now.Year - int.Parse(sach.NamXuatBan) > ThoiGianNhapSachToiDa)
+            {
+                throw new Exception("Chỉ nhận các sách xuất bản trong vòng " + ThoiGianNhapSachToiDa + " năm");
+            }
+            return DAL_Sach.CapNhatSach(sach);
+        }
+
+        public bool XoaSach(string maSach)
+        {
+            if (string.IsNullOrWhiteSpace(maSach))
+            {
+                throw new Exception("Mã sách không được để trống");
+            }
+            return DAL_Sach.XoaSach(maSach);
         }
     }
 }

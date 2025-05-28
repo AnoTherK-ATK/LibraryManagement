@@ -59,7 +59,7 @@ namespace DoAn.DTO
             string ngayNhapStr, 
             int triGia, 
             string maNhanVien,
-            string tinhTrang)
+            string tinhTrang = "Chưa mượn")
         {
             this.maSach = maSach;
             this.tenSach = tenSach;

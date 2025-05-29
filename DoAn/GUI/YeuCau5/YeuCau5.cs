@@ -17,8 +17,8 @@ namespace DoAn.GUI.YeuCau5
         BUS_PhieuMuonSach BUS_PhieuMuonSach = new BUS_PhieuMuonSach();
         BUS_TheDocGia BUS_TheDocGia = new BUS_TheDocGia();
         BUS_ThamSo BUS_ThamSo = new BUS_ThamSo();
-
-
+        Form1 form1 = new Form1();
+        
         public YeuCau5()
         {
             InitializeComponent();
@@ -28,6 +28,12 @@ namespace DoAn.GUI.YeuCau5
             HienThiMaPhieuMuonMoi();
             HienThiDanhSachTenDocGia();
             HienThiHanTraSach();
+            NgaySinhSelector.Value = DateTime.Today;
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form1);
+            form1.Show();
         }
         private void HienThiMaPhieuMuonMoi()
         {
@@ -39,6 +45,7 @@ namespace DoAn.GUI.YeuCau5
             else
             {
                 string maPMCuoi = listPhieuMuonSach.Last().MaPhieuMuonSach;
+                //MessageBox.Show(maPMCuoi);
                 int soCuoi = int.Parse(maPMCuoi.Substring(2)) + 1;
                 MaPhieuMuonTxt.Text = "S" + soCuoi.ToString("D4");
             }
@@ -61,7 +68,15 @@ namespace DoAn.GUI.YeuCau5
 
         }
 
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

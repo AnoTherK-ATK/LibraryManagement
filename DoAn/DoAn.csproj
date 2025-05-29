@@ -83,10 +83,12 @@
     <Compile Include="BUS\BUS_LoaiDocGia.cs" />
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_LoaiChucVu.cs" />
+    <Compile Include="BUS\BUS_PhieuMuonSach.cs" />
     <Compile Include="BUS\BUS_Sach.cs" />
     <Compile Include="BUS\BUS_ThamSo.cs" />
     <Compile Include="BUS\BUS_TheDocGia.cs" />
     <Compile Include="BUS\BUS_TheLoai.cs" />
+    <Compile Include="DAL\DAL_PhieuMuonSach.cs" />
     <Compile Include="DAL\DAL_Sach.cs" />
     <Compile Include="DAL\DAL_ThamSo.cs" />
     <Compile Include="DAL\DAL_TheDocGia.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="DAL\DAL_TheLoai.cs" />
     <Compile Include="DAL\DataHelper.cs" />
     <Compile Include="DAL\Secret.cs" />
+    <Compile Include="DTO\DTO_PhieuMuonSach.cs" />
     <Compile Include="DTO\DTO_Sach.cs" />
     <Compile Include="DTO\DTO_TheDocGia.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
@@ -178,6 +181,12 @@
     <Compile Include="GUI\YeuCau4\YeuCau4.Designer.cs">
       <DependentUpon>YeuCau4.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\YeuCau5\YeuCau5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau5\YeuCau5.Designer.cs">
+      <DependentUpon>YeuCau5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\YeuCau1\YeuCau1.cs">
@@ -221,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau4\YeuCau4.resx">
       <DependentUpon>YeuCau4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau5\YeuCau5.resx">
+      <DependentUpon>YeuCau5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

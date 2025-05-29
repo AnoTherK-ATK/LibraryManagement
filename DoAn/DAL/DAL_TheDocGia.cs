@@ -101,6 +101,19 @@ namespace DoAn.DAL
             return listMaDocGia;
         }
 
+        internal List<string> LayTatCaTenDocGia()
+        {
+            string query = "SELECT HoTen FROM THEDOCGIA WHERE CURRENT_DATE() < NgayHetHan";
+            DataTable dtTenDocGia = helper.ExecuteQuery(query);
+            List<string> listTenDocGia = new List<string>();
+            foreach (DataRow dr in dtTenDocGia.Rows)
+            {
+                listTenDocGia.Add(dr["HoTen"].ToString());
+            }
+            return listTenDocGia;
+        }
+
+        
         // Add the missing declaration and initialization for 'listChucVu'.
         // Assuming 'listChucVu' is a list of DTO_ChucVu objects that can be retrieved from a DAL_ChucVu class.
 

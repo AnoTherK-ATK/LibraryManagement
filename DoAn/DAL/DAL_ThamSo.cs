@@ -66,5 +66,19 @@ namespace DoAn.DAL
                 throw new InvalidOperationException("No data found for THOIGIANNHAPSACHTOIDA in THAMSO.");
             }
         }
+
+        internal int LayHanMuonSachToiDa()
+        {
+            DataTable dtHamMuonSachToiDa = helper.ExecuteQuery("SELECT HanMuonSachToiDa FROM THAMSO");
+            if (dtHamMuonSachToiDa != null && dtHamMuonSachToiDa.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dtHamMuonSachToiDa.Rows[0]["HanMuonSachToiDa"]);
+            }
+            else
+            {
+                // Return a default value or throw an exception if no data is found
+                throw new InvalidOperationException("No data found for HanMuonSachToiDa in THAMSO.");
+            }
+        }
     }
 }

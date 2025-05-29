@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAn.DTO;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,8 +14,9 @@ namespace DoAn.DAL
         DataHelper helper = new DataHelper();
         internal List<string> LayMaPMDangMuon(List<string> danhSachMaPM)
         {
+            //return danhSachMaPM;
             if (danhSachMaPM == null || danhSachMaPM.Count == 0)
-                return new List<string>(); // Trả về danh sách rỗng nếu input không hợp lệ
+                return new List<string>() ;// Trả về danh sách rỗng nếu input không hợp lệ
             
             // Chuyển danh sách mã PM thành chuỗi cho câu lệnh SQL IN
             string danhSachMaPMText = string.Join("','", danhSachMaPM);
@@ -25,7 +28,41 @@ namespace DoAn.DAL
             {
                 listMaPMDangMuon.Add(dr["MaPhieuMuonSach"].ToString());
             }
+            //List<string> fruits = new List<string> { "Mango", "Pineapple", "Grapes" };
             return listMaPMDangMuon;
+        }
+
+        public int ThemPhieuMuonSach(DTO_ThongTinSachMuon ThongTinSachMuon)
+        {
+            string query = @"
+            INSERT INTO THONGTINSACHMUON (
+                MaPhieuMuonSach,
+                MaSach,
+                TrangThai
+            ) VALUES (
+                @MaPhieuMuonSach,
+                @MaSach,
+                @TrangThai
+            )";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaPhieuMuonSach", ThongTinSachMuon.MaPhieuMuonSach);
+                        cmd.Parameters.AddWithValue("@MaSach", ThongTinSachMuon.MaSach);
+                        cmd.Parameters.AddWithValue("@TrangThai", ThongTinSachMuon.TrangThai);
+                        conn.Open();
+                        return cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi thêm thông tin cho phiếu mượn sách mới: " + ex.Message);
+            }
+
         }
 
     }

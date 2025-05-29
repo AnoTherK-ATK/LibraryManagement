@@ -277,7 +277,6 @@
     <Content Include="DB\createSchema-S1.sql" />
     <Content Include="DB\createSchema-S2.sql" />
     <Content Include="DB\createSchema-S3.sql" />
-    <Content Include="DB\createSchema-S5.sql" />
     <Content Include="DB\generate-nhanvien.sql" />
   </ItemGroup>
   <ItemGroup />

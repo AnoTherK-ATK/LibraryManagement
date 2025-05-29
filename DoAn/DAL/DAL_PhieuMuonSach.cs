@@ -14,7 +14,7 @@ namespace DoAn.DAL
         DataHelper helper = new DataHelper();
         internal List<DTO_PhieuMuonSach> LayDanhSachPhieuMuonSach()
         {
-            DataTable dtPhieuMuonSach = helper.ExecuteQuery("SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia FROM PHIEUMUONSACH");
+            DataTable dtPhieuMuonSach = helper.ExecuteQuery("SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, HanTraSach FROM PHIEUMUONSACH");
 
             List<DTO_PhieuMuonSach> listPhieuMuonSach = new List<DTO_PhieuMuonSach>();
 
@@ -23,7 +23,8 @@ namespace DoAn.DAL
                 DTO_PhieuMuonSach PhieuMuonSachTemp = new DTO_PhieuMuonSach(
                     dr["MaPhieuMuonSach"].ToString(),
                     dr["NgayMuon"].ToString(),
-                    dr["MaDocGia"].ToString()
+                    dr["MaDocGia"].ToString(),
+                    dr["HanTraSach"].ToString()
                 );
                 listPhieuMuonSach.Add(PhieuMuonSachTemp);
             }
@@ -57,6 +58,42 @@ namespace DoAn.DAL
                 listMaPM.Add(dr["MaPhieuMuonSach"].ToString());
             }
             return listMaPM;
+        }
+
+        public int ThemPhieuMuonSach(DTO_PhieuMuonSach phieuMuonSach)
+        {
+            string query = @"
+            INSERT INTO PHIEUMUONSACH (
+                MaPhieuMuonSach,
+                NgayMuon,
+                MaDocGia,
+                HanTraSach
+            ) VALUES (
+                @MaPhieuMuonSach,
+                @NgayMuon,
+                @MaDocGia,
+                @HanTraSach
+            )";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaPhieuMuonSach", phieuMuonSach.MaPhieuMuonSach);
+                        cmd.Parameters.AddWithValue("@NgayMuon", phieuMuonSach.ngayMuon);
+                        cmd.Parameters.AddWithValue("@MaDocGia", phieuMuonSach.MaDocGia);
+                        cmd.Parameters.AddWithValue("@HanTraSach", phieuMuonSach.hanTraSach);
+                        conn.Open();
+                        return cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi thêm phiếu mượn sách mới: " + ex.Message);
+            }
+
         }
 
     }

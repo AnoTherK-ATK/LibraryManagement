@@ -11,6 +11,8 @@ using DoAn.GUI.YeuCau1;
 using DoAn.GUI.YeuCau2;
 using DoAn.GUI.YeuCau3;
 using DoAn.GUI.YeuCau4;
+using DoAn.GUI.YeuCau5;
+
 
 namespace DoAn
 {
@@ -81,6 +83,11 @@ namespace DoAn
         private void XoaSachBtn_Click(object sender, EventArgs e)
         {
             new GUI_XoaSach().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new YeuCau5().Show();
         }
     }
 }

@@ -106,6 +106,27 @@ namespace DoAn.DAL
             return null;
         }
 
+        internal bool CapNhatTinhTrangSach(string maSach)
+        {
+            string query = "UPDATE SACH SET TinhTrang = 'Đã mượn' WHERE MaSach = @MaSach";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    conn.Open();
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaSach", maSach);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật tình trạng sách: " + ex.Message);
+            }
+        }
+
         internal bool CapNhatSach(DTO_Sach sach)
         {
             string query = @"

@@ -18,8 +18,8 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainMenu());
-            Application.Run(new YeuCau5());
+            Application.Run(new MainMenu());
+            //Application.Run(new YeuCau5());
             //Application.Run(new Form1());
         }
     }

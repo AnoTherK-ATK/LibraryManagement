@@ -13,7 +13,22 @@ namespace DoAn.BUS
         DAL_ThongTinSachMuon DAL_ThongTinSachMuon = new DAL_ThongTinSachMuon();
         internal List<string> LayMaPMDangMuon(List<string> danhSachMaPM)
         {
+
             return DAL_ThongTinSachMuon.LayMaPMDangMuon(danhSachMaPM);
+        }
+
+        public bool ThemPhieuMuonSach(DTO_ThongTinSachMuon ThongTinSachMuon)
+        {
+            {
+                // Kiểm tra dữ liệu đầu vào
+                if (string.IsNullOrWhiteSpace(ThongTinSachMuon.MaPhieuMuonSach) ||
+                    string.IsNullOrWhiteSpace(ThongTinSachMuon.MaSach) ||
+                    string.IsNullOrWhiteSpace(ThongTinSachMuon.TrangThai))
+                {
+                    throw new Exception("Các trường không được để trống");
+                }
+                return DAL_ThongTinSachMuon.ThemPhieuMuonSach(ThongTinSachMuon) > 0;
+            }
         }
     }
 

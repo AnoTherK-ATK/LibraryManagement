@@ -20,6 +20,7 @@ namespace DoAn
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainMenu());
             Application.Run(new YeuCau5());
+            //Application.Run(new Form1());
         }
     }
 }

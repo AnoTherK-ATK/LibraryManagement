@@ -18,8 +18,8 @@ namespace DoAn.GUI.YeuCau5
         BUS_ThongTinSachMuon BUS_ThongTinSachMuon = new BUS_ThongTinSachMuon();
         BUS_TheDocGia BUS_TheDocGia = new BUS_TheDocGia();
         BUS_ThamSo BUS_ThamSo = new BUS_ThamSo();
-
-
+        Form1 form1 = new Form1();
+        
         public YeuCau5()
         {
             InitializeComponent();
@@ -29,6 +29,12 @@ namespace DoAn.GUI.YeuCau5
             HienThiMaPhieuMuonMoi();
             HienThiDanhSachTenDocGia();
             HienThiHanTraSach();
+            NgaySinhSelector.Value = DateTime.Today;
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form1);
+            form1.Show();
             HienThiSoSachMuonQuaHan();
         }
         private void HienThiMaPhieuMuonMoi()
@@ -41,6 +47,7 @@ namespace DoAn.GUI.YeuCau5
             else
             {
                 string maPMCuoi = listPhieuMuonSach.Last().MaPhieuMuonSach;
+                //MessageBox.Show(maPMCuoi);
                 int soCuoi = int.Parse(maPMCuoi.Substring(2)) + 1;
                 MaPhieuMuonTxt.Text = "S" + soCuoi.ToString("D4");
             }
@@ -108,10 +115,19 @@ namespace DoAn.GUI.YeuCau5
                         MessageBox.Show($"Độc giả {TenDocGia} đang mượn {MaPMDangMuonTheoTG.Count} quyển sách trong {thoiGianMuonSachQuyDinh} ngày, vượt mức {sachMuonToiDaTheoThoiGianQuyDinh} quyển theo quy định!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }));
                 }
+        
 
             }
         }
-    }
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+        }
+      }
     
 
 }

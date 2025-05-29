@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.GUI.YeuCau5;
 
 namespace DoAn.GUI.YeuCau5
 {

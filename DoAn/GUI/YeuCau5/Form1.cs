@@ -76,12 +76,14 @@ namespace DoAn.GUI.YeuCau5
             dataGridView1.Columns["TheLoai"].Width = 100;
             dataGridView1.Columns["TacGia"].Width = 150;
             dataGridView1.Columns["TinhTrang"].Width = 125;
+
         }
         private void addRow(object sender, DataGridViewRowsAddedEventArgs e)
         {
             int rowIndex = e.RowIndex;
             dataGridView1.Rows[rowIndex].Cells["Stt"].Value = rowIndex + 1;
         }
+        
         private void updateRow(object sender, DataGridViewCellEventArgs e)
         {
             String maSach = null;

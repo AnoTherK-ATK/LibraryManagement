@@ -185,7 +185,6 @@
             this.SubmitBtn.TabIndex = 22;
             this.SubmitBtn.Text = "Lập phiếu mượn";
             this.SubmitBtn.UseVisualStyleBackColor = false;
-            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // SearchBtn
             // 

@@ -70,5 +70,18 @@ namespace DoAn.DAL
                 return cmd.ExecuteNonQuery();
             }
         }
+        public object ExecuteScalar(string query, Dictionary<string, object> parameters)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                return cmd.ExecuteScalar();
+            }
+        }
     }
 }

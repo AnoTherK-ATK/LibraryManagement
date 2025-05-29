@@ -15,5 +15,15 @@ namespace DoAn.BUS
         {
             return DAL_PhieuMuonSach.LayDanhSachPhieuMuonSach();
         }
+
+        internal List<string> LayTatCaMaPMTheoDocGia(string maDocGia)
+        {
+            return DAL_PhieuMuonSach.LayTatCaMaPMTheoDocGia(maDocGia);
+        }
+
+        internal List<string> LayTatCaMaPMTheoThoiGianMuonSach(string maDocGia, int ThoiGianMuonSachQuyDinh)
+        {
+            return DAL_PhieuMuonSach.LayTatCaMaPMTheoThoiGianMuonSach(maDocGia, ThoiGianMuonSachQuyDinh);
+        }
     }
 }

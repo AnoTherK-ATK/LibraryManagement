@@ -80,5 +80,33 @@ namespace DoAn.DAL
                 throw new InvalidOperationException("No data found for HanMuonSachToiDa in THAMSO.");
             }
         }
+
+        internal int LayThoiGianMuonSachTheoQuyDinh()
+        {
+            DataTable dtThoiGianMuonSachTheoQuyDinh = helper.ExecuteQuery("SELECT ThoiGianMuonSachTheoQuyDinh FROM THAMSO");
+            if (dtThoiGianMuonSachTheoQuyDinh != null && dtThoiGianMuonSachTheoQuyDinh.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dtThoiGianMuonSachTheoQuyDinh.Rows[0]["ThoiGianMuonSachTheoQuyDinh"]);
+            }
+            else
+            {
+                // Return a default value or throw an exception if no data is found
+                throw new InvalidOperationException("No data found for ThoiGianMuonSachTheoQuyDinh in THAMSO.");
+            }
+        }
+
+        internal int LaySachMuonToiDaTheoThoiGianQuyDinh()
+        {
+            DataTable dtSachMuonToiDaTheoThoiGianQuyDinh = helper.ExecuteQuery("SELECT SachMuonToiDaTheoThoiGianQuyDinh FROM THAMSO");
+            if (dtSachMuonToiDaTheoThoiGianQuyDinh != null && dtSachMuonToiDaTheoThoiGianQuyDinh.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dtSachMuonToiDaTheoThoiGianQuyDinh.Rows[0]["SachMuonToiDaTheoThoiGianQuyDinh"]);
+            }
+            else
+            {
+                // Return a default value or throw an exception if no data is found
+                throw new InvalidOperationException("No data found for SachMuonToiDaTheoThoiGianQuyDinh in THAMSO.");
+            }
+        }
     }
 }

@@ -25,6 +25,10 @@ namespace DoAn.BUS
         {
             return dal_TheDocGia.LayTatCaTenDocGia();
         }
+        internal string LayMaDocGiaTheoTenDocGia(string TenDocGia)
+        {
+            return dal_TheDocGia.LayMaDocGiaTheoTenDocGia(TenDocGia);
+        }
 
 
         Dictionary<string, string> loaiDocGia = new Dictionary<string, string>

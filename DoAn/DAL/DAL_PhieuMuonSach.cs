@@ -30,5 +30,34 @@ namespace DoAn.DAL
 
             return listPhieuMuonSach;
         }
+        internal List<string> LayTatCaMaPMTheoDocGia(string maDocGia)
+        {
+            string query = $"SELECT MaPhieuMuonSach FROM PHIEUMUONSACH WHERE MaDocGia = '{maDocGia}' AND HanTraSach < CURDATE() ";
+            DataTable dtMaPM = helper.ExecuteQuery(query);
+            List<string> listmaPM = new List<string>();
+            foreach (DataRow dr in dtMaPM.Rows)
+            {
+                listmaPM.Add(dr["MaPhieuMuonSach"].ToString());
+            }
+            return listmaPM;
+        }
+
+        internal List<string> LayTatCaMaPMTheoThoiGianMuonSach(string maDocGia, int ThoiGianMuonSachQuyDinh)
+        {
+            string query = $@"
+                SELECT MaPhieuMuonSach 
+                FROM PHIEUMUONSACH 
+                WHERE MaDocGia = '{maDocGia}' 
+                  AND DATE_ADD(NgayMuon, INTERVAL {ThoiGianMuonSachQuyDinh} DAY) >= CURDATE()";
+
+            DataTable dtMaPM = helper.ExecuteQuery(query);
+            List<string> listMaPM = new List<string>();
+            foreach (DataRow dr in dtMaPM.Rows)
+            {
+                listMaPM.Add(dr["MaPhieuMuonSach"].ToString());
+            }
+            return listMaPM;
+        }
+
     }
 }

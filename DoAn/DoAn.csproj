@@ -88,6 +88,7 @@
     <Compile Include="BUS\BUS_ThamSo.cs" />
     <Compile Include="BUS\BUS_TheDocGia.cs" />
     <Compile Include="BUS\BUS_TheLoai.cs" />
+    <Compile Include="BUS\BUS_ThongTinSachMuon.cs" />
     <Compile Include="DAL\DAL_PhieuMuonSach.cs" />
     <Compile Include="DAL\DAL_Sach.cs" />
     <Compile Include="DAL\DAL_ThamSo.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="DAL\DAL_LoaiDocGia.cs" />
     <Compile Include="DAL\DAL_NhanVien.cs" />
     <Compile Include="DAL\DAL_TheLoai.cs" />
+    <Compile Include="DAL\DAL_ThongTinSachMuon.cs" />
     <Compile Include="DAL\DataHelper.cs" />
     <Compile Include="DAL\Secret.cs" />
     <Compile Include="DTO\DTO_PhieuMuonSach.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="DTO\DTO_LoaiDocGia.cs" />
     <Compile Include="DTO\DTO_NhanVien.cs" />
     <Compile Include="DTO\DTO_TheLoai.cs" />
+    <Compile Include="DTO\DTO_ThongTinSachMuon.cs" />
     <Compile Include="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>

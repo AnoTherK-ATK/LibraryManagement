@@ -96,5 +96,44 @@ namespace DoAn.DAL
 
         }
 
+        internal List<DTO_PhieuMuonSach> TimPhieuMuonSach(string maPM, string maDocGia, DateTime? ngayMuon)
+        {
+            List<DTO_PhieuMuonSach> dTO_PhieuMuonSaches = LayDanhSachPhieuMuonSach();
+            List<DTO_PhieuMuonSach> clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+            if (!string.IsNullOrEmpty(maPM))
+            {
+                foreach (var phieuMuon in clone)
+                {
+                    if (!phieuMuon.MaPhieuMuonSach.Equals(maPM, StringComparison.OrdinalIgnoreCase))
+                    {
+                        dTO_PhieuMuonSaches.Remove(phieuMuon);
+                    }
+                }                
+            }
+            clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+            if (!string.IsNullOrEmpty(maDocGia))
+            {
+                foreach (var phieuMuon in clone)
+                {
+                    if (!phieuMuon.MaDocGia.Equals(maDocGia, StringComparison.OrdinalIgnoreCase))
+                    {
+                        dTO_PhieuMuonSaches.Remove(phieuMuon);
+                    }
+                }
+            }
+            clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+            if (ngayMuon.HasValue)
+            {
+                string ngayMuonStr = ngayMuon.Value.ToString("dd/MM/yyyy");
+                foreach (var phieuMuon in clone)
+                {
+                    if (!phieuMuon.ngayMuonStr.Equals(ngayMuonStr, StringComparison.OrdinalIgnoreCase))
+                    {
+                        dTO_PhieuMuonSaches.Remove(phieuMuon);
+                    }
+                }
+            }
+            return dTO_PhieuMuonSaches;
+        }
     }
 }

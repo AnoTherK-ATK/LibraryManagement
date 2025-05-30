@@ -12,6 +12,7 @@ namespace DoAn.BUS
     class BUS_PhieuMuonSach
     {
         DAL_PhieuMuonSach DAL_PhieuMuonSach = new DAL_PhieuMuonSach();
+        DAL_TheDocGia DAL_TheDocGia = new DAL_TheDocGia();
         internal List<DTO_PhieuMuonSach> LayDanhSachPhieuMuonSach()
         {
             return DAL_PhieuMuonSach.LayDanhSachPhieuMuonSach();
@@ -27,20 +28,14 @@ namespace DoAn.BUS
 
             return DAL_PhieuMuonSach.LayTatCaMaPMTheoThoiGianMuonSach(maDocGia, ThoiGianMuonSachQuyDinh);
         }
-
-        public bool ThemPhieuMuonSach(DTO_PhieuMuonSach PhieuMuonSach)
+        internal List<DTO_PhieuMuonSach> TimPhieuMuonSach(string maPM, string hoTen, DateTime? ngayMuon)
         {
+            string maDocGia = string.Empty;
+            if (!string.IsNullOrEmpty(hoTen))
             {
-                // Kiểm tra dữ liệu đầu vào
-                if (string.IsNullOrWhiteSpace(PhieuMuonSach.MaPhieuMuonSach) ||
-                    string.IsNullOrWhiteSpace(PhieuMuonSach.MaDocGia) ||
-                    string.IsNullOrWhiteSpace(PhieuMuonSach.ngayMuon.ToString()) ||
-                    string.IsNullOrWhiteSpace(PhieuMuonSach.hanTraSach.ToString()))
-                {
-                    throw new Exception("Các trường không được để trống");
-                }
-                return DAL_PhieuMuonSach.ThemPhieuMuonSach(PhieuMuonSach) > 0;
+                maDocGia = DAL_TheDocGia.LayMaDocGiaTheoTenDocGia(hoTen);
             }
+            return DAL_PhieuMuonSach.TimPhieuMuonSach(maPM, maDocGia, ngayMuon);
         }
     }
 }

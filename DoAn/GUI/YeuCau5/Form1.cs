@@ -103,5 +103,10 @@ namespace DoAn.GUI.YeuCau5
                 dataGridView1.Rows[e.RowIndex].Cells["TinhTrang"].Value = sachInfo.TinhTrang;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

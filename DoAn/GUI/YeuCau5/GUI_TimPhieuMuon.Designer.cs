@@ -32,17 +32,19 @@
             this.ResetBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TimPM = new System.Windows.Forms.Button();
-            this.TenNhanVienTxt = new System.Windows.Forms.TextBox();
-            this.MaNhanVienTxt = new System.Windows.Forms.TextBox();
+            this.Name_text = new System.Windows.Forms.TextBox();
+            this.MaPM_text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NgayMuon = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ExitBtn
             // 
             this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(991, 76);
+            this.ExitBtn.Location = new System.Drawing.Point(706, 141);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(146, 38);
             this.ExitBtn.TabIndex = 47;
@@ -53,7 +55,7 @@
             // ResetBtn
             // 
             this.ResetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetBtn.Location = new System.Drawing.Point(1059, 31);
+            this.ResetBtn.Location = new System.Drawing.Point(505, 141);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(113, 39);
             this.ResetBtn.TabIndex = 46;
@@ -64,17 +66,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 125);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1134, 589);
+            this.dataGridView1.Size = new System.Drawing.Size(1073, 589);
             this.dataGridView1.TabIndex = 45;
             // 
             // TimPM
             // 
             this.TimPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimPM.Location = new System.Drawing.Point(957, 31);
+            this.TimPM.Location = new System.Drawing.Point(329, 141);
             this.TimPM.Name = "TimPM";
             this.TimPM.Size = new System.Drawing.Size(89, 39);
             this.TimPM.TabIndex = 44;
@@ -82,28 +84,28 @@
             this.TimPM.UseVisualStyleBackColor = true;
             this.TimPM.Click += new System.EventHandler(this.TimPM_Click);
             // 
-            // TenNhanVienTxt
+            // Name_text
             // 
-            this.TenNhanVienTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenNhanVienTxt.Location = new System.Drawing.Point(529, 57);
-            this.TenNhanVienTxt.Name = "TenNhanVienTxt";
-            this.TenNhanVienTxt.Size = new System.Drawing.Size(222, 32);
-            this.TenNhanVienTxt.TabIndex = 36;
+            this.Name_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_text.Location = new System.Drawing.Point(505, 69);
+            this.Name_text.Name = "Name_text";
+            this.Name_text.Size = new System.Drawing.Size(222, 32);
+            this.Name_text.TabIndex = 36;
             // 
-            // MaNhanVienTxt
+            // MaPM_text
             // 
-            this.MaNhanVienTxt.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.MaNhanVienTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaNhanVienTxt.Location = new System.Drawing.Point(214, 60);
-            this.MaNhanVienTxt.Name = "MaNhanVienTxt";
-            this.MaNhanVienTxt.Size = new System.Drawing.Size(104, 32);
-            this.MaNhanVienTxt.TabIndex = 35;
+            this.MaPM_text.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.MaPM_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaPM_text.Location = new System.Drawing.Point(214, 69);
+            this.MaPM_text.Name = "MaPM_text";
+            this.MaPM_text.Size = new System.Drawing.Size(104, 32);
+            this.MaPM_text.TabIndex = 35;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(418, 63);
+            this.label2.Location = new System.Drawing.Point(394, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 26);
             this.label2.TabIndex = 33;
@@ -113,23 +115,48 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 63);
+            this.label3.Location = new System.Drawing.Point(46, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 26);
             this.label3.TabIndex = 32;
             this.label3.Text = "Mã phiếu mượn";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(790, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 26);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Ngày mượn";
+            // 
+            // NgayMuon
+            // 
+            this.NgayMuon.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayMuon.CustomFormat = "";
+            this.NgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NgayMuon.Location = new System.Drawing.Point(920, 69);
+            this.NgayMuon.Name = "NgayMuon";
+            this.NgayMuon.Size = new System.Drawing.Size(191, 32);
+            this.NgayMuon.TabIndex = 49;
+            this.NgayMuon.Value = new System.DateTime(2025, 5, 29, 22, 17, 49, 0);
+            this.NgayMuon.ValueChanged += new System.EventHandler(this.ValueChange);
+            // 
             // GUI_TimPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 738);
+            this.ClientSize = new System.Drawing.Size(1154, 839);
+            this.Controls.Add(this.NgayMuon);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.ResetBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TimPM);
-            this.Controls.Add(this.TenNhanVienTxt);
-            this.Controls.Add(this.MaNhanVienTxt);
+            this.Controls.Add(this.Name_text);
+            this.Controls.Add(this.MaPM_text);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Name = "GUI_TimPhieuMuon";
@@ -146,9 +173,11 @@
         private System.Windows.Forms.Button ResetBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button TimPM;
-        private System.Windows.Forms.TextBox TenNhanVienTxt;
-        private System.Windows.Forms.TextBox MaNhanVienTxt;
+        private System.Windows.Forms.TextBox Name_text;
+        private System.Windows.Forms.TextBox MaPM_text;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker NgayMuon;
     }
 }

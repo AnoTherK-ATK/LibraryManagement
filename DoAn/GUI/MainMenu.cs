@@ -89,5 +89,10 @@ namespace DoAn
         {
             new YeuCau5().Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new GUI_TimPhieuMuon().Show();
+        }
     }
 }

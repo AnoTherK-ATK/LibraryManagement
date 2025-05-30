@@ -21,6 +21,7 @@ namespace DoAn
             Application.Run(new MainMenu());
             //Application.Run(new YeuCau5());
             //Application.Run(new Form1());
+            //Application.Run(new GUI_TimPhieuMuon());
         }
     }
 }

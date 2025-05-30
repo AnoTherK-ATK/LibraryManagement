@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.ResetBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TimPM = new System.Windows.Forms.Button();
             this.Name_text = new System.Windows.Forms.TextBox();
             this.MaPM_text = new System.Windows.Forms.TextBox();
@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NgayMuon = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,16 +63,6 @@
             this.ResetBtn.Text = "Tái lập";
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 200);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1073, 589);
-            this.dataGridView1.TabIndex = 45;
             // 
             // TimPM
             // 
@@ -141,19 +132,39 @@
             this.NgayMuon.Name = "NgayMuon";
             this.NgayMuon.Size = new System.Drawing.Size(191, 32);
             this.NgayMuon.TabIndex = 49;
-            this.NgayMuon.Value = new System.DateTime(2025, 5, 29, 22, 17, 49, 0);
+            this.NgayMuon.Value = new System.DateTime(2025, 5, 30, 0, 0, 0, 0);
             this.NgayMuon.ValueChanged += new System.EventHandler(this.ValueChange);
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(51, 209);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 571);
+            this.dataGridView1.TabIndex = 50;
             // 
             // GUI_TimPhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 839);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.NgayMuon);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.ResetBtn);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TimPM);
             this.Controls.Add(this.Name_text);
             this.Controls.Add(this.MaPM_text);
@@ -171,7 +182,6 @@
 
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button ResetBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button TimPM;
         private System.Windows.Forms.TextBox Name_text;
         private System.Windows.Forms.TextBox MaPM_text;
@@ -179,5 +189,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker NgayMuon;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

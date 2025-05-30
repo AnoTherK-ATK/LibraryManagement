@@ -28,17 +28,16 @@ namespace DoAn.DTO
                 //ngaySinhNhanVien = DateTime.ParseExact(value, "dd/MM/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
             }
         }
-        public DateTime hanTraSach { get; set; }
-
+        public DateTime HanTraSach { get; set; }
 
         public string hanTraSachStr
         {
-            get => hanTraSach.ToString("dd/MM/yyyy");
+            get => HanTraSach.ToString("dd/MM/yyyy");
             set
             {
                 if (DateTime.TryParseExact(value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
                 {
-                    hanTraSach = parsedDate;
+                    HanTraSach = parsedDate;
                 }
                 //ngaySinhNhanVien = DateTime.ParseExact(value, "dd/MM/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
             }
@@ -55,7 +54,6 @@ namespace DoAn.DTO
             this.maPhieuMuonSach = maPhieuMuonSach;
             this.maDocGia = maDocGia;
             this.ngayMuonStr = ngayMuonStr;
-            this.hanTraSach = hanTraSach;
             this.hanTraSachStr = hanTraSachStr;
         }
     }

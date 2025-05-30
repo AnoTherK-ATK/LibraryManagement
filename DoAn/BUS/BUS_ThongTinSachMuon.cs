@@ -30,6 +30,14 @@ namespace DoAn.BUS
                 return DAL_ThongTinSachMuon.ThemPhieuMuonSach(ThongTinSachMuon) > 0;
             }
         }
+        internal List<string> LayTatCaSachTheoPhieuMuon(string maPM)
+        {
+            return DAL_ThongTinSachMuon.LayTatCaSachTheoPhieuMuon(maPM);
+        }
+        internal string LayTrangThaiPhieuMuon(string maPM)
+        {
+            return DAL_ThongTinSachMuon.LayTrangThaiPhieuMuon(maPM);
+        }
     }
 
 }

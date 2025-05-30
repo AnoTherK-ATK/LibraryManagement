@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySqlConnector;
+using System.Windows.Forms;
 
 namespace DoAn.DAL
 {
@@ -14,18 +15,20 @@ namespace DoAn.DAL
         DataHelper helper = new DataHelper();
         internal List<DTO_PhieuMuonSach> LayDanhSachPhieuMuonSach()
         {
-            DataTable dtPhieuMuonSach = helper.ExecuteQuery("SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, HanTraSach FROM PHIEUMUONSACH");
+            DataTable dtPhieuMuonSach = helper.ExecuteQuery("SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, DATE_FORMAT(HanTraSach, '%d/%m/%Y') HanTraSach FROM PHIEUMUONSACH");
 
             List<DTO_PhieuMuonSach> listPhieuMuonSach = new List<DTO_PhieuMuonSach>();
 
             foreach (DataRow dr in dtPhieuMuonSach.Rows)
             {
+                //MessageBox.Show(dr["HanTraSach"].ToString());
                 DTO_PhieuMuonSach PhieuMuonSachTemp = new DTO_PhieuMuonSach(
                     dr["MaPhieuMuonSach"].ToString(),
-                    dr["NgayMuon"].ToString(),
                     dr["MaDocGia"].ToString(),
+                    dr["NgayMuon"].ToString(),
                     dr["HanTraSach"].ToString()
                 );
+                //MessageBox.Show(PhieuMuonSachTemp.hanTraSachStr);
                 listPhieuMuonSach.Add(PhieuMuonSachTemp);
             }
 
@@ -83,7 +86,7 @@ namespace DoAn.DAL
                         cmd.Parameters.AddWithValue("@MaPhieuMuonSach", phieuMuonSach.MaPhieuMuonSach);
                         cmd.Parameters.AddWithValue("@NgayMuon", phieuMuonSach.ngayMuon);
                         cmd.Parameters.AddWithValue("@MaDocGia", phieuMuonSach.MaDocGia);
-                        cmd.Parameters.AddWithValue("@HanTraSach", phieuMuonSach.hanTraSach);
+                        cmd.Parameters.AddWithValue("@HanTraSach", phieuMuonSach.HanTraSach);
                         conn.Open();
                         return cmd.ExecuteNonQuery();
                     }
@@ -134,6 +137,27 @@ namespace DoAn.DAL
                 }
             }
             return dTO_PhieuMuonSaches;
+        }
+        internal List<string> LayTatCaSachTheoPhieuMuon(string maPM)
+        {
+            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}'";
+            DataTable dtMaSach = helper.ExecuteQuery(query);
+            List<string> listMaSach = new List<string>();
+            foreach (DataRow dr in dtMaSach.Rows)
+            {
+                listMaSach.Add(dr["MaSach"].ToString());
+            }
+            return listMaSach;
+        }
+        internal string LayTrangThaiPhieuMuon(string maPM)
+        {
+            string query = $"SELECT TrangThai FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}'";
+            DataTable dtTrangThai = helper.ExecuteQuery(query);
+            if (dtTrangThai.Rows.Count > 0)
+            {
+                return dtTrangThai.Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
         }
     }
 }

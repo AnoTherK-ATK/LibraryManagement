@@ -64,6 +64,26 @@ namespace DoAn.DAL
             }
 
         }
-
+        internal List<string> LayTatCaSachTheoPhieuMuon(string maPM)
+        {
+            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}'";
+            DataTable dtMaSach = helper.ExecuteQuery(query);
+            List<string> listMaSach = new List<string>();
+            foreach (DataRow dr in dtMaSach.Rows)
+            {
+                listMaSach.Add(dr["MaSach"].ToString());
+            }
+            return listMaSach;
+        }
+        internal string LayTrangThaiPhieuMuon(string maPM)
+        {
+            string query = $"SELECT TrangThai FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}'";
+            DataTable dtTrangThai = helper.ExecuteQuery(query);
+            if (dtTrangThai.Rows.Count > 0)
+            {
+                return dtTrangThai.Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
     }
 }

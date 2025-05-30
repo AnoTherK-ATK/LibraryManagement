@@ -37,5 +37,18 @@ namespace DoAn.BUS
             }
             return DAL_PhieuMuonSach.TimPhieuMuonSach(maPM, maDocGia, ngayMuon);
         }
+        public bool ThemPhieuMuonSach(DTO_PhieuMuonSach PhieuMuonSach)
+        {
+            {
+                if (string.IsNullOrWhiteSpace(PhieuMuonSach.MaPhieuMuonSach) ||
+                    string.IsNullOrWhiteSpace(PhieuMuonSach.MaDocGia) ||
+                    string.IsNullOrWhiteSpace(PhieuMuonSach.ngayMuon.ToString()) ||
+                    string.IsNullOrWhiteSpace(PhieuMuonSach.HanTraSach.ToString()))
+                {
+                    throw new Exception("Các trường không được để trống");
+                }
+                return DAL_PhieuMuonSach.ThemPhieuMuonSach(PhieuMuonSach) > 0;
+            }
+        }
     }
 }

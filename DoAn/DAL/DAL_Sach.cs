@@ -229,5 +229,41 @@ namespace DoAn.DAL
 
             return ketQua;
         }
+
+        internal List<string> LayTenSachTheoListMaSach(List<string> listMaSach)
+        {
+            string danhSachMaSachText = string.Join("','", listMaSach);
+            string query = $"SELECT TenSach FROM SACH WHERE  MaSach IN ('{danhSachMaSachText}')";
+
+            DataTable dtTenSach = helper.ExecuteQuery(query);
+            List<string> listTenSach = new List<string>();
+            foreach (DataRow dr in dtTenSach.Rows)
+            {
+                listTenSach.Add(dr["TenSach"].ToString());
+            }
+            //List<string> fruits = new List<string> { "Mango", "Pineapple", "Grapes" };
+            return listTenSach;
+        }
+
+        internal string LayMaSachTheoTenSach(string TenSach)
+        {
+            string query = @"
+                SELECT MaSach 
+                FROM SACH 
+                WHERE TenSach = @TenSach
+            ";
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>()
+            {
+                { "@TenSach", TenSach }
+            };
+
+            object result = helper.ExecuteScalar(query, parameters);
+
+            if (result != null)
+                return result.ToString();
+            else
+                return null; // hoặc trả "" nếu muốn
+        }
     }
 }

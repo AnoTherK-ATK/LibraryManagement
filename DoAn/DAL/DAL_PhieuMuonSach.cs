@@ -46,6 +46,18 @@ namespace DoAn.DAL
             return listmaPM;
         }
 
+        internal List<string> LayTatCaMaPMTheoDocGia2(string maDocGia)
+        {
+            string query = $"SELECT MaPhieuMuonSach FROM PHIEUMUONSACH WHERE MaDocGia = '{maDocGia}'";
+            DataTable dtMaPM = helper.ExecuteQuery(query);
+            List<string> listmaPM = new List<string>();
+            foreach (DataRow dr in dtMaPM.Rows)
+            {
+                listmaPM.Add(dr["MaPhieuMuonSach"].ToString());
+            }
+            return listmaPM;
+        }
+
         internal List<string> LayTatCaMaPMTheoThoiGianMuonSach(string maDocGia, int ThoiGianMuonSachQuyDinh)
         {
             string query = $@"
@@ -149,6 +161,29 @@ namespace DoAn.DAL
                 return dtTrangThai.Rows[0]["TrangThai"].ToString();
             }
             return string.Empty;
+        }
+        internal List<string> LayTatCaMaDocGia()
+        {
+            string query = "SELECT DISTINCT MaDocGia FROM PHIEUMUONSACH";
+            DataTable dtMaDocGia = helper.ExecuteQuery(query);
+            List<string> listMaDocGia = new List<string>();
+            foreach (DataRow dr in dtMaDocGia.Rows)
+            {
+                listMaDocGia.Add(dr["MaDocGia"].ToString());
+            }
+            return listMaDocGia;
+        }
+        internal DTO_PhieuMuonSach LayThongTinPhieuMuon(string MaPM)
+        {
+            string query = "SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, DATE_FORMAT(HanTraSach, '%d/%m/%Y') HanTraSach FROM PHIEUMUONSACH";
+            DataTable dtMaDocGia = helper.ExecuteQuery(query);
+            DTO_PhieuMuonSach PhieuMuonSachTemp = new DTO_PhieuMuonSach(
+                    dtMaDocGia.Rows[0]["MaPhieuMuonSach"].ToString(),
+                    dtMaDocGia.Rows[0]["MaDocGia"].ToString(),
+                    dtMaDocGia.Rows[0]["NgayMuon"].ToString(),
+                    dtMaDocGia.Rows[0]["HanTraSach"].ToString()
+                );
+            return PhieuMuonSachTemp;
         }
     }
 }

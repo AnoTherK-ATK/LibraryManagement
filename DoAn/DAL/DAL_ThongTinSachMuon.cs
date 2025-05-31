@@ -66,7 +66,7 @@ namespace DoAn.DAL
         }
         internal List<string> LayTatCaSachTheoPhieuMuon(string maPM)
         {
-            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}'";
+            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}' AND TrangThai = 'Đang Mượn'";
             DataTable dtMaSach = helper.ExecuteQuery(query);
             List<string> listMaSach = new List<string>();
             foreach (DataRow dr in dtMaSach.Rows)
@@ -82,6 +82,17 @@ namespace DoAn.DAL
             if (dtTrangThai.Rows.Count > 0)
             {
                 return dtTrangThai.Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+
+        internal string LayMaPMTheoMaSach(string MaSach)
+        {
+            string query = $"SELECT MaPhieuMuonSach FROM THONGTINSACHMUON WHERE MaSach = '{MaSach}' AND TrangThai = 'Đang mượn'";
+            DataTable dtMaPM = helper.ExecuteQuery(query);
+            if (dtMaPM.Rows.Count > 0)
+            {
+                return dtMaPM.Rows[0]["MaPhieuMuonSach"].ToString();
             }
             return string.Empty;
         }

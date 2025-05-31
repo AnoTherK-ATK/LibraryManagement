@@ -116,5 +116,15 @@ namespace DoAn.BUS
                 triGiaDen
             );
         }
+
+        public List<string> LayTenSachTheoListMaSach(List<string> listMaSach)
+        {
+            return DAL_Sach.LayTenSachTheoListMaSach(listMaSach);
+        }
+
+        public string LayMaSachTheoTenSach(string TenSach)
+        {
+            return DAL_Sach.LayMaSachTheoTenSach(TenSach);
+        }
     }
 }

@@ -23,6 +23,11 @@ namespace DoAn.BUS
             return DAL_PhieuMuonSach.LayTatCaMaPMTheoDocGia(maDocGia);
         }
 
+        internal List<string> LayTatCaMaPMTheoDocGia2(string maDocGia)
+        {
+            return DAL_PhieuMuonSach.LayTatCaMaPMTheoDocGia2(maDocGia);
+        }
+
         internal List<string> LayTatCaMaPMTheoThoiGianMuonSach(string maDocGia, int ThoiGianMuonSachQuyDinh)
         {
 
@@ -45,5 +50,17 @@ namespace DoAn.BUS
                 return DAL_PhieuMuonSach.ThemPhieuMuonSach(PhieuMuonSach) > 0;
             }
         }
+
+        internal List<string> LayTatCaMaDocGia()
+        {
+            return DAL_TheDocGia.LayTatCaMaDocGia();
+        }
+
+        internal DTO_PhieuMuonSach LayThongTinPhieuMuon(string maPM)
+        {
+            return DAL_PhieuMuonSach.LayThongTinPhieuMuon(maPM);
+        }
+
+
     }
 }

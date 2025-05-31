@@ -28,13 +28,8 @@ namespace DoAn.BUS
 
             return DAL_PhieuMuonSach.LayTatCaMaPMTheoThoiGianMuonSach(maDocGia, ThoiGianMuonSachQuyDinh);
         }
-        internal List<DTO_PhieuMuonSach> TimPhieuMuonSach(string maPM, string hoTen, DateTime? ngayMuon)
+        internal List<DTO_PhieuMuonSach> TimPhieuMuonSach(string maPM, string maDocGia, DateTime? ngayMuon)
         {
-            string maDocGia = string.Empty;
-            if (!string.IsNullOrEmpty(hoTen))
-            {
-                maDocGia = DAL_TheDocGia.LayMaDocGiaTheoTenDocGia(hoTen);
-            }
             return DAL_PhieuMuonSach.TimPhieuMuonSach(maPM, maDocGia, ngayMuon);
         }
         public bool ThemPhieuMuonSach(DTO_PhieuMuonSach PhieuMuonSach)

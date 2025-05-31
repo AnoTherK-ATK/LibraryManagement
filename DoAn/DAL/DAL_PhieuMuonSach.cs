@@ -102,39 +102,30 @@ namespace DoAn.DAL
         internal List<DTO_PhieuMuonSach> TimPhieuMuonSach(string maPM, string maDocGia, DateTime? ngayMuon)
         {
             List<DTO_PhieuMuonSach> dTO_PhieuMuonSaches = LayDanhSachPhieuMuonSach();
-            List<DTO_PhieuMuonSach> clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+
             if (!string.IsNullOrEmpty(maPM))
             {
-                foreach (var phieuMuon in clone)
-                {
-                    if (!phieuMuon.MaPhieuMuonSach.Equals(maPM, StringComparison.OrdinalIgnoreCase))
-                    {
-                        dTO_PhieuMuonSaches.Remove(phieuMuon);
-                    }
-                }                
+                dTO_PhieuMuonSaches = dTO_PhieuMuonSaches
+                    .Where(phieuMuon => phieuMuon.MaPhieuMuonSach != null &&
+                        phieuMuon.MaPhieuMuonSach.IndexOf(maPM, StringComparison.OrdinalIgnoreCase) >= 0)
+                    .ToList();
             }
-            clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+
             if (!string.IsNullOrEmpty(maDocGia))
             {
-                foreach (var phieuMuon in clone)
-                {
-                    if (!phieuMuon.MaDocGia.Equals(maDocGia, StringComparison.OrdinalIgnoreCase))
-                    {
-                        dTO_PhieuMuonSaches.Remove(phieuMuon);
-                    }
-                }
+                dTO_PhieuMuonSaches = dTO_PhieuMuonSaches
+                    .Where(phieuMuon => phieuMuon.MaDocGia != null &&
+                        phieuMuon.MaDocGia.IndexOf(maDocGia, StringComparison.OrdinalIgnoreCase) >= 0)
+                    .ToList();
             }
-            clone = new List<DTO_PhieuMuonSach>(dTO_PhieuMuonSaches);
+
             if (ngayMuon.HasValue)
             {
                 string ngayMuonStr = ngayMuon.Value.ToString("dd/MM/yyyy");
-                foreach (var phieuMuon in clone)
-                {
-                    if (!phieuMuon.ngayMuonStr.Equals(ngayMuonStr, StringComparison.OrdinalIgnoreCase))
-                    {
-                        dTO_PhieuMuonSaches.Remove(phieuMuon);
-                    }
-                }
+                dTO_PhieuMuonSaches = dTO_PhieuMuonSaches
+                    .Where(phieuMuon => phieuMuon.ngayMuonStr != null &&
+                        phieuMuon.ngayMuonStr.Equals(ngayMuonStr, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
             }
             return dTO_PhieuMuonSaches;
         }

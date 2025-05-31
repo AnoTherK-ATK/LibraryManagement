@@ -45,13 +45,13 @@ namespace DoAn.GUI.YeuCau5
         {
             dataGridView1.Rows.Clear();
             string maPM = MaPM_text.Text.Trim();
-            string hoTen = Name_text.Text.ToLower().Trim();
+            string maDocGia = Name_text.Text.ToLower().Trim();
             DateTime? ngayMuon = null;
             if (NgayMuon.CustomFormat != " ")
             {
                 ngayMuon = NgayMuon.Value;
             }
-            var listPhieuMuon = PhieuMuonSach.TimPhieuMuonSach(maPM, hoTen, ngayMuon);
+            var listPhieuMuon = PhieuMuonSach.TimPhieuMuonSach(maPM, maDocGia, ngayMuon);
             foreach (var phieuMuon in listPhieuMuon)
             {
                 List<string> sach = ThongTinSachMuon.LayTatCaSachTheoPhieuMuon(phieuMuon.MaPhieuMuonSach);

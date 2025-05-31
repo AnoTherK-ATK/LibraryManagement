@@ -21,6 +21,15 @@ namespace DoAn.BUS
             return dal_TheDocGia.LayTatCaMaDocGia();
         }
 
+        internal List<string> LayTatCaTenDocGia()
+        {
+            return dal_TheDocGia.LayTatCaTenDocGia();
+        }
+        internal string LayMaDocGiaTheoTenDocGia(string TenDocGia)
+        {
+            return dal_TheDocGia.LayMaDocGiaTheoTenDocGia(TenDocGia);
+        }
+
 
         Dictionary<string, string> loaiDocGia = new Dictionary<string, string>
         {
@@ -86,6 +95,11 @@ namespace DoAn.BUS
             return dal_TheDocGia.LayThongTinTheDocGia(maTDG);
         }
 
+        //internal DTO_TheDocGia LayNgayHetHan(string tenTDG)
+        //{
+        //    return dal_TheDocGia.LayNgayHetHan(tenTDG);
+        //}
+
 
         internal bool CapNhatTheDocGia(DTO.DTO_TheDocGia dto_TheDocGia)
         {
@@ -106,6 +120,8 @@ namespace DoAn.BUS
        
             return dal_TheDocGia.CapNhatTheDocGia(dto_TheDocGia);
         }
+
+
 
 
         internal bool XoaTheDocGia(string maTheDocGia)

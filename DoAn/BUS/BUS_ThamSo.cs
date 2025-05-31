@@ -30,5 +30,19 @@ namespace DoAn.BUS
             return DAL_ThamSo.LayThoiGianNhapSachToiDa();
         }
 
+        internal int LayHanMuonSachToiDa()
+        {
+            return DAL_ThamSo.LayHanMuonSachToiDa();
+        }
+
+        internal int LayThoiGianMuonSachTheoQuyDinh()
+        {
+            return DAL_ThamSo.LayThoiGianMuonSachTheoQuyDinh();
+        }
+
+        internal int LaySachMuonToiDaTheoThoiGianQuyDinh()
+        {
+            return DAL_ThamSo.LaySachMuonToiDaTheoThoiGianQuyDinh();
+        }
     }
 }

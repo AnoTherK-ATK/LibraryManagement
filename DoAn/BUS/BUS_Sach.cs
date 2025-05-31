@@ -51,6 +51,11 @@ namespace DoAn.BUS
             return DAL_Sach.LayThongTinSach(maSach);
         }
 
+        public bool CapNhatTinhTrangSach(string maSach)
+        {
+            return DAL_Sach.CapNhatTinhTrangSach(maSach);
+        }
+
         public bool CapNhatSach(DTO_Sach sach)
         {
             // Kiểm tra dữ liệu đầu vào

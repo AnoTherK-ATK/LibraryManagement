@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.GUI.YeuCau5;
+
 
 namespace DoAn
 {
@@ -17,6 +19,9 @@ namespace DoAn
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
+            //Application.Run(new YeuCau5());
+            //Application.Run(new Form1());
+            //Application.Run(new GUI_TimPhieuMuon());
         }
     }
 }

@@ -106,9 +106,9 @@ namespace DoAn.DAL
             return null;
         }
 
-        internal bool CapNhatTinhTrangSach(string maSach)
+        internal bool CapNhatTinhTrangSach(string maSach, string tinhTrang = "Đã mượn")
         {
-            string query = "UPDATE SACH SET TinhTrang = 'Đã mượn' WHERE MaSach = @MaSach";
+            string query = "UPDATE SACH SET TinhTrang = @TinhTrang WHERE MaSach = @MaSach";
             try
             {
                 using (var conn = helper.GetConnection())
@@ -117,6 +117,8 @@ namespace DoAn.DAL
                     using (var cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaSach", maSach);
+                        cmd.Parameters.AddWithValue("@TinhTrang", tinhTrang);
+
                         return cmd.ExecuteNonQuery() > 0;
                     }
                 }

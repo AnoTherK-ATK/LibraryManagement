@@ -46,6 +46,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.TimSachTrabtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TraSachbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // YC1btn
@@ -64,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 45);
+            this.label1.Size = new System.Drawing.Size(245, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý nhân viên";
             // 
@@ -104,7 +107,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(323, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(310, 45);
+            this.label2.Size = new System.Drawing.Size(264, 37);
             this.label2.TabIndex = 23;
             this.label2.Text = "Quản lý thẻ độc giả";
             // 
@@ -154,7 +157,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(622, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 45);
+            this.label3.Size = new System.Drawing.Size(177, 37);
             this.label3.TabIndex = 27;
             this.label3.Text = "Quản lý sách";
             // 
@@ -214,7 +217,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(227, 90);
+            this.label4.Size = new System.Drawing.Size(193, 74);
             this.label4.TabIndex = 33;
             this.label4.Text = "Quản lý phiếu\r\n  mượn sách";
             // 
@@ -228,11 +231,43 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // TimSachTrabtn
+            // 
+            this.TimSachTrabtn.Location = new System.Drawing.Point(331, 340);
+            this.TimSachTrabtn.Name = "TimSachTrabtn";
+            this.TimSachTrabtn.Size = new System.Drawing.Size(187, 30);
+            this.TimSachTrabtn.TabIndex = 37;
+            this.TimSachTrabtn.Text = "Tìm sách đã trả";
+            this.TimSachTrabtn.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(347, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(221, 37);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Quản lý trả sách";
+            // 
+            // TraSachbtn
+            // 
+            this.TraSachbtn.Location = new System.Drawing.Point(331, 294);
+            this.TraSachbtn.Name = "TraSachbtn";
+            this.TraSachbtn.Size = new System.Drawing.Size(187, 30);
+            this.TraSachbtn.TabIndex = 35;
+            this.TraSachbtn.Text = "Trả sách";
+            this.TraSachbtn.UseVisualStyleBackColor = true;
+            this.TraSachbtn.Click += new System.EventHandler(this.TraSachbtn_Click);
+            // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 465);
+            this.Controls.Add(this.TimSachTrabtn);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TraSachbtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
@@ -280,6 +315,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button TimSachTrabtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button TraSachbtn;
     }
 }
 

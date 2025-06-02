@@ -37,6 +37,12 @@ namespace DoAn.GUI.YeuCau5
             panel1.Controls.Add(form1);
             form1.Show();
             HienThiSoSachMuonQuaHan();
+            TenDocGiaCombo.SelectedIndex = -1;
+            SoSachQuaHanTxt.Clear();
+            SachMuonTheoQDTxt.Clear();
+            form1.dataGridView1.Rows.Clear();
+            form1.dataGridView1.Enabled = false;
+            form1.loadDataGridView();
         }
         private void HienThiMaPhieuMuonMoi()
         {
@@ -140,6 +146,7 @@ namespace DoAn.GUI.YeuCau5
             NgayMuonTxt.Value = DateTime.Now;
             form1.dataGridView1.Rows.Clear();
             form1.dataGridView1.Enabled = false;
+
         }
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
@@ -214,7 +221,7 @@ namespace DoAn.GUI.YeuCau5
                         {
                             MessageBox.Show("Thêm phiếu mượn sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.DialogResult = DialogResult.OK;
-                            ClearContent();
+                            YeuCau5_Load(sender, e);
                         }
 
                     } else

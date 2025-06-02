@@ -46,7 +46,7 @@ namespace DoAn.GUI.YeuCau5
             }
         }
 
-        private void loadDataGridView()
+        public void loadDataGridView()
         {
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add("Stt", "STT");

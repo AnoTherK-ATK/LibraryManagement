@@ -39,6 +39,20 @@ namespace DoAn.DAL
                 throw new InvalidOperationException("No data found for TUOITOIDA in THAMSO.");
             }
         }
+
+        internal int LayTienPhatTraTreMoiNgay()
+        {
+            DataTable dtTienPhatTraTreMoiNgay = helper.ExecuteQuery("SELECT TienPhatTraTreMoiNgay FROM THAMSO");
+            if (dtTienPhatTraTreMoiNgay != null && dtTienPhatTraTreMoiNgay.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dtTienPhatTraTreMoiNgay.Rows[0]["TienPhatTraTreMoiNgay"]);
+            }
+            else
+            {
+                // Return a default value or throw an exception if no data is found
+                throw new InvalidOperationException("No data found for TienPhatTraTreMoiNgay in THAMSO.");
+            }
+        }
         internal int LayGiaTriThe()
         {
             DataTable dtLoaiDocGia = helper.ExecuteQuery("SELECT GIATRITHE FROM THAMSO");

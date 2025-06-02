@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DoAn.DAL
@@ -95,6 +96,35 @@ namespace DoAn.DAL
                 return dtMaPM.Rows[0]["MaPhieuMuonSach"].ToString();
             }
             return string.Empty;
+        }
+
+        internal bool CapNhatNgayTraSach(string MaPhieuMuonSach, string MaSach, string TrangThai)
+        {
+            string query = @"
+            UPDATE THONGTINSACHMUON SET 
+                NgayTraSach = @NgayTraSach, 
+                TrangThai = @TrangThai
+            WHERE MaPhieuMuonSach = @MaPhieuMuonSach AND MaSach = @MaSach";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@NgayTraSach", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@MaPhieuMuonSach", MaPhieuMuonSach);
+                        cmd.Parameters.AddWithValue("@MaSach", MaSach);
+                        cmd.Parameters.AddWithValue("@TrangThai", TrangThai);
+
+                        conn.Open();
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật thẻ độc giả: " + ex.Message);
+            }
         }
     }
 }

@@ -149,6 +149,11 @@ namespace DoAn.BUS
                 throw new Exception("Mã thẻ độc giả không được để trống");
             }
             return dal_TheDocGia.XoaTheDocGia(maTheDocGia);
-            }
         }
+
+        internal bool CapNhatTongNo(string MaDocGia, float TongNo)
+        {
+            return dal_TheDocGia.CapNhatTongNo(MaDocGia, TongNo);
+        }
+    }
 }

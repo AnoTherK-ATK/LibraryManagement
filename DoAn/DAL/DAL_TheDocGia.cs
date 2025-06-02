@@ -282,5 +282,31 @@ namespace DoAn.DAL
                 throw new Exception("Lỗi khi xóa thẻ độc giả: " + ex.Message);
             }
         }
+
+        internal bool CapNhatTongNo(string MaDocGia, float TongNo)
+        {
+            string query = @"
+            UPDATE THEDOCGIA SET 
+                TongNo = @TongNo
+            WHERE MaDocGia = @MaDocGia";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TongNo", TongNo);
+                        cmd.Parameters.AddWithValue("@MaDocGia", MaDocGia);
+
+                        conn.Open();
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật thẻ độc giả: " + ex.Message);
+            }
+        }
     }
 }

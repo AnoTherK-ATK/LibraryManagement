@@ -54,6 +54,13 @@ namespace DoAn.BUS
         {
             return DAL_ThongTinSachMuon.LayMaPMTheoMaSach(MaSach);
         }
+
+        internal bool CapNhatNgayTraSach(string MaPhieuMuonSach, string MaSach, string TrangThai)
+        {
+            return DAL_ThongTinSachMuon.CapNhatNgayTraSach(MaPhieuMuonSach, MaSach, TrangThai);
+        }
+
+        
     }
 
 }

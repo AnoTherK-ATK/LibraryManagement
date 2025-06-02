@@ -175,7 +175,7 @@ namespace DoAn.DAL
         }
         internal DTO_PhieuMuonSach LayThongTinPhieuMuon(string MaPM)
         {
-            string query = "SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, DATE_FORMAT(HanTraSach, '%d/%m/%Y') HanTraSach FROM PHIEUMUONSACH";
+            string query = $"SELECT MaPhieuMuonSach, DATE_FORMAT(NgayMuon, '%d/%m/%Y') AS NgayMuon, MaDocGia, DATE_FORMAT(HanTraSach, '%d/%m/%Y') HanTraSach FROM PHIEUMUONSACH WHERE MaPhieuMuonSach = '{MaPM}'";
             DataTable dtMaDocGia = helper.ExecuteQuery(query);
             DTO_PhieuMuonSach PhieuMuonSachTemp = new DTO_PhieuMuonSach(
                     dtMaDocGia.Rows[0]["MaPhieuMuonSach"].ToString(),

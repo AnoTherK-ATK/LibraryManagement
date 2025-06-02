@@ -51,9 +51,9 @@ namespace DoAn.BUS
             return DAL_Sach.LayThongTinSach(maSach);
         }
 
-        public bool CapNhatTinhTrangSach(string maSach)
+        public bool CapNhatTinhTrangSach(string maSach, string tinhTrang = "Đã mượn")
         {
-            return DAL_Sach.CapNhatTinhTrangSach(maSach);
+            return DAL_Sach.CapNhatTinhTrangSach(maSach, tinhTrang);
         }
 
         public bool CapNhatSach(DTO_Sach sach)

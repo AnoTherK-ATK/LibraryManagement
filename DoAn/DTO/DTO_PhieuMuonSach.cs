@@ -44,10 +44,10 @@ namespace DoAn.DTO
         }
 
         public DTO_PhieuMuonSach(
-            string maPhieuMuonSach,
-            string maDocGia,
-            string ngayMuonStr,
-            string hanTraSachStr
+            string maPhieuMuonSach=null,
+            string maDocGia = null,
+            string ngayMuonStr = null,
+            string hanTraSachStr = null
 
         )
         {

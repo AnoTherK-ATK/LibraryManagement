@@ -20,6 +20,11 @@ namespace DoAn.BUS
             return DAL_ThamSo.LayTuoiToiDa();
         }
 
+        internal int LayTienPhatTraTreMoiNgay()
+        {
+            return DAL_ThamSo.LayTienPhatTraTreMoiNgay();
+        }
+
         internal int LayGiaTriThe()
         {
             return DAL_ThamSo.LayGiaTriThe();

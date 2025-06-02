@@ -92,6 +92,12 @@ namespace DoAn.DTO
             }
         }
 
+        int tongNo;
+        public int TongNo
+        {
+            get { return tongNo; }
+            set { tongNo = value; }
+        }
 
 
         //Foreign keys
@@ -108,6 +114,8 @@ namespace DoAn.DTO
             set { maNhanVien = value; }
         }
 
+
+        // Constructor với tham số tuỳ chọn
         public DTO_TheDocGia(
             string maDocGia,
             string hoTenDocGia,
@@ -117,18 +125,20 @@ namespace DoAn.DTO
             string ngayLapTheStr,
             string ngayHetHanStr,
             string maLoaiDocGia,
-            string maNhanVien
+            string maNhanVien, 
+            int tongNo = 0
         )
         {
-            this.maDocGia = maDocGia;
+            this.maDocGia = maDocGia ;
             this.hoTenDocGia = hoTenDocGia;
             this.diaChiDocGia = diaChiDocGia;
-            this.ngaySinhDocGiaStr = ngaySinhDocGiaStr;
             this.emailDocGia = emailDocGia;
-            this.ngayLapTheStr = ngayLapTheStr;
+            this.ngaySinhDocGiaStr = ngaySinhDocGiaStr;
+            this.ngayLapTheStr = ngayLapTheStr; 
             this.ngayHetHanStr = ngayHetHanStr;
             this.maLoaiDocGia = maLoaiDocGia;
             this.maNhanVien = maNhanVien;
+            this.tongNo = tongNo;
         }
 
 

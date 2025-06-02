@@ -34,10 +34,33 @@ namespace DoAn.BUS
         {
             return DAL_ThongTinSachMuon.LayTatCaSachTheoPhieuMuon(maPM);
         }
+
+        internal List<string> LayTatCaSachTheoListPhieuMuon(List<string> listMaPM)
+        {
+            HashSet<string> allSach = new HashSet<string>();
+            foreach (string maPM in listMaPM)
+            {
+                List<string> maSach = DAL_ThongTinSachMuon.LayTatCaSachTheoPhieuMuon(maPM);
+                allSach.UnionWith(maSach);
+            }
+            // Nếu cần trả về List<string>:
+            return allSach.ToList();
+        }
         internal string LayTrangThaiPhieuMuon(string maPM)
         {
             return DAL_ThongTinSachMuon.LayTrangThaiPhieuMuon(maPM);
         }
+        internal string LayMaPMTheoMaSach(string MaSach)
+        {
+            return DAL_ThongTinSachMuon.LayMaPMTheoMaSach(MaSach);
+        }
+
+        internal bool CapNhatNgayTraSach(string MaPhieuMuonSach, string MaSach, string TrangThai)
+        {
+            return DAL_ThongTinSachMuon.CapNhatNgayTraSach(MaPhieuMuonSach, MaSach, TrangThai);
+        }
+
+        
     }
 
 }

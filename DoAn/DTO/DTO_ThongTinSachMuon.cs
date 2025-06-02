@@ -18,17 +18,48 @@ namespace DoAn.DTO
         string trangThai;
         public string TrangThai { get => trangThai; set => trangThai = value; }
 
+        string hanTraSach;
+
+        DateTime ngayTraSach;
+        public DateTime NgayTraSach
+        {
+            get { return ngayTraSach; }
+            set { ngayTraSach = value; }
+        }
+        public string ngayTraSachStr
+        {
+            get => ngayTraSach.ToString("dd/MM/yyyy");
+            set
+            {
+                if (DateTime.TryParseExact(value, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime parsedDate))
+                {
+                    ngayTraSach = parsedDate;
+                }
+            }
+        }
 
 
+
+        //public DTO_ThongTinSachMuon()
+        //{
+        //    this.maPhieuMuonSach = string.Empty;
+        //    this.maSach = string.Empty;
+        //    this.trangThai = string.Empty;
+        //    this.ngayTraSachStr = DateTime.Now.ToString();
+        //}
+
+        // Constructor với các tham số tuỳ chọn
         public DTO_ThongTinSachMuon(
             string maPhieuMuonSach,
             string maSach,
-            string trangThai
+            string trangThai,
+            string ngayTraSachStr = null
         )
         {
             this.maPhieuMuonSach = maPhieuMuonSach;
             this.maSach = maSach;
             this.trangThai = trangThai;
+            this.ngayTraSachStr = ngayTraSachStr;
         }
     }
 }

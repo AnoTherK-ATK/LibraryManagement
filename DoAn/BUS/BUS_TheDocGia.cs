@@ -29,6 +29,24 @@ namespace DoAn.BUS
         {
             return dal_TheDocGia.LayMaDocGiaTheoTenDocGia(TenDocGia);
         }
+        internal string LayTenDocGiaTheoMaDocGia(string MaDocGia)
+        {
+            return dal_TheDocGia.LayTenDocGiaTheoMaDocGia(MaDocGia);
+        }
+
+        internal List<string> LayTatCaTenDocGiaTheoMaDocGia(List<string> danhsachMaDocGia)
+        {
+            List<string> danhSachTenDocGia = new List<string>();
+            foreach (var ma in danhsachMaDocGia)
+            {
+                var ten = LayTenDocGiaTheoMaDocGia(ma);
+                if (!string.IsNullOrEmpty(ten))
+                {
+                    danhSachTenDocGia.Add(ten);
+                }
+            }
+            return danhSachTenDocGia;
+        }
 
 
         Dictionary<string, string> loaiDocGia = new Dictionary<string, string>
@@ -131,6 +149,11 @@ namespace DoAn.BUS
                 throw new Exception("Mã thẻ độc giả không được để trống");
             }
             return dal_TheDocGia.XoaTheDocGia(maTheDocGia);
-            }
         }
+
+        internal bool CapNhatTongNo(string MaDocGia, float TongNo)
+        {
+            return dal_TheDocGia.CapNhatTongNo(MaDocGia, TongNo);
+        }
+    }
 }

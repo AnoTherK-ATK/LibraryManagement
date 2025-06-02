@@ -12,6 +12,7 @@ using DoAn.GUI.YeuCau2;
 using DoAn.GUI.YeuCau3;
 using DoAn.GUI.YeuCau4;
 using DoAn.GUI.YeuCau5;
+using DoAn.GUI.YeuCau6;
 
 
 namespace DoAn
@@ -93,6 +94,11 @@ namespace DoAn
         private void button2_Click(object sender, EventArgs e)
         {
             new GUI_TimPhieuMuon().Show();
+        }
+
+        private void TraSachbtn_Click(object sender, EventArgs e)
+        {
+            new YeuCau6().Show();
         }
     }
 }

@@ -134,6 +134,26 @@ namespace DoAn.DAL
                 return null; // hoặc trả "" nếu muốn
         }
 
+        internal string LayTenDocGiaTheoMaDocGia(string MaDocGia)
+        {
+            string query = @"
+                SELECT HoTen 
+                FROM THEDOCGIA 
+                WHERE MaDocGia = @MaDocGia AND CURRENT_DATE() < NgayHetHan
+            ";
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>()
+            {
+                { "@MaDocGia", MaDocGia }
+            };
+
+            object result = helper.ExecuteScalar(query, parameters);
+
+            if (result != null)
+                return result.ToString();
+            else
+                return null; // hoặc trả "" nếu muốn
+        }
 
 
 
@@ -178,7 +198,7 @@ namespace DoAn.DAL
 
         internal DTO_TheDocGia LayThongTinTheDocGia(string maDocGia)
         {
-            string query = $"SELECT MaDocGia,HoTen, DATE_FORMAT(NgaySinh, '%d/%m/%Y') AS NgaySinh, DiaChi, Email, DATE_FORMAT(NgayLapThe, '%d/%m/%Y') AS NgayLapThe, DATE_FORMAT(NgayHetHan, '%d/%m/%Y') AS NgayHetHan, MaLoaiDocGia, MaNhanVien FROM THEDOCGIA WHERE MaDocGia = '{maDocGia}'";
+            string query = $"SELECT MaDocGia,HoTen, DATE_FORMAT(NgaySinh, '%d/%m/%Y') AS NgaySinh, DiaChi, Email, DATE_FORMAT(NgayLapThe, '%d/%m/%Y') AS NgayLapThe, DATE_FORMAT(NgayHetHan, '%d/%m/%Y') AS NgayHetHan, MaLoaiDocGia, MaNhanVien,TongNo FROM THEDOCGIA WHERE MaDocGia = '{maDocGia}'";
             DataTable dtTheDocGia = helper.ExecuteQuery(query);
             if (dtTheDocGia.Rows.Count > 0)
             {
@@ -192,11 +212,15 @@ namespace DoAn.DAL
                     dr["NgayLapThe"].ToString(),
                     dr["NgayHetHan"].ToString(),
                     dr["MaLoaiDocGia"].ToString(),
-                    dr["MaNhanVien"].ToString()
+                    dr["MaNhanVien"].ToString(),
+                    Convert.ToInt32(dr["TongNo"])
+
                 );
             }
             return null;
         }
+        
+
 
         internal bool CapNhatTheDocGia(DTO_TheDocGia dto_TheDocGia)
         {
@@ -256,6 +280,32 @@ namespace DoAn.DAL
             catch (Exception ex)
             {
                 throw new Exception("Lỗi khi xóa thẻ độc giả: " + ex.Message);
+            }
+        }
+
+        internal bool CapNhatTongNo(string MaDocGia, float TongNo)
+        {
+            string query = @"
+            UPDATE THEDOCGIA SET 
+                TongNo = @TongNo
+            WHERE MaDocGia = @MaDocGia";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TongNo", TongNo);
+                        cmd.Parameters.AddWithValue("@MaDocGia", MaDocGia);
+
+                        conn.Open();
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật thẻ độc giả: " + ex.Message);
             }
         }
     }

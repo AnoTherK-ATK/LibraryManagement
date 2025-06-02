@@ -51,9 +51,9 @@ namespace DoAn.BUS
             return DAL_Sach.LayThongTinSach(maSach);
         }
 
-        public bool CapNhatTinhTrangSach(string maSach)
+        public bool CapNhatTinhTrangSach(string maSach, string tinhTrang = "Đã mượn")
         {
-            return DAL_Sach.CapNhatTinhTrangSach(maSach);
+            return DAL_Sach.CapNhatTinhTrangSach(maSach, tinhTrang);
         }
 
         public bool CapNhatSach(DTO_Sach sach)
@@ -115,6 +115,16 @@ namespace DoAn.BUS
                 triGiaTu,
                 triGiaDen
             );
+        }
+
+        public List<string> LayTenSachTheoListMaSach(List<string> listMaSach)
+        {
+            return DAL_Sach.LayTenSachTheoListMaSach(listMaSach);
+        }
+
+        public string LayMaSachTheoTenSach(string TenSach)
+        {
+            return DAL_Sach.LayMaSachTheoTenSach(TenSach);
         }
     }
 }

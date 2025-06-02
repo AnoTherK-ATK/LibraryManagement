@@ -155,13 +155,15 @@ namespace DoAn.GUI.YeuCau6
 
         private void ClearContent()
         {
+            TenDocGiaCombo.SelectedIndexChanged -= TenDocGiaCombo_SelectedIndexChanged;
+
             TenDocGiaCombo.SelectedIndex = -1;
             HienThiDanhSachTenDocGia();
             NgayTradate.Value = DateTime.Now;
             Danhsachsachmuon.Rows.Clear();
             Danhsachsachmuon.RowsAdded += addRow;
             TienPhatKiNayTxt.Text = "0";
-            TongNoTxt.Text = "";
+            TongNoTxt.Text = "0";
             TienNoTxt.Text = "0";
             TenDocGiaCombo.Enabled = true;
             Danhsachsachmuon.Enabled = false;

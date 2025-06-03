@@ -85,28 +85,7 @@ namespace DoAn.GUI.YeuCau6
             Danhsachsachmuon.Rows[rowIndex].Cells["stt"].Value = rowIndex + 1;
         }
 
-        private void Danhsachsachmuon_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            if (Danhsachsachmuon.Columns[e.ColumnIndex].Name == "tenSach")
-            {
-                string newValue = e.FormattedValue?.ToString();
-                if (string.IsNullOrEmpty(newValue))
-                    return;
 
-                // Kiểm tra trùng lặp ở các hàng khác
-                for (int i = 0; i < Danhsachsachmuon.Rows.Count; i++)
-                {
-                    if (i == e.RowIndex) continue; // Bỏ qua hàng hiện tại
-                    var cell = Danhsachsachmuon.Rows[i].Cells["tenSach"];
-                    if (cell.Value != null && cell.Value.ToString() == newValue)
-                    {
-                        MessageBox.Show("sách này đã được chọn ở hàng khác. Vui lòng chọn mã khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        e.Cancel = true;
-                        return;
-                    }
-                }
-            }
-        }
 
         private void Danhsachsachmuon_CellValidated(object sender, DataGridViewCellEventArgs e)
         {
@@ -132,7 +111,14 @@ namespace DoAn.GUI.YeuCau6
                 DateTime dateMuon = DateTime.ParseExact(DTO_PhieuMuonSach.ngayMuonStr, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 int SoNgayMuon = (int)(DateTime.Now - dateMuon).TotalDays;
                 Danhsachsachmuon.Rows[e.RowIndex].Cells["soNgayMuon"].Value = SoNgayMuon.ToString();
-                TienPhatKiNayTxt.Text = (float.Parse(TienPhatKiNayTxt.Text) + tienPhatTre).ToString();
+                float tienphatkn = 0;
+                foreach(DataGridViewRow row in Danhsachsachmuon.Rows)
+                {
+                    if (row.IsNewRow) continue;
+                    tienphatkn = float.Parse(row.Cells["tienPhat"].Value.ToString()) + tienphatkn;
+                    TienPhatKiNayTxt.Text = tienphatkn.ToString();
+                }
+                //TienPhatKiNayTxt.Text = (float.Parse(TienPhatKiNayTxt.Text) + tienPhatTre).ToString();
                 TienNoTxt.Enabled = true;
                 
 
@@ -149,7 +135,11 @@ namespace DoAn.GUI.YeuCau6
             }
             else
             {
+                if (TienNoTxt.Text !="")
+                {
                 TinhTongNo(float.Parse(TienNoTxt.Text));
+
+                }
             }
         }
 

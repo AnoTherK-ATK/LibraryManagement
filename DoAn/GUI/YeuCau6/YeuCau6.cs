@@ -188,7 +188,7 @@ namespace DoAn.GUI.YeuCau6
                                 foreach (string maPM in listmaPM)
                                 {
                                     List<string> listMaSach = BUS_ThongTinSachMuon.LayTatCaSachTheoPhieuMuon(maPM);
-                                    if (listMaSach.Contains(maSach))
+                                    if (listMaSach.Contains(maSach) && BUS_ThongTinSachMuon.LayTrangThaiPhieuMuonTheoMS_MPM(maPM, maSach)=="Đang mượn")
                                     {
                                         if ((BUS_ThongTinSachMuon.CapNhatNgayTraSach(maPM, maSach, trangThai)))
                                         {

@@ -50,6 +50,11 @@ namespace DoAn.BUS
         {
             return DAL_ThongTinSachMuon.LayTrangThaiPhieuMuon(maPM);
         }
+
+        internal string LayTrangThaiPhieuMuonTheoMS_MPM(string maPM, string maSach)
+        {
+            return DAL_ThongTinSachMuon.LayTrangThaiPhieuMuonTheoMS_MPM(maPM, maSach);
+        }
         internal string LayMaPMTheoMaSach(string MaSach)
         {
             return DAL_ThongTinSachMuon.LayMaPMTheoMaSach(MaSach);

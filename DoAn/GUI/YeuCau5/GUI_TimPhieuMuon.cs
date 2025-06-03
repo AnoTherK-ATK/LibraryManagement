@@ -63,7 +63,7 @@ namespace DoAn.GUI.YeuCau5
                     row.Cells["MaDocGia"].Value = phieuMuon.MaDocGia;
                     row.Cells["NgayMuon"].Value = phieuMuon.ngayMuon.ToString("dd/MM/yyyy");
                     row.Cells["NgayTra"].Value = phieuMuon.hanTraSachStr;
-                    row.Cells["TrangThai"].Value = ThongTinSachMuon.LayTrangThaiPhieuMuon(phieuMuon.MaPhieuMuonSach);
+                    row.Cells["TrangThai"].Value = ThongTinSachMuon.LayTrangThaiPhieuMuonTheoMS_MPM(phieuMuon.MaPhieuMuonSach, s);
                     row.Cells["MaSach"].Value = s;
                 }
             }

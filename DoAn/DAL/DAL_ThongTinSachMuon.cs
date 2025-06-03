@@ -87,6 +87,17 @@ namespace DoAn.DAL
             return string.Empty;
         }
 
+        internal string LayTrangThaiPhieuMuonTheoMS_MPM(string maPM, string maSach)
+        {
+            string query = $"SELECT TrangThai FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}' AND MaSach = '{maSach}'";
+            DataTable dtTrangThai = helper.ExecuteQuery(query);
+            if (dtTrangThai.Rows.Count > 0)
+            {
+                return dtTrangThai.Rows[0]["TrangThai"].ToString();
+            }
+            return string.Empty;
+        }
+
         internal string LayMaPMTheoMaSach(string MaSach)
         {
             string query = $"SELECT MaPhieuMuonSach FROM THONGTINSACHMUON WHERE MaSach = '{MaSach}' AND TrangThai = 'Đang mượn'";

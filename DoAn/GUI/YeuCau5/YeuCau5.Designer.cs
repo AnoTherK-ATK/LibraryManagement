@@ -56,7 +56,7 @@
             this.MaPhieuMuonTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaPhieuMuonTxt.Name = "MaPhieuMuonTxt";
             this.MaPhieuMuonTxt.ReadOnly = true;
-            this.MaPhieuMuonTxt.Size = new System.Drawing.Size(146, 34);
+            this.MaPhieuMuonTxt.Size = new System.Drawing.Size(146, 39);
             this.MaPhieuMuonTxt.TabIndex = 10;
             // 
             // label1
@@ -66,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(23, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 28);
+            this.label1.Size = new System.Drawing.Size(196, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã phiếu mượn";
             // 
@@ -76,7 +76,7 @@
             this.TenDocGiaCombo.FormattingEnabled = true;
             this.TenDocGiaCombo.Location = new System.Drawing.Point(202, 43);
             this.TenDocGiaCombo.Name = "TenDocGiaCombo";
-            this.TenDocGiaCombo.Size = new System.Drawing.Size(139, 36);
+            this.TenDocGiaCombo.Size = new System.Drawing.Size(139, 40);
             this.TenDocGiaCombo.TabIndex = 12;
             this.TenDocGiaCombo.SelectedIndexChanged += new System.EventHandler(this.TenDocGiaCombo_SelectedIndexChanged);
             // 
@@ -86,7 +86,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(197, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 28);
+            this.label3.Size = new System.Drawing.Size(145, 32);
             this.label3.TabIndex = 11;
             this.label3.Text = "Tên độc giả";
             // 
@@ -96,7 +96,7 @@
             this.NgayMuonTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayMuonTxt.Location = new System.Drawing.Point(392, 44);
             this.NgayMuonTxt.Name = "NgayMuonTxt";
-            this.NgayMuonTxt.Size = new System.Drawing.Size(191, 34);
+            this.NgayMuonTxt.Size = new System.Drawing.Size(191, 39);
             this.NgayMuonTxt.TabIndex = 14;
             this.NgayMuonTxt.Value = new System.DateTime(2025, 5, 29, 0, 0, 0, 0);
             // 
@@ -106,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(387, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 28);
+            this.label4.Size = new System.Drawing.Size(149, 32);
             this.label4.TabIndex = 13;
             this.label4.Text = "Ngày mượn";
             // 
@@ -118,7 +118,7 @@
             this.HanTraSachTxt.Location = new System.Drawing.Point(616, 45);
             this.HanTraSachTxt.Name = "HanTraSachTxt";
             this.HanTraSachTxt.ReadOnly = true;
-            this.HanTraSachTxt.Size = new System.Drawing.Size(191, 34);
+            this.HanTraSachTxt.Size = new System.Drawing.Size(191, 39);
             this.HanTraSachTxt.TabIndex = 16;
             // 
             // label2
@@ -127,7 +127,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(611, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 28);
+            this.label2.Size = new System.Drawing.Size(161, 32);
             this.label2.TabIndex = 15;
             this.label2.Text = "Hạn Trả Sách";
             // 
@@ -138,7 +138,7 @@
             this.label5.Location = new System.Drawing.Point(23, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 28);
+            this.label5.Size = new System.Drawing.Size(273, 32);
             this.label5.TabIndex = 17;
             this.label5.Text = "Số sách mượn quá hạn";
             // 
@@ -153,7 +153,7 @@
             this.SoSachQuaHanTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SoSachQuaHanTxt.Name = "SoSachQuaHanTxt";
             this.SoSachQuaHanTxt.ReadOnly = true;
-            this.SoSachQuaHanTxt.Size = new System.Drawing.Size(100, 34);
+            this.SoSachQuaHanTxt.Size = new System.Drawing.Size(100, 39);
             this.SoSachQuaHanTxt.TabIndex = 18;
             // 
             // label6
@@ -163,7 +163,7 @@
             this.label6.Location = new System.Drawing.Point(376, 110);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(361, 28);
+            this.label6.Size = new System.Drawing.Size(434, 32);
             this.label6.TabIndex = 19;
             this.label6.Text = "Tổng sách mượn theo ngày quy định";
             // 
@@ -224,12 +224,12 @@
             this.SachMuonTheoQDTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SachMuonTheoQDTxt.Name = "SachMuonTheoQDTxt";
             this.SachMuonTheoQDTxt.ReadOnly = true;
-            this.SachMuonTheoQDTxt.Size = new System.Drawing.Size(81, 34);
+            this.SachMuonTheoQDTxt.Size = new System.Drawing.Size(81, 39);
             this.SachMuonTheoQDTxt.TabIndex = 26;
             // 
             // YeuCau5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(839, 522);
@@ -252,7 +252,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "YeuCau5";
-            this.Text = "YeuCau5";
+            this.Text = "Lập phiếu mượn";
             this.Load += new System.EventHandler(this.YeuCau5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

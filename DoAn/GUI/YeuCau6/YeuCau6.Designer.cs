@@ -57,7 +57,7 @@
             this.TenDocGiaCombo.FormattingEnabled = true;
             this.TenDocGiaCombo.Location = new System.Drawing.Point(31, 54);
             this.TenDocGiaCombo.Name = "TenDocGiaCombo";
-            this.TenDocGiaCombo.Size = new System.Drawing.Size(122, 36);
+            this.TenDocGiaCombo.Size = new System.Drawing.Size(122, 40);
             this.TenDocGiaCombo.TabIndex = 14;
             this.TenDocGiaCombo.SelectedIndexChanged += new System.EventHandler(this.TenDocGiaCombo_SelectedIndexChanged);
             // 
@@ -67,7 +67,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 28);
+            this.label3.Size = new System.Drawing.Size(145, 32);
             this.label3.TabIndex = 13;
             this.label3.Text = "Tên độc giả";
             // 
@@ -78,7 +78,7 @@
             this.NgayTradate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayTradate.Location = new System.Drawing.Point(188, 54);
             this.NgayTradate.Name = "NgayTradate";
-            this.NgayTradate.Size = new System.Drawing.Size(168, 36);
+            this.NgayTradate.Size = new System.Drawing.Size(168, 42);
             this.NgayTradate.TabIndex = 16;
             this.NgayTradate.Value = new System.DateTime(2025, 5, 29, 0, 0, 0, 0);
             // 
@@ -88,7 +88,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(184, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 28);
+            this.label4.Size = new System.Drawing.Size(116, 32);
             this.label4.TabIndex = 15;
             this.label4.Text = "Ngày Trả";
             // 
@@ -101,7 +101,7 @@
             this.TienPhatKiNayTxt.Location = new System.Drawing.Point(388, 54);
             this.TienPhatKiNayTxt.Name = "TienPhatKiNayTxt";
             this.TienPhatKiNayTxt.ReadOnly = true;
-            this.TienPhatKiNayTxt.Size = new System.Drawing.Size(152, 34);
+            this.TienPhatKiNayTxt.Size = new System.Drawing.Size(152, 39);
             this.TienPhatKiNayTxt.TabIndex = 18;
             // 
             // label2
@@ -110,7 +110,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(383, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 28);
+            this.label2.Size = new System.Drawing.Size(196, 32);
             this.label2.TabIndex = 17;
             this.label2.Text = "Tiền phạt kì này";
             // 
@@ -121,7 +121,7 @@
             this.TienNoTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.TienNoTxt.Location = new System.Drawing.Point(564, 53);
             this.TienNoTxt.Name = "TienNoTxt";
-            this.TienNoTxt.Size = new System.Drawing.Size(120, 34);
+            this.TienNoTxt.Size = new System.Drawing.Size(120, 39);
             this.TienNoTxt.TabIndex = 20;
             this.TienNoTxt.TextChanged += new System.EventHandler(this.TienNoTxt_TextChanged);
             // 
@@ -131,7 +131,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(558, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 28);
+            this.label1.Size = new System.Drawing.Size(100, 32);
             this.label1.TabIndex = 19;
             this.label1.Text = "Tiền nợ";
             // 
@@ -144,7 +144,7 @@
             this.TongNoTxt.Location = new System.Drawing.Point(705, 53);
             this.TongNoTxt.Name = "TongNoTxt";
             this.TongNoTxt.ReadOnly = true;
-            this.TongNoTxt.Size = new System.Drawing.Size(107, 34);
+            this.TongNoTxt.Size = new System.Drawing.Size(107, 39);
             this.TongNoTxt.TabIndex = 22;
             // 
             // label5
@@ -153,7 +153,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(700, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 28);
+            this.label5.Size = new System.Drawing.Size(110, 32);
             this.label5.TabIndex = 21;
             this.label5.Text = "Tổng nợ";
             // 
@@ -264,7 +264,7 @@
             // 
             // YeuCau6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 528);
             this.Controls.Add(this.ExitBtn);
@@ -283,7 +283,7 @@
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.Name = "YeuCau6";
-            this.Text = "YeuCau6";
+            this.Text = "Trả sách";
             this.Load += new System.EventHandler(this.YeuCau6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Danhsachsachmuon)).EndInit();
             this.ResumeLayout(false);

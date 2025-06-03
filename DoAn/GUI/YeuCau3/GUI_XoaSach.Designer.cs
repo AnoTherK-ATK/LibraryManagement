@@ -38,9 +38,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 21);
+            this.label1.Size = new System.Drawing.Size(90, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sách";
             // 
@@ -48,44 +49,53 @@
             // 
             this.MaSachTxt.Location = new System.Drawing.Point(16, 33);
             this.MaSachTxt.Name = "MaSachTxt";
-            this.MaSachTxt.Size = new System.Drawing.Size(100, 29);
+            this.MaSachTxt.Size = new System.Drawing.Size(124, 34);
             this.MaSachTxt.TabIndex = 1;
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(122, 33);
+            this.SearchBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SearchBtn.Location = new System.Drawing.Point(170, 30);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(87, 29);
+            this.SearchBtn.Size = new System.Drawing.Size(87, 37);
             this.SearchBtn.TabIndex = 2;
             this.SearchBtn.Text = "Tìm";
-            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(253, 33);
+            this.DeleteBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DeleteBtn.Location = new System.Drawing.Point(294, 30);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(87, 29);
+            this.DeleteBtn.Size = new System.Drawing.Size(87, 37);
             this.DeleteBtn.TabIndex = 3;
             this.DeleteBtn.Text = "Xoá";
-            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.UseVisualStyleBackColor = false;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(253, 87);
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ExitBtn.Location = new System.Drawing.Point(415, 30);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(87, 29);
+            this.ExitBtn.Size = new System.Drawing.Size(87, 37);
             this.ExitBtn.TabIndex = 4;
             this.ExitBtn.Text = "Thoát";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // GUI_XoaSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 136);
+            this.ClientSize = new System.Drawing.Size(543, 136);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.SearchBtn);

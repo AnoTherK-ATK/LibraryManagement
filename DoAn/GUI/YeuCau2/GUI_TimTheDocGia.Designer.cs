@@ -65,13 +65,15 @@
             // 
             // TimTheDocGiaBtn
             // 
-            this.TimTheDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimTheDocGiaBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TimTheDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimTheDocGiaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TimTheDocGiaBtn.Location = new System.Drawing.Point(1228, 74);
             this.TimTheDocGiaBtn.Name = "TimTheDocGiaBtn";
             this.TimTheDocGiaBtn.Size = new System.Drawing.Size(105, 38);
             this.TimTheDocGiaBtn.TabIndex = 47;
             this.TimTheDocGiaBtn.Text = "Tìm";
-            this.TimTheDocGiaBtn.UseVisualStyleBackColor = true;
+            this.TimTheDocGiaBtn.UseVisualStyleBackColor = false;
             this.TimTheDocGiaBtn.Click += new System.EventHandler(this.TimTheDocGiaBtn_Click);
             // 
             // ResetBtn
@@ -161,60 +163,60 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(34, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 28);
+            this.label4.Size = new System.Drawing.Size(118, 28);
             this.label4.TabIndex = 48;
             this.label4.Text = "Mã độc giả";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(201, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 28);
+            this.label6.Size = new System.Drawing.Size(152, 28);
             this.label6.TabIndex = 49;
             this.label6.Text = "Họ tên độc giả";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(434, 29);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 28);
+            this.label9.Size = new System.Drawing.Size(70, 28);
             this.label9.TabIndex = 50;
             this.label9.Text = "Email ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(956, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 28);
+            this.label10.Size = new System.Drawing.Size(107, 28);
             this.label10.TabIndex = 51;
             this.label10.Text = "Ngày sinh";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(701, 29);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 28);
+            this.label11.Size = new System.Drawing.Size(78, 28);
             this.label11.TabIndex = 52;
             this.label11.Text = "Địa chỉ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(956, 134);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 28);
+            this.label12.Size = new System.Drawing.Size(141, 28);
             this.label12.TabIndex = 53;
             this.label12.Text = "Mã nhân viên";
             // 
@@ -258,7 +260,7 @@
             this.NgayHetHanSelector.CustomFormat = "dd/MM/yyyy";
             this.NgayHetHanSelector.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayHetHanSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayHetHanSelector.Location = new System.Drawing.Point(439, 176);
+            this.NgayHetHanSelector.Location = new System.Drawing.Point(465, 176);
             this.NgayHetHanSelector.Name = "NgayHetHanSelector";
             this.NgayHetHanSelector.Size = new System.Drawing.Size(140, 34);
             this.NgayHetHanSelector.TabIndex = 58;
@@ -269,7 +271,7 @@
             this.NgayLapTheSelector.CustomFormat = "dd/MM/yyyy";
             this.NgayLapTheSelector.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayLapTheSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NgayLapTheSelector.Location = new System.Drawing.Point(206, 176);
+            this.NgayLapTheSelector.Location = new System.Drawing.Point(226, 176);
             this.NgayLapTheSelector.Name = "NgayLapTheSelector";
             this.NgayLapTheSelector.Size = new System.Drawing.Size(142, 34);
             this.NgayLapTheSelector.TabIndex = 59;
@@ -278,30 +280,30 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(201, 134);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(221, 134);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 28);
+            this.label14.Size = new System.Drawing.Size(134, 28);
             this.label14.TabIndex = 61;
             this.label14.Text = "Ngày lập thẻ";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(434, 134);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(460, 134);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 28);
+            this.label13.Size = new System.Drawing.Size(140, 28);
             this.label13.TabIndex = 62;
             this.label13.Text = "Ngày hết hạn";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(701, 129);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 28);
+            this.label15.Size = new System.Drawing.Size(144, 28);
             this.label15.TabIndex = 64;
             this.label15.Text = "Tên nhân viên";
             // 
@@ -315,24 +317,28 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ExitBtn.Location = new System.Drawing.Point(1228, 182);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(105, 38);
             this.ExitBtn.TabIndex = 65;
             this.ExitBtn.Text = "Thoát";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // ResetButton
             // 
-            this.ResetButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.BackColor = System.Drawing.Color.Turquoise;
+            this.ResetButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ResetButton.Location = new System.Drawing.Point(1228, 129);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(105, 38);
             this.ResetButton.TabIndex = 66;
             this.ResetButton.Text = "Tái lập";
-            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // LoaiDocGiaCombo
@@ -347,10 +353,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(34, 134);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 28);
+            this.label16.Size = new System.Drawing.Size(127, 28);
             this.label16.TabIndex = 67;
             this.label16.Text = "Loại độc giả";
             // 

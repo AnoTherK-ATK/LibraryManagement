@@ -62,32 +62,41 @@
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Location = new System.Drawing.Point(194, 362);
+            this.ResetBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.ResetBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ResetBtn.Location = new System.Drawing.Point(342, 383);
             this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(177, 52);
+            this.ResetBtn.Size = new System.Drawing.Size(177, 46);
             this.ResetBtn.TabIndex = 57;
-            this.ResetBtn.Text = "Tái lập";
-            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.UseVisualStyleBackColor = false;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(710, 358);
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ExitBtn.Location = new System.Drawing.Point(661, 382);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(126, 57);
+            this.ExitBtn.Size = new System.Drawing.Size(177, 47);
             this.ExitBtn.TabIndex = 56;
             this.ExitBtn.Text = "Thoát";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // TiepNhanSachBtn
             // 
-            this.TiepNhanSachBtn.Location = new System.Drawing.Point(16, 358);
+            this.TiepNhanSachBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TiepNhanSachBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TiepNhanSachBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TiepNhanSachBtn.Location = new System.Drawing.Point(17, 382);
             this.TiepNhanSachBtn.Name = "TiepNhanSachBtn";
-            this.TiepNhanSachBtn.Size = new System.Drawing.Size(164, 57);
+            this.TiepNhanSachBtn.Size = new System.Drawing.Size(164, 47);
             this.TiepNhanSachBtn.TabIndex = 55;
             this.TiepNhanSachBtn.Text = "Cập nhật sách";
-            this.TiepNhanSachBtn.UseVisualStyleBackColor = true;
+            this.TiepNhanSachBtn.UseVisualStyleBackColor = false;
             this.TiepNhanSachBtn.Click += new System.EventHandler(this.TiepNhanSachBtn_Click);
             // 
             // TriGiaTxt
@@ -99,6 +108,7 @@
             // 
             // label13
             // 
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(505, 288);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 21);
@@ -114,6 +124,7 @@
             // 
             // label12
             // 
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(12, 288);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(119, 21);
@@ -130,6 +141,7 @@
             // 
             // label11
             // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(505, 193);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 21);
@@ -148,6 +160,7 @@
             // 
             // label10
             // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(203, 193);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 21);
@@ -167,6 +180,7 @@
             // 
             // label9
             // 
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(12, 193);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 21);
@@ -183,6 +197,7 @@
             // 
             // label8
             // 
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(740, 103);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 21);
@@ -191,6 +206,7 @@
             // 
             // label7
             // 
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(505, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 21);
@@ -213,6 +229,7 @@
             // 
             // label6
             // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(203, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 21);
@@ -229,6 +246,7 @@
             // 
             // label5
             // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 21);
@@ -246,9 +264,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(677, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 28);
+            this.label4.Size = new System.Drawing.Size(174, 28);
             this.label4.TabIndex = 35;
             this.label4.Text = "Quyền nhận sách";
             // 
@@ -263,9 +282,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(505, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 28);
+            this.label3.Size = new System.Drawing.Size(128, 28);
             this.label3.TabIndex = 33;
             this.label3.Text = "Tên bộ phận";
             // 
@@ -280,7 +300,7 @@
             // MaNhanVienCombo
             // 
             this.MaNhanVienCombo.FormattingEnabled = true;
-            this.MaNhanVienCombo.Location = new System.Drawing.Point(16, 33);
+            this.MaNhanVienCombo.Location = new System.Drawing.Point(12, 33);
             this.MaNhanVienCombo.Name = "MaNhanVienCombo";
             this.MaNhanVienCombo.Size = new System.Drawing.Size(119, 36);
             this.MaNhanVienCombo.TabIndex = 31;
@@ -288,6 +308,7 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(203, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 21);
@@ -296,7 +317,8 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 29;
@@ -304,12 +326,15 @@
             // 
             // SearchBtn
             // 
+            this.SearchBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.SearchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SearchBtn.Location = new System.Drawing.Point(141, 131);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(61, 25);
             this.SearchBtn.TabIndex = 58;
             this.SearchBtn.Text = "Tìm";
-            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // GUI_CapNhatSach

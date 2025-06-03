@@ -44,86 +44,92 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(628, 113);
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ExitBtn.Location = new System.Drawing.Point(706, 112);
             this.ExitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(130, 30);
+            this.ExitBtn.Size = new System.Drawing.Size(140, 45);
             this.ExitBtn.TabIndex = 47;
             this.ExitBtn.Text = "Thoát";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetBtn.Location = new System.Drawing.Point(449, 113);
+            this.ResetBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.ResetBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ResetBtn.Location = new System.Drawing.Point(466, 112);
             this.ResetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(100, 31);
+            this.ResetBtn.Size = new System.Drawing.Size(140, 45);
             this.ResetBtn.TabIndex = 46;
             this.ResetBtn.Text = "Tái lập";
-            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.UseVisualStyleBackColor = false;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // TimPM
             // 
-            this.TimPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimPM.Location = new System.Drawing.Point(292, 113);
+            this.TimPM.BackColor = System.Drawing.Color.Turquoise;
+            this.TimPM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimPM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TimPM.Location = new System.Drawing.Point(190, 112);
             this.TimPM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimPM.Name = "TimPM";
-            this.TimPM.Size = new System.Drawing.Size(79, 31);
+            this.TimPM.Size = new System.Drawing.Size(142, 45);
             this.TimPM.TabIndex = 44;
             this.TimPM.Text = "Tìm";
-            this.TimPM.UseVisualStyleBackColor = true;
+            this.TimPM.UseVisualStyleBackColor = false;
             this.TimPM.Click += new System.EventHandler(this.TimPM_Click);
             // 
             // Name_text
             // 
-            this.Name_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name_text.Location = new System.Drawing.Point(449, 55);
+            this.Name_text.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_text.Location = new System.Drawing.Point(466, 58);
             this.Name_text.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name_text.Name = "Name_text";
-            this.Name_text.Size = new System.Drawing.Size(198, 28);
+            this.Name_text.Size = new System.Drawing.Size(198, 34);
             this.Name_text.TabIndex = 36;
             // 
             // MaPM_text
             // 
             this.MaPM_text.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.MaPM_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaPM_text.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaPM_text.Location = new System.Drawing.Point(190, 55);
             this.MaPM_text.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaPM_text.Name = "MaPM_text";
-            this.MaPM_text.Size = new System.Drawing.Size(93, 28);
+            this.MaPM_text.Size = new System.Drawing.Size(142, 34);
             this.MaPM_text.TabIndex = 35;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(350, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 24);
+            this.label2.Size = new System.Drawing.Size(118, 28);
             this.label2.TabIndex = 33;
             this.label2.Text = "Mã độc giả";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(41, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 24);
+            this.label3.Size = new System.Drawing.Size(163, 28);
             this.label3.TabIndex = 32;
             this.label3.Text = "Mã phiếu mượn";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(702, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(124, 28);
             this.label1.TabIndex = 48;
             this.label1.Text = "Ngày mượn";
             // 
@@ -131,12 +137,12 @@
             // 
             this.NgayMuon.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayMuon.CustomFormat = "";
-            this.NgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayMuon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayMuon.Location = new System.Drawing.Point(818, 55);
             this.NgayMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NgayMuon.Name = "NgayMuon";
-            this.NgayMuon.Size = new System.Drawing.Size(170, 28);
+            this.NgayMuon.Size = new System.Drawing.Size(170, 34);
             this.NgayMuon.TabIndex = 49;
             this.NgayMuon.Value = new System.DateTime(2025, 5, 30, 0, 0, 0, 0);
             this.NgayMuon.ValueChanged += new System.EventHandler(this.ValueChange);

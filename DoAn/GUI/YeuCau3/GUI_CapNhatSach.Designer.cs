@@ -103,7 +103,7 @@
             // 
             this.TriGiaTxt.Location = new System.Drawing.Point(509, 312);
             this.TriGiaTxt.Name = "TriGiaTxt";
-            this.TriGiaTxt.Size = new System.Drawing.Size(294, 34);
+            this.TriGiaTxt.Size = new System.Drawing.Size(294, 39);
             this.TriGiaTxt.TabIndex = 54;
             // 
             // label13
@@ -119,7 +119,7 @@
             // 
             this.NhaXuatBanTxt.Location = new System.Drawing.Point(16, 312);
             this.NhaXuatBanTxt.Name = "NhaXuatBanTxt";
-            this.NhaXuatBanTxt.Size = new System.Drawing.Size(405, 34);
+            this.NhaXuatBanTxt.Size = new System.Drawing.Size(405, 39);
             this.NhaXuatBanTxt.TabIndex = 52;
             // 
             // label12
@@ -136,7 +136,7 @@
             this.SachQuaHanNhapTxt.Location = new System.Drawing.Point(509, 220);
             this.SachQuaHanNhapTxt.Name = "SachQuaHanNhapTxt";
             this.SachQuaHanNhapTxt.ReadOnly = true;
-            this.SachQuaHanNhapTxt.Size = new System.Drawing.Size(148, 34);
+            this.SachQuaHanNhapTxt.Size = new System.Drawing.Size(148, 39);
             this.SachQuaHanNhapTxt.TabIndex = 50;
             // 
             // label11
@@ -154,7 +154,7 @@
             this.NgayNhapSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayNhapSelector.Location = new System.Drawing.Point(207, 217);
             this.NgayNhapSelector.Name = "NgayNhapSelector";
-            this.NgayNhapSelector.Size = new System.Drawing.Size(181, 34);
+            this.NgayNhapSelector.Size = new System.Drawing.Size(181, 39);
             this.NgayNhapSelector.TabIndex = 48;
             this.NgayNhapSelector.ValueChanged += new System.EventHandler(this.NgayNhapSelector_ValueChanged);
             // 
@@ -174,7 +174,7 @@
             this.NamXuatBanSelector.Location = new System.Drawing.Point(16, 217);
             this.NamXuatBanSelector.Name = "NamXuatBanSelector";
             this.NamXuatBanSelector.ShowUpDown = true;
-            this.NamXuatBanSelector.Size = new System.Drawing.Size(119, 34);
+            this.NamXuatBanSelector.Size = new System.Drawing.Size(119, 39);
             this.NamXuatBanSelector.TabIndex = 46;
             this.NamXuatBanSelector.ValueChanged += new System.EventHandler(this.NamXuatBanSelector_ValueChanged);
             // 
@@ -192,7 +192,7 @@
             this.TheLoaiCombo.FormattingEnabled = true;
             this.TheLoaiCombo.Location = new System.Drawing.Point(744, 127);
             this.TheLoaiCombo.Name = "TheLoaiCombo";
-            this.TheLoaiCombo.Size = new System.Drawing.Size(92, 36);
+            this.TheLoaiCombo.Size = new System.Drawing.Size(92, 40);
             this.TheLoaiCombo.TabIndex = 44;
             // 
             // label8
@@ -217,14 +217,14 @@
             // 
             this.TacGiaTxt.Location = new System.Drawing.Point(509, 127);
             this.TacGiaTxt.Name = "TacGiaTxt";
-            this.TacGiaTxt.Size = new System.Drawing.Size(199, 34);
+            this.TacGiaTxt.Size = new System.Drawing.Size(199, 39);
             this.TacGiaTxt.TabIndex = 41;
             // 
             // TenSachTxt
             // 
             this.TenSachTxt.Location = new System.Drawing.Point(207, 127);
             this.TenSachTxt.Name = "TenSachTxt";
-            this.TenSachTxt.Size = new System.Drawing.Size(236, 34);
+            this.TenSachTxt.Size = new System.Drawing.Size(236, 39);
             this.TenSachTxt.TabIndex = 40;
             // 
             // label6
@@ -240,7 +240,7 @@
             // 
             this.MaSachTxt.Location = new System.Drawing.Point(16, 127);
             this.MaSachTxt.Name = "MaSachTxt";
-            this.MaSachTxt.Size = new System.Drawing.Size(119, 34);
+            this.MaSachTxt.Size = new System.Drawing.Size(119, 39);
             this.MaSachTxt.TabIndex = 38;
             this.MaSachTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MaSachTxt_KeyDown);
             // 
@@ -258,7 +258,7 @@
             this.QuyeNhanSachTxt.Location = new System.Drawing.Point(681, 33);
             this.QuyeNhanSachTxt.Name = "QuyeNhanSachTxt";
             this.QuyeNhanSachTxt.ReadOnly = true;
-            this.QuyeNhanSachTxt.Size = new System.Drawing.Size(115, 34);
+            this.QuyeNhanSachTxt.Size = new System.Drawing.Size(115, 39);
             this.QuyeNhanSachTxt.TabIndex = 36;
             // 
             // label4
@@ -267,7 +267,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(677, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 28);
+            this.label4.Size = new System.Drawing.Size(209, 32);
             this.label4.TabIndex = 35;
             this.label4.Text = "Quyền nhận sách";
             // 
@@ -276,7 +276,7 @@
             this.TenBoPhanTxt.Location = new System.Drawing.Point(509, 33);
             this.TenBoPhanTxt.Name = "TenBoPhanTxt";
             this.TenBoPhanTxt.ReadOnly = true;
-            this.TenBoPhanTxt.Size = new System.Drawing.Size(115, 34);
+            this.TenBoPhanTxt.Size = new System.Drawing.Size(115, 39);
             this.TenBoPhanTxt.TabIndex = 34;
             // 
             // label3
@@ -285,7 +285,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(505, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 28);
+            this.label3.Size = new System.Drawing.Size(155, 32);
             this.label3.TabIndex = 33;
             this.label3.Text = "Tên bộ phận";
             // 
@@ -294,7 +294,7 @@
             this.TenNhanVienTxt.Location = new System.Drawing.Point(207, 33);
             this.TenNhanVienTxt.Name = "TenNhanVienTxt";
             this.TenNhanVienTxt.ReadOnly = true;
-            this.TenNhanVienTxt.Size = new System.Drawing.Size(236, 34);
+            this.TenNhanVienTxt.Size = new System.Drawing.Size(236, 39);
             this.TenNhanVienTxt.TabIndex = 32;
             // 
             // MaNhanVienCombo
@@ -302,7 +302,7 @@
             this.MaNhanVienCombo.FormattingEnabled = true;
             this.MaNhanVienCombo.Location = new System.Drawing.Point(12, 33);
             this.MaNhanVienCombo.Name = "MaNhanVienCombo";
-            this.MaNhanVienCombo.Size = new System.Drawing.Size(119, 36);
+            this.MaNhanVienCombo.Size = new System.Drawing.Size(119, 40);
             this.MaNhanVienCombo.TabIndex = 31;
             this.MaNhanVienCombo.SelectedIndexChanged += new System.EventHandler(this.MaNhanVienCombo_SelectedIndexChanged);
             // 
@@ -339,7 +339,7 @@
             // 
             // GUI_CapNhatSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 455);
             this.Controls.Add(this.SearchBtn);
@@ -375,7 +375,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_CapNhatSach";
-            this.Text = "GUI_CapNhatSach";
+            this.Text = "Cập nhật sách";
             this.Load += new System.EventHandler(this.GUI_CapNhatSach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

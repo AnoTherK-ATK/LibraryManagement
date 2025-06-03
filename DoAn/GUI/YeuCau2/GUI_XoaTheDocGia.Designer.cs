@@ -39,9 +39,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 37);
+            this.label4.Location = new System.Drawing.Point(19, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 28);
+            this.label4.Size = new System.Drawing.Size(141, 32);
             this.label4.TabIndex = 71;
             this.label4.Text = "Mã độc giả";
             // 
@@ -50,10 +50,9 @@
             this.TimTheDocGiaBtn.BackColor = System.Drawing.Color.Turquoise;
             this.TimTheDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimTheDocGiaBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TimTheDocGiaBtn.Location = new System.Drawing.Point(215, 78);
-            this.TimTheDocGiaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TimTheDocGiaBtn.Location = new System.Drawing.Point(242, 102);
             this.TimTheDocGiaBtn.Name = "TimTheDocGiaBtn";
-            this.TimTheDocGiaBtn.Size = new System.Drawing.Size(105, 38);
+            this.TimTheDocGiaBtn.Size = new System.Drawing.Size(118, 50);
             this.TimTheDocGiaBtn.TabIndex = 76;
             this.TimTheDocGiaBtn.Text = "Tìm";
             this.TimTheDocGiaBtn.UseVisualStyleBackColor = false;
@@ -64,10 +63,9 @@
             this.DelBtn.BackColor = System.Drawing.Color.Turquoise;
             this.DelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DelBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DelBtn.Location = new System.Drawing.Point(348, 78);
-            this.DelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DelBtn.Location = new System.Drawing.Point(392, 102);
             this.DelBtn.Name = "DelBtn";
-            this.DelBtn.Size = new System.Drawing.Size(105, 38);
+            this.DelBtn.Size = new System.Drawing.Size(118, 50);
             this.DelBtn.TabIndex = 77;
             this.DelBtn.Text = "Xóa";
             this.DelBtn.UseVisualStyleBackColor = false;
@@ -76,11 +74,10 @@
             // MaDocGiaTxt
             // 
             this.MaDocGiaTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaDocGiaTxt.Location = new System.Drawing.Point(21, 82);
-            this.MaDocGiaTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaDocGiaTxt.Location = new System.Drawing.Point(24, 108);
             this.MaDocGiaTxt.Name = "MaDocGiaTxt";
             this.MaDocGiaTxt.ReadOnly = true;
-            this.MaDocGiaTxt.Size = new System.Drawing.Size(157, 34);
+            this.MaDocGiaTxt.Size = new System.Drawing.Size(176, 39);
             this.MaDocGiaTxt.TabIndex = 78;
             // 
             // exitBtn
@@ -88,10 +85,9 @@
             this.exitBtn.BackColor = System.Drawing.Color.Red;
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exitBtn.Location = new System.Drawing.Point(479, 78);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitBtn.Location = new System.Drawing.Point(539, 102);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(105, 38);
+            this.exitBtn.Size = new System.Drawing.Size(118, 50);
             this.exitBtn.TabIndex = 79;
             this.exitBtn.Text = "Thoát";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -99,17 +95,16 @@
             // 
             // GUI_XoaTheDocGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 148);
+            this.ClientSize = new System.Drawing.Size(670, 194);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.MaDocGiaTxt);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.TimTheDocGiaBtn);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GUI_XoaTheDocGia";
-            this.Text = "GUI_XoaTheDocGia";
+            this.Text = "Xoá thẻ độc giả";
             this.ResumeLayout(false);
             this.PerformLayout();
 

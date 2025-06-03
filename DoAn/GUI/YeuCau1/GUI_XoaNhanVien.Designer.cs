@@ -41,7 +41,7 @@
             this.MaNhanVienTxt.Location = new System.Drawing.Point(23, 55);
             this.MaNhanVienTxt.Name = "MaNhanVienTxt";
             this.MaNhanVienTxt.ReadOnly = true;
-            this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 34);
+            this.MaNhanVienTxt.Size = new System.Drawing.Size(171, 39);
             this.MaNhanVienTxt.TabIndex = 10;
             // 
             // label1
@@ -50,7 +50,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 28);
+            this.label1.Size = new System.Drawing.Size(169, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã nhân viên";
             // 
@@ -94,7 +94,7 @@
             // 
             // GUI_XoaNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 158);
             this.Controls.Add(this.ExitBtn);
@@ -105,7 +105,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_XoaNhanVien";
-            this.Text = "GUI_XoaNhanVien";
+            this.Text = "Xoá nhân viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 

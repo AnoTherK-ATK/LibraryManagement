@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySqlConnector;
 
 namespace DoAn.DAL
 {
@@ -120,6 +121,52 @@ namespace DoAn.DAL
             {
                 // Return a default value or throw an exception if no data is found
                 throw new InvalidOperationException("No data found for SachMuonToiDaTheoThoiGianQuyDinh in THAMSO.");
+            }
+        }
+
+        internal bool CapNhatThamSo(
+            int tuoiToiThieu,
+            int tuoiToiDa,
+            int giaTriThe,
+            int thoiGianNhapSachToiDa,
+            int hanMuonSachToiDa,
+            int sachMuonToiDaTheoThoiGianQuyDinh,
+            int thoiGianMuonSachTheoQuyDinh,
+            int tienPhatTraTreMoiNgay
+        )
+        {
+            string query = @"
+            UPDATE THAMSO SET 
+                TUOITOITHIEU = @TuoiToiThieu, 
+                TUOITOIDA = @TuoiToiDa, 
+                GIATRITHE = @GiaTriThe, 
+                THOIGIANNHAPSACHTOIDA = @ThoiGianNhapSachToiDa, 
+                HanMuonSachToiDa = @HanMuonSachToiDa, 
+                SachMuonToiDaTheoThoiGianQuyDinh = @SachMuonToiDaTheoThoiGianQuyDinh, 
+                ThoiGianMuonSachTheoQuyDinh = @ThoiGianMuonSachTheoQuyDinh, 
+                TienPhatTraTreMoiNgay = @TienPhatTraTreMoiNgay";
+            using (var conn = helper.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@TuoiToiThieu", tuoiToiThieu);
+                    cmd.Parameters.AddWithValue("@TuoiToiDa", tuoiToiDa);
+                    cmd.Parameters.AddWithValue("@GiaTriThe", giaTriThe);
+                    cmd.Parameters.AddWithValue("@ThoiGianNhapSachToiDa", thoiGianNhapSachToiDa);
+                    cmd.Parameters.AddWithValue("@HanMuonSachToiDa", hanMuonSachToiDa);
+                    cmd.Parameters.AddWithValue("@SachMuonToiDaTheoThoiGianQuyDinh", sachMuonToiDaTheoThoiGianQuyDinh);
+                    cmd.Parameters.AddWithValue("@ThoiGianMuonSachTheoQuyDinh", thoiGianMuonSachTheoQuyDinh);
+                    cmd.Parameters.AddWithValue("@TienPhatTraTreMoiNgay", tienPhatTraTreMoiNgay);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception (log it, rethrow it, etc.)
+                    throw new Exception("Error updating THAMSO: " + ex.Message);
+                }
             }
         }
     }

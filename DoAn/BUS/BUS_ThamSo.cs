@@ -49,5 +49,10 @@ namespace DoAn.BUS
         {
             return DAL_ThamSo.LaySachMuonToiDaTheoThoiGianQuyDinh();
         }
+
+        internal bool CapNhatThamSo(int tuoiToiThieu, int tuoiToiDa, int tienPhatTraTreMoiNgay, int giaTriThe, int thoiGianNhapSachToiDa, int hanMuonSachToiDa, int thoiGianMuonSachTheoQuyDinh, int sachMuonToiDaTheoThoiGianQuyDinh)
+        {
+            return DAL_ThamSo.CapNhatThamSo(tuoiToiThieu, tuoiToiDa, tienPhatTraTreMoiNgay, giaTriThe, thoiGianNhapSachToiDa, hanMuonSachToiDa, thoiGianMuonSachTheoQuyDinh, sachMuonToiDaTheoThoiGianQuyDinh);
+        }
     }
 }

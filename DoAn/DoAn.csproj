@@ -112,6 +112,12 @@
     <Compile Include="DTO\DTO_NhanVien.cs" />
     <Compile Include="DTO\DTO_TheLoai.cs" />
     <Compile Include="DTO\DTO_ThongTinSachMuon.cs" />
+    <Compile Include="GUI\GUI_ThayDoiThamSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_ThayDoiThamSo.Designer.cs">
+      <DependentUpon>GUI_ThayDoiThamSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     <Compile Include="GUI\YeuCau1\YeuCau1.Designer.cs">
       <DependentUpon>YeuCau1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\GUI_ThayDoiThamSo.resx">
+      <DependentUpon>GUI_ThayDoiThamSo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

@@ -47,40 +47,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 28);
+            this.label1.Size = new System.Drawing.Size(141, 28);
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã nhân viên";
             // 
             // TimNhanVienBtn
             // 
+            this.TimNhanVienBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TimNhanVienBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimNhanVienBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TimNhanVienBtn.Location = new System.Drawing.Point(212, 54);
             this.TimNhanVienBtn.Name = "TimNhanVienBtn";
             this.TimNhanVienBtn.Size = new System.Drawing.Size(102, 38);
             this.TimNhanVienBtn.TabIndex = 44;
             this.TimNhanVienBtn.Text = "Tìm";
-            this.TimNhanVienBtn.UseVisualStyleBackColor = true;
+            this.TimNhanVienBtn.UseVisualStyleBackColor = false;
             this.TimNhanVienBtn.Click += new System.EventHandler(this.TimNhanVienBtn_Click);
             // 
             // DeleteBtb
             // 
+            this.DeleteBtb.BackColor = System.Drawing.Color.Turquoise;
+            this.DeleteBtb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtb.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DeleteBtb.Location = new System.Drawing.Point(320, 55);
             this.DeleteBtb.Name = "DeleteBtb";
             this.DeleteBtb.Size = new System.Drawing.Size(154, 37);
             this.DeleteBtb.TabIndex = 45;
             this.DeleteBtb.Text = "Xoá nhân viên";
-            this.DeleteBtb.UseVisualStyleBackColor = true;
+            this.DeleteBtb.UseVisualStyleBackColor = false;
             this.DeleteBtb.Click += new System.EventHandler(this.DeleteBtb_Click);
             // 
             // ExitBtn
             // 
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ExitBtn.Location = new System.Drawing.Point(480, 54);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(117, 38);
             this.ExitBtn.TabIndex = 46;
             this.ExitBtn.Text = "Thoát";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             // 
             // GUI_XoaNhanVien
             // 

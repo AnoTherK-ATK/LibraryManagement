@@ -289,7 +289,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "MainMenu";
-            this.Text = "Quản lý thư viện";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

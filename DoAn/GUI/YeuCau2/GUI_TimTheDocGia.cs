@@ -19,7 +19,7 @@ namespace DoAn.GUI.YeuCau2
         private BUS_TheDocGia BUS_TheDocGia = new BUS_TheDocGia();
         private BUS_NhanVien BUS_NhanVien = new BUS_NhanVien();
         private bool ngaySinhSelected = false;
-        private bool ngayLapTheSelected = false;
+        private bool ngayLapTheSelected = false; 
         private bool ngayHetHanSelected = false;
 
         public GUI_TimTheDocGia()

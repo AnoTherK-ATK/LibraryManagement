@@ -40,15 +40,15 @@
             this.TongNoTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Danhsachsachmuon = new System.Windows.Forms.DataGridView();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SubmitBtn = new System.Windows.Forms.Button();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ngayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hanTraSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soNgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExitBtn = new System.Windows.Forms.Button();
-            this.SearchBtn = new System.Windows.Forms.Button();
-            this.SubmitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Danhsachsachmuon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,52 +189,6 @@
             this.Danhsachsachmuon.TabIndex = 23;
             this.Danhsachsachmuon.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Danhsachsachmuon_CellValidated);
             // 
-            // stt
-            // 
-            this.stt.HeaderText = "STT";
-            this.stt.MinimumWidth = 6;
-            this.stt.Name = "stt";
-            this.stt.Width = 50;
-            // 
-            // tenSach
-            // 
-            this.tenSach.HeaderText = "Tên Sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            this.tenSach.Width = 200;
-            // 
-            // ngayMuon
-            // 
-            this.ngayMuon.HeaderText = "Ngày Mượn";
-            this.ngayMuon.MinimumWidth = 6;
-            this.ngayMuon.Name = "ngayMuon";
-            this.ngayMuon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ngayMuon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ngayMuon.Width = 140;
-            // 
-            // hanTraSach
-            // 
-            this.hanTraSach.HeaderText = "Hạn Trả Sách";
-            this.hanTraSach.MinimumWidth = 6;
-            this.hanTraSach.Name = "hanTraSach";
-            this.hanTraSach.Width = 140;
-            // 
-            // tienPhat
-            // 
-            this.tienPhat.HeaderText = "Tiền Phạt";
-            this.tienPhat.MinimumWidth = 6;
-            this.tienPhat.Name = "tienPhat";
-            this.tienPhat.ReadOnly = true;
-            this.tienPhat.Width = 140;
-            // 
-            // soNgayMuon
-            // 
-            this.soNgayMuon.HeaderText = "Số Ngày Mượn";
-            this.soNgayMuon.MinimumWidth = 6;
-            this.soNgayMuon.Name = "soNgayMuon";
-            this.soNgayMuon.ReadOnly = true;
-            this.soNgayMuon.Width = 110;
-            // 
             // ExitBtn
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Red;
@@ -275,6 +229,52 @@
             this.SubmitBtn.Text = "Trả sách";
             this.SubmitBtn.UseVisualStyleBackColor = false;
             this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
+            // 
+            // stt
+            // 
+            this.stt.HeaderText = "STT";
+            this.stt.MinimumWidth = 6;
+            this.stt.Name = "stt";
+            this.stt.Width = 50;
+            // 
+            // tenSach
+            // 
+            this.tenSach.HeaderText = "Tên Sách";
+            this.tenSach.MinimumWidth = 6;
+            this.tenSach.Name = "tenSach";
+            this.tenSach.Width = 400;
+            // 
+            // ngayMuon
+            // 
+            this.ngayMuon.HeaderText = "Ngày Mượn";
+            this.ngayMuon.MinimumWidth = 6;
+            this.ngayMuon.Name = "ngayMuon";
+            this.ngayMuon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ngayMuon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ngayMuon.Width = 170;
+            // 
+            // hanTraSach
+            // 
+            this.hanTraSach.HeaderText = "Hạn Trả Sách";
+            this.hanTraSach.MinimumWidth = 6;
+            this.hanTraSach.Name = "hanTraSach";
+            this.hanTraSach.Width = 170;
+            // 
+            // tienPhat
+            // 
+            this.tienPhat.HeaderText = "Tiền Phạt";
+            this.tienPhat.MinimumWidth = 6;
+            this.tienPhat.Name = "tienPhat";
+            this.tienPhat.ReadOnly = true;
+            this.tienPhat.Width = 170;
+            // 
+            // soNgayMuon
+            // 
+            this.soNgayMuon.HeaderText = "Số Ngày Mượn";
+            this.soNgayMuon.MinimumWidth = 6;
+            this.soNgayMuon.Name = "soNgayMuon";
+            this.soNgayMuon.ReadOnly = true;
+            this.soNgayMuon.Width = 170;
             // 
             // YeuCau6
             // 
@@ -320,14 +320,14 @@
         private System.Windows.Forms.TextBox TongNoTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView Danhsachsachmuon;
+        private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Button SubmitBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewComboBoxColumn tenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn hanTraSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tienPhat;
         private System.Windows.Forms.DataGridViewTextBoxColumn soNgayMuon;
-        private System.Windows.Forms.Button ExitBtn;
-        private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.Button SubmitBtn;
     }
 }

@@ -267,5 +267,48 @@ namespace DoAn.DAL
             else
                 return null; // hoặc trả "" nếu muốn
         }
+
+        internal bool CapNhatSach(DTO_Sach sach, string maSachCu)
+        {
+            string query = @"
+            UPDATE SACH SET 
+                MaSach = @MaSach, 
+                TenSach = @TenSach, 
+                MaTheLoai = @MaTheLoai, 
+                TacGia = @TacGia, 
+                NamXuatBan = @NamXuatBan, 
+                NhaXuatBan = @NhaXuatBan, 
+                NgayNhap = @NgayNhap, 
+                TriGia = @TriGia, 
+                MaNhanVien = @MaNhanVien,
+                TinhTrang = @TinhTrang
+            WHERE MaSach = @MaSachCu";
+            try
+            {
+                using (var conn = helper.GetConnection())
+                {
+                    conn.Open();
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaSach", sach.MaSach);
+                        cmd.Parameters.AddWithValue("@TenSach", sach.TenSach);
+                        cmd.Parameters.AddWithValue("@MaTheLoai", sach.MaTheLoai);
+                        cmd.Parameters.AddWithValue("@TacGia", sach.TacGia);
+                        cmd.Parameters.AddWithValue("@NamXuatBan", sach.NamXuatBan);
+                        cmd.Parameters.AddWithValue("@NhaXuatBan", sach.NhaXuatBan);
+                        cmd.Parameters.AddWithValue("@NgayNhap", sach.ngayNhapStr);
+                        cmd.Parameters.AddWithValue("@TriGia", sach.TriGia);
+                        cmd.Parameters.AddWithValue("@MaNhanVien", sach.MaNhanVien);
+                        cmd.Parameters.AddWithValue("@TinhTrang", sach.TinhTrang);
+                        cmd.Parameters.AddWithValue("@MaSachCu", maSachCu);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật sách: " + ex.Message);
+            }
+        }
     }
 }

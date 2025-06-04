@@ -289,10 +289,8 @@
     <EmbeddedResource Include="GUI\YeuCau6\YeuCau6.resx">
       <DependentUpon>YeuCau6.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="GUI\YeuCau7\GUI_TimPhieuThu.resx">
       <DependentUpon>GUI_TimPhieuThu.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau7\YeuCau7.resx">
       <DependentUpon>YeuCau7.cs</DependentUpon>

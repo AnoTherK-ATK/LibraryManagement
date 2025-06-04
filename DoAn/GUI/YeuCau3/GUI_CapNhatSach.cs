@@ -193,7 +193,33 @@ namespace DoAn.GUI.YeuCau3
 
         private void TiepNhanSachBtn_Click(object sender, EventArgs e)
         {
-
+            DTO_Sach sach = new DTO_Sach(
+                MaSachTxt.Text,
+                TenSachTxt.Text,
+                TheLoaiCombo.SelectedValue.ToString(),
+                TacGiaTxt.Text,
+                NamXuatBanSelector.Text,
+                NhaXuatBanTxt.Text,
+                NgayNhapSelector.Text,
+                int.Parse(TriGiaTxt.Text),
+                MaNhanVienCombo.SelectedItem.ToString()
+            );
+            try
+            {
+                if (BUS_Sach.CapNhatSach(sach))
+                {
+                    MessageBox.Show("Cập nhật sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearContent();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật sách thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)

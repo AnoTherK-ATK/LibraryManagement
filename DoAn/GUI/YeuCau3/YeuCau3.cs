@@ -145,6 +145,7 @@ namespace DoAn.GUI.YeuCau3
 
         private void ClearContent()
         {
+            
             HienThiMaSachMoi();
             TenSachTxt.Clear();
             TacGiaTxt.Clear();
@@ -153,7 +154,8 @@ namespace DoAn.GUI.YeuCau3
             NgayNhapSelector.Value = DateTime.Now;
             NamXuatBanSelector.Value = DateTime.Now;
             TheLoaiCombo.SelectedIndex = -1;
-            MaNhanVienCombo.SelectedIndex = -1;
+            //MaNhanVienCombo.SelectedIndex = -1;
+            HienThiDanhSachMaNhanVien();
             TenNhanVienTxt.Clear();
             TenBoPhanTxt.Clear();
             QuyeNhanSachTxt.Clear();

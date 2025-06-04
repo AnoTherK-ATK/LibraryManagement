@@ -68,5 +68,17 @@ namespace DoAn.GUI
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
+
+        private void GUI_ThayDoiThamSo_Load_1(object sender, EventArgs e)
+        {
+            TuoiToiThieuTxt.Text = thamSo.LayTuoiToiThieu().ToString();
+            TuoiToiDaTxt.Text = thamSo.LayTuoiToiDa().ToString();
+            TienPhatTraTreMoiNgayTxt.Text = thamSo.LayTienPhatTraTreMoiNgay().ToString();
+            ThoiHanGiaTriTheTxt.Text = thamSo.LayGiaTriThe().ToString();
+            ThoiGianNhapSachToiDaTxt.Text = thamSo.LayThoiGianNhapSachToiDa().ToString();
+            HanMuonSachToiDaTxt.Text = thamSo.LayHanMuonSachToiDa().ToString();
+            ThoiGianMuonSachToiDaTxt.Text = thamSo.LayThoiGianMuonSachTheoQuyDinh().ToString();
+            SoSachToiDaTxt.Text = thamSo.LaySachMuonToiDaTheoThoiGianQuyDinh().ToString();
+        }
     }
 }

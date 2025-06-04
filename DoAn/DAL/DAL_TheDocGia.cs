@@ -101,9 +101,9 @@ namespace DoAn.DAL
             return listMaDocGia;
         }
 
-        internal List<string> LayTatCaTenDocGia()
+        internal List<string> LayTatCaTenDocGia(int TongNo = -1)
         {
-            string query = "SELECT HoTen FROM THEDOCGIA WHERE CURRENT_DATE() < NgayHetHan";
+            string query = $"SELECT HoTen FROM THEDOCGIA WHERE CURRENT_DATE() < NgayHetHan AND TongNo > {TongNo}";
             DataTable dtTenDocGia = helper.ExecuteQuery(query);
             List<string> listTenDocGia = new List<string>();
             foreach (DataRow dr in dtTenDocGia.Rows)

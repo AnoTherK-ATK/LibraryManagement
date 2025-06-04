@@ -84,12 +84,14 @@
     <Compile Include="BUS\BUS_NhanVien.cs" />
     <Compile Include="BUS\BUS_LoaiChucVu.cs" />
     <Compile Include="BUS\BUS_PhieuMuonSach.cs" />
+    <Compile Include="BUS\BUS_PhieuThuTienPhat.cs" />
     <Compile Include="BUS\BUS_Sach.cs" />
     <Compile Include="BUS\BUS_ThamSo.cs" />
     <Compile Include="BUS\BUS_TheDocGia.cs" />
     <Compile Include="BUS\BUS_TheLoai.cs" />
     <Compile Include="BUS\BUS_ThongTinSachMuon.cs" />
     <Compile Include="DAL\DAL_PhieuMuonSach.cs" />
+    <Compile Include="DAL\DAL_PhieuThuTienPhat.cs" />
     <Compile Include="DAL\DAL_Sach.cs" />
     <Compile Include="DAL\DAL_ThamSo.cs" />
     <Compile Include="DAL\DAL_TheDocGia.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="DAL\DataHelper.cs" />
     <Compile Include="DAL\Secret.cs" />
     <Compile Include="DTO\DTO_PhieuMuonSach.cs" />
+    <Compile Include="DTO\DTO_PhieuThuTienPhat.cs" />
     <Compile Include="DTO\DTO_Sach.cs" />
     <Compile Include="DTO\DTO_TheDocGia.cs" />
     <Compile Include="DTO\DTO_LoaiBangCap.cs" />
@@ -214,6 +217,18 @@
     <Compile Include="GUI\YeuCau6\YeuCau6.Designer.cs">
       <DependentUpon>YeuCau6.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\YeuCau7\GUI_TimPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau7\GUI_TimPhieuMuon.Designer.cs">
+      <DependentUpon>GUI_TimPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\YeuCau7\YeuCau7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\YeuCau7\YeuCau7.Designer.cs">
+      <DependentUpon>YeuCau7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\YeuCau1\YeuCau1.cs">
@@ -272,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau6\YeuCau6.resx">
       <DependentUpon>YeuCau6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau7\YeuCau7.resx">
+      <DependentUpon>YeuCau7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

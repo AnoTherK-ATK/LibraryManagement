@@ -21,9 +21,9 @@ namespace DoAn.BUS
             return dal_TheDocGia.LayTatCaMaDocGia();
         }
 
-        internal List<string> LayTatCaTenDocGia()
+        internal List<string> LayTatCaTenDocGia(int TongNo = -1)
         {
-            return dal_TheDocGia.LayTatCaTenDocGia();
+            return dal_TheDocGia.LayTatCaTenDocGia(TongNo);
         }
         internal string LayMaDocGiaTheoTenDocGia(string TenDocGia)
         {

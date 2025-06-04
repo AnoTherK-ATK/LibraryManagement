@@ -83,6 +83,11 @@ namespace DoAn.BUS
             return DAL_NhanVien.LayTatCaMaNhanVien();
         }
 
+        internal List<string> LayTatCaTenNhanVien()
+        {
+            return DAL_NhanVien.LayTatCaTenNhanVien();
+        }
+
         internal DTO_NhanVien LayThongTinNhanVien(string maNV)
         {
             return DAL_NhanVien.LayThongTinNhanVien(maNV);
@@ -132,6 +137,15 @@ namespace DoAn.BUS
                 throw new Exception("Không tìm thấy thông tin nhân viên với mã: " + maNV);
             }
             return nhanVien.TenNhanVien;
+        }
+
+        internal string LayMaBoPhanTheoTenNhanVien(string HoTen)
+        {
+            return DAL_NhanVien.LayMaBoPhanTheoTenNhanVien(HoTen);
+        }
+        internal string LayMaNhanVienTheoTenNhanVien(string HoTen)
+        {
+            return DAL_NhanVien.LayMaNhanVienTheoTenNhanVien(HoTen);
         }
     }
 

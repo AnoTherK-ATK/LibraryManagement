@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAn.GUI.YeuCau6;
+using DoAn.GUI.YeuCau7;
 
 
 namespace DoAn
@@ -18,8 +18,8 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
-            //Application.Run(new YeuCau6());
+            //Application.Run(new MainMenu());
+            Application.Run(new YeuCau7());
             //Application.Run(new Form1());
             //Application.Run(new GUI_TimPhieuMuon());
         }

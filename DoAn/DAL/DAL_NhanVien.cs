@@ -123,7 +123,40 @@ namespace DoAn.DAL
             return listMaNhanVien;
         }
 
-       
+        internal List<string> LayTatCaTenNhanVien()
+        {
+            string query = "SELECT HoTen FROM NHANVIEN";
+            DataTable dtHoTen = helper.ExecuteQuery(query);
+            List<string> listHoTen = new List<string>();
+            foreach (DataRow dr in dtHoTen.Rows)
+            {
+                listHoTen.Add(dr["HoTen"].ToString());
+            }
+            return listHoTen;
+        }
+
+        internal string LayMaBoPhanTheoTenNhanVien(string HoTen)
+        {
+            string query = $"SELECT MaBoPhan FROM NHANVIEN WHERE HoTen = '{HoTen}'";
+            DataTable dtMaBoPhan = helper.ExecuteQuery(query);
+            if (dtMaBoPhan.Rows.Count > 0)
+            {
+                return dtMaBoPhan.Rows[0]["MaBoPhan"].ToString();
+            }
+            return null;
+        }
+
+        internal string LayMaNhanVienTheoTenNhanVien(string HoTen)
+        {
+            string query = $"SELECT MaNhanVien FROM NHANVIEN WHERE HoTen = '{HoTen}'";
+            DataTable dtNV = helper.ExecuteQuery(query);
+            if (dtNV.Rows.Count > 0)
+            {
+                return dtNV.Rows[0]["MaNhanVien"].ToString();
+            }
+            return null;
+        }
+
 
         internal DTO_NhanVien LayThongTinNhanVien(string maNV)
         {

@@ -108,9 +108,16 @@ namespace DoAn
             new GUI_ThayDoiThamSo().Show();
         }
 
-        private void LapPhieuThuTienPhatBtn_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            new YeuCau7().Show();
+            new YeuCau7().Show();   
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new GUI_TimPhieuThu().Show();
+
         }
     }
 }

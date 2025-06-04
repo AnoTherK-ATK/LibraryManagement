@@ -67,7 +67,7 @@ namespace DoAn.DAL
         }
         internal List<string> LayTatCaSachTheoPhieuMuon(string maPM)
         {
-            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach = '{maPM}' AND TrangThai = 'Đang Mượn'";
+            string query = $"SELECT MaSach FROM THONGTINSACHMUON WHERE MaPhieuMuonSach LIKE '%{maPM}%' AND TrangThai = 'Đang Mượn'";
             DataTable dtMaSach = helper.ExecuteQuery(query);
             List<string> listMaSach = new List<string>();
             foreach (DataRow dr in dtMaSach.Rows)

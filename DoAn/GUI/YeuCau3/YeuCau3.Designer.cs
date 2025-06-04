@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeuCau3));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MaNhanVienCombo = new System.Windows.Forms.ComboBox();
@@ -82,7 +83,7 @@
             this.MaNhanVienCombo.FormattingEnabled = true;
             this.MaNhanVienCombo.Location = new System.Drawing.Point(16, 45);
             this.MaNhanVienCombo.Name = "MaNhanVienCombo";
-            this.MaNhanVienCombo.Size = new System.Drawing.Size(119, 36);
+            this.MaNhanVienCombo.Size = new System.Drawing.Size(119, 40);
             this.MaNhanVienCombo.TabIndex = 2;
             this.MaNhanVienCombo.SelectedIndexChanged += new System.EventHandler(this.MaNhanVienCombo_SelectedIndexChanged);
             // 
@@ -91,7 +92,7 @@
             this.TenNhanVienTxt.Location = new System.Drawing.Point(207, 45);
             this.TenNhanVienTxt.Name = "TenNhanVienTxt";
             this.TenNhanVienTxt.ReadOnly = true;
-            this.TenNhanVienTxt.Size = new System.Drawing.Size(236, 34);
+            this.TenNhanVienTxt.Size = new System.Drawing.Size(236, 39);
             this.TenNhanVienTxt.TabIndex = 3;
             // 
             // label3
@@ -100,7 +101,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(505, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 28);
+            this.label3.Size = new System.Drawing.Size(155, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên bộ phận";
             // 
@@ -109,7 +110,7 @@
             this.TenBoPhanTxt.Location = new System.Drawing.Point(509, 45);
             this.TenBoPhanTxt.Name = "TenBoPhanTxt";
             this.TenBoPhanTxt.ReadOnly = true;
-            this.TenBoPhanTxt.Size = new System.Drawing.Size(115, 34);
+            this.TenBoPhanTxt.Size = new System.Drawing.Size(115, 39);
             this.TenBoPhanTxt.TabIndex = 5;
             // 
             // label4
@@ -118,7 +119,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(677, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 28);
+            this.label4.Size = new System.Drawing.Size(209, 32);
             this.label4.TabIndex = 6;
             this.label4.Text = "Quyền nhận sách";
             // 
@@ -127,7 +128,7 @@
             this.QuyeNhanSachTxt.Location = new System.Drawing.Point(681, 45);
             this.QuyeNhanSachTxt.Name = "QuyeNhanSachTxt";
             this.QuyeNhanSachTxt.ReadOnly = true;
-            this.QuyeNhanSachTxt.Size = new System.Drawing.Size(115, 34);
+            this.QuyeNhanSachTxt.Size = new System.Drawing.Size(115, 39);
             this.QuyeNhanSachTxt.TabIndex = 7;
             // 
             // label5
@@ -144,7 +145,7 @@
             this.MaSachTxt.Location = new System.Drawing.Point(16, 139);
             this.MaSachTxt.Name = "MaSachTxt";
             this.MaSachTxt.ReadOnly = true;
-            this.MaSachTxt.Size = new System.Drawing.Size(119, 34);
+            this.MaSachTxt.Size = new System.Drawing.Size(119, 39);
             this.MaSachTxt.TabIndex = 9;
             // 
             // label6
@@ -160,14 +161,14 @@
             // 
             this.TenSachTxt.Location = new System.Drawing.Point(207, 139);
             this.TenSachTxt.Name = "TenSachTxt";
-            this.TenSachTxt.Size = new System.Drawing.Size(236, 34);
+            this.TenSachTxt.Size = new System.Drawing.Size(236, 39);
             this.TenSachTxt.TabIndex = 11;
             // 
             // TacGiaTxt
             // 
             this.TacGiaTxt.Location = new System.Drawing.Point(509, 139);
             this.TacGiaTxt.Name = "TacGiaTxt";
-            this.TacGiaTxt.Size = new System.Drawing.Size(199, 34);
+            this.TacGiaTxt.Size = new System.Drawing.Size(199, 39);
             this.TacGiaTxt.TabIndex = 12;
             // 
             // label7
@@ -193,7 +194,7 @@
             this.TheLoaiCombo.FormattingEnabled = true;
             this.TheLoaiCombo.Location = new System.Drawing.Point(744, 139);
             this.TheLoaiCombo.Name = "TheLoaiCombo";
-            this.TheLoaiCombo.Size = new System.Drawing.Size(92, 36);
+            this.TheLoaiCombo.Size = new System.Drawing.Size(92, 40);
             this.TheLoaiCombo.TabIndex = 15;
             // 
             // label9
@@ -212,7 +213,7 @@
             this.NamXuatBanSelector.Location = new System.Drawing.Point(16, 229);
             this.NamXuatBanSelector.Name = "NamXuatBanSelector";
             this.NamXuatBanSelector.ShowUpDown = true;
-            this.NamXuatBanSelector.Size = new System.Drawing.Size(119, 34);
+            this.NamXuatBanSelector.Size = new System.Drawing.Size(119, 39);
             this.NamXuatBanSelector.TabIndex = 17;
             this.NamXuatBanSelector.ValueChanged += new System.EventHandler(this.NamXuatBanSelector_ValueChanged);
             // 
@@ -231,7 +232,7 @@
             this.NgayNhapSelector.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.NgayNhapSelector.Location = new System.Drawing.Point(207, 229);
             this.NgayNhapSelector.Name = "NgayNhapSelector";
-            this.NgayNhapSelector.Size = new System.Drawing.Size(181, 34);
+            this.NgayNhapSelector.Size = new System.Drawing.Size(181, 39);
             this.NgayNhapSelector.TabIndex = 19;
             // 
             // label11
@@ -248,7 +249,7 @@
             this.SachQuaHanNhapTxt.Location = new System.Drawing.Point(509, 232);
             this.SachQuaHanNhapTxt.Name = "SachQuaHanNhapTxt";
             this.SachQuaHanNhapTxt.ReadOnly = true;
-            this.SachQuaHanNhapTxt.Size = new System.Drawing.Size(148, 34);
+            this.SachQuaHanNhapTxt.Size = new System.Drawing.Size(148, 39);
             this.SachQuaHanNhapTxt.TabIndex = 21;
             // 
             // label12
@@ -264,7 +265,7 @@
             // 
             this.NhaXuatBanTxt.Location = new System.Drawing.Point(16, 324);
             this.NhaXuatBanTxt.Name = "NhaXuatBanTxt";
-            this.NhaXuatBanTxt.Size = new System.Drawing.Size(405, 34);
+            this.NhaXuatBanTxt.Size = new System.Drawing.Size(405, 39);
             this.NhaXuatBanTxt.TabIndex = 23;
             // 
             // label13
@@ -280,7 +281,7 @@
             // 
             this.TriGiaTxt.Location = new System.Drawing.Point(509, 324);
             this.TriGiaTxt.Name = "TriGiaTxt";
-            this.TriGiaTxt.Size = new System.Drawing.Size(294, 34);
+            this.TriGiaTxt.Size = new System.Drawing.Size(294, 39);
             this.TriGiaTxt.TabIndex = 25;
             // 
             // TiepNhanSachBtn
@@ -324,7 +325,7 @@
             // 
             // YeuCau3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 428);
             this.Controls.Add(this.ResetBtn);
@@ -357,6 +358,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "YeuCau3";
             this.Text = "Tiếp nhận sách mới";

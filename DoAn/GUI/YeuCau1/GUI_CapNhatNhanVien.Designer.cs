@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_CapNhatNhanVien));
             this.ExitBtn = new System.Windows.Forms.Button();
             this.CapNhatNhanVienBtn = new System.Windows.Forms.Button();
             this.SDTTxt = new System.Windows.Forms.TextBox();
@@ -265,6 +266,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_CapNhatNhanVien";
             this.Text = "Cập nhật nhân viên";

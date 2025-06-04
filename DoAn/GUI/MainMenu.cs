@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.GUI;
 using DoAn.GUI.YeuCau1;
 using DoAn.GUI.YeuCau2;
 using DoAn.GUI.YeuCau3;
@@ -99,6 +100,11 @@ namespace DoAn
         private void TraSachbtn_Click(object sender, EventArgs e)
         {
             new YeuCau6().Show();
+        }
+
+        private void ThayDoiThamSoBtn_Click(object sender, EventArgs e)
+        {
+            new GUI_ThayDoiThamSo().Show();
         }
     }
 }

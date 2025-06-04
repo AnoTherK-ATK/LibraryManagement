@@ -237,6 +237,7 @@
     <Compile Include="GUI\YeuCau1\YeuCau1.Designer.cs">
       <DependentUpon>YeuCau1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="GUI\GUI_ThayDoiThamSo.resx">
       <DependentUpon>GUI_ThayDoiThamSo.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau6\YeuCau6.resx">
       <DependentUpon>YeuCau6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau7\GUI_TimPhieuMuon.resx">
+      <DependentUpon>GUI_TimPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau7\YeuCau7.resx">
       <DependentUpon>YeuCau7.cs</DependentUpon>

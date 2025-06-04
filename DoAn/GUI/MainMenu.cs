@@ -14,6 +14,7 @@ using DoAn.GUI.YeuCau3;
 using DoAn.GUI.YeuCau4;
 using DoAn.GUI.YeuCau5;
 using DoAn.GUI.YeuCau6;
+using DoAn.GUI.YeuCau7;
 
 
 namespace DoAn
@@ -105,6 +106,16 @@ namespace DoAn
         private void ThayDoiThamSoBtn_Click(object sender, EventArgs e)
         {
             new GUI_ThayDoiThamSo().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new YeuCau7().Show();   
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new GUI_TimPhieuThu().Show();
         }
     }
 }

@@ -217,11 +217,11 @@
     <Compile Include="GUI\YeuCau6\YeuCau6.Designer.cs">
       <DependentUpon>YeuCau6.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\YeuCau7\GUI_TimPhieuMuon.cs">
+    <Compile Include="GUI\YeuCau7\GUI_TimPhieuThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\YeuCau7\GUI_TimPhieuMuon.Designer.cs">
-      <DependentUpon>GUI_TimPhieuMuon.cs</DependentUpon>
+    <Compile Include="GUI\YeuCau7\GUI_TimPhieuThu.Designer.cs">
+      <DependentUpon>GUI_TimPhieuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\YeuCau7\YeuCau7.cs">
       <SubType>Form</SubType>
@@ -287,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau6\YeuCau6.resx">
       <DependentUpon>YeuCau6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\YeuCau7\GUI_TimPhieuThu.resx">
+      <DependentUpon>GUI_TimPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCau7\YeuCau7.resx">
       <DependentUpon>YeuCau7.cs</DependentUpon>

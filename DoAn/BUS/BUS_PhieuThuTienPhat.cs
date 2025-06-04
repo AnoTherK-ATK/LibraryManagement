@@ -16,6 +16,11 @@ namespace DoAn.BUS
             return DAL_PhieuThuTienPhat.LayDanhSachPhieuThuTienPhat();
         }
 
+        internal List<DTO_PhieuThuTienPhat> LayTatCaPhieuThuTienPhat(string maPM = "", string MaDG = "")
+        {
+            return DAL_PhieuThuTienPhat.LayTatCaPhieuThu(maPM, MaDG);
+        }
+
         public bool ThemPhieuThuTienPhat(DTO_PhieuThuTienPhat PhieuThuTienPhat)
         {
             {
@@ -29,6 +34,11 @@ namespace DoAn.BUS
                 }
                 return DAL_PhieuThuTienPhat.ThemPhieuThuTienPhat(PhieuThuTienPhat) > 0;
             }
+        }
+
+        public List<DTO_PhieuThuTienPhat> LayTatCaPhieuThu(string maPT = "", string maDG = "")
+        {
+            return DAL_PhieuThuTienPhat.LayTatCaPhieuThu(maPT, maDG);   
         }
 
     }

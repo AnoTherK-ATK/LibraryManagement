@@ -66,6 +66,25 @@ namespace DoAn.DAL
                 throw new Exception("Lỗi khi thêm thêm phiếu thu tiền phạt mới: " + ex.Message);
             }
 
+
+        }
+
+        internal List<DTO_PhieuThuTienPhat> LayTatCaPhieuThu(string maPT = "", string maDG = "")
+        {
+            string query = $"SELECT * FROM PHIEUTHUTIENPHAT WHERE MaPhieuThuTienPhat LIKE '%{maPT}%' AND MaDocGia LIKE '%{maDG}%'";
+            DataTable dtPT = helper.ExecuteQuery(query);
+            List<DTO_PhieuThuTienPhat> listPT = new List<DTO_PhieuThuTienPhat>();
+            foreach (DataRow dr in dtPT.Rows)
+            {
+                DTO_PhieuThuTienPhat NhanVienTemp = new DTO_PhieuThuTienPhat(
+                    dr["MaPhieuThuTienPhat"].ToString(),
+                    int.Parse(dr["SoTienThu"].ToString()),
+                    dr["MaDocGia"].ToString(),
+                    dr["MaNhanVien"].ToString()
+                );
+                listPT.Add(NhanVienTemp);
+            }
+            return listPT;
         }
     }
 }

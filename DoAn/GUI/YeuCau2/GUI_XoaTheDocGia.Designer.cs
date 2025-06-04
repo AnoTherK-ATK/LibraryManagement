@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_XoaTheDocGia));
             this.label4 = new System.Windows.Forms.Label();
             this.TimTheDocGiaBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.TimTheDocGiaBtn);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI_XoaTheDocGia";
             this.Text = "Xoá thẻ độc giả";
             this.ResumeLayout(false);

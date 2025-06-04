@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeuCau5));
             this.MaPhieuMuonTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TenDocGiaCombo = new System.Windows.Forms.ComboBox();
@@ -249,7 +250,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.MaPhieuMuonTxt);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "YeuCau5";
             this.Text = "Lập phiếu mượn";

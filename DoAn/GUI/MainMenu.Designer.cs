@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -105,6 +106,7 @@
             // TraSachbtn
             // 
             this.TraSachbtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TraSachbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TraSachbtn.ForeColor = System.Drawing.SystemColors.Control;
             this.TraSachbtn.Location = new System.Drawing.Point(331, 294);
             this.TraSachbtn.Name = "TraSachbtn";
@@ -117,6 +119,7 @@
             // YC1btn
             // 
             this.YC1btn.BackColor = System.Drawing.Color.Turquoise;
+            this.YC1btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YC1btn.ForeColor = System.Drawing.SystemColors.Control;
             this.YC1btn.Location = new System.Drawing.Point(12, 56);
             this.YC1btn.Name = "YC1btn";
@@ -129,6 +132,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Turquoise;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Location = new System.Drawing.Point(12, 294);
             this.button3.Name = "button3";
@@ -141,6 +145,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Turquoise;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(12, 340);
             this.button2.Name = "button2";
@@ -153,6 +158,7 @@
             // XoaSachBtn
             // 
             this.XoaSachBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.XoaSachBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XoaSachBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.XoaSachBtn.Location = new System.Drawing.Point(627, 164);
             this.XoaSachBtn.Name = "XoaSachBtn";
@@ -165,6 +171,7 @@
             // CapNhatSachBtn
             // 
             this.CapNhatSachBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.CapNhatSachBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CapNhatSachBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.CapNhatSachBtn.Location = new System.Drawing.Point(627, 128);
             this.CapNhatSachBtn.Name = "CapNhatSachBtn";
@@ -177,6 +184,7 @@
             // TimSachBtn
             // 
             this.TimSachBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TimSachBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimSachBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.TimSachBtn.Location = new System.Drawing.Point(627, 92);
             this.TimSachBtn.Name = "TimSachBtn";
@@ -189,6 +197,7 @@
             // TiepNhanSachMoiBtn
             // 
             this.TiepNhanSachMoiBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TiepNhanSachMoiBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TiepNhanSachMoiBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.TiepNhanSachMoiBtn.Location = new System.Drawing.Point(627, 56);
             this.TiepNhanSachMoiBtn.Name = "TiepNhanSachMoiBtn";
@@ -201,6 +210,7 @@
             // DelDocGiaBtn
             // 
             this.DelDocGiaBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.DelDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DelDocGiaBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.DelDocGiaBtn.Location = new System.Drawing.Point(328, 164);
             this.DelDocGiaBtn.Name = "DelDocGiaBtn";
@@ -213,6 +223,7 @@
             // UpdateTheDocGiaBtn
             // 
             this.UpdateTheDocGiaBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.UpdateTheDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateTheDocGiaBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.UpdateTheDocGiaBtn.Location = new System.Drawing.Point(328, 128);
             this.UpdateTheDocGiaBtn.Name = "UpdateTheDocGiaBtn";
@@ -225,6 +236,7 @@
             // TimTheDocGiaBtn
             // 
             this.TimTheDocGiaBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TimTheDocGiaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimTheDocGiaBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.TimTheDocGiaBtn.Location = new System.Drawing.Point(328, 92);
             this.TimTheDocGiaBtn.Name = "TimTheDocGiaBtn";
@@ -237,6 +249,7 @@
             // YeuCau2Btn
             // 
             this.YeuCau2Btn.BackColor = System.Drawing.Color.Turquoise;
+            this.YeuCau2Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YeuCau2Btn.ForeColor = System.Drawing.SystemColors.Control;
             this.YeuCau2Btn.Location = new System.Drawing.Point(328, 56);
             this.YeuCau2Btn.Name = "YeuCau2Btn";
@@ -249,6 +262,7 @@
             // DelNhanVienBtn
             // 
             this.DelNhanVienBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.DelNhanVienBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DelNhanVienBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.DelNhanVienBtn.Location = new System.Drawing.Point(12, 164);
             this.DelNhanVienBtn.Name = "DelNhanVienBtn";
@@ -261,6 +275,7 @@
             // UpdateNhanVienBtn
             // 
             this.UpdateNhanVienBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.UpdateNhanVienBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateNhanVienBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.UpdateNhanVienBtn.Location = new System.Drawing.Point(12, 128);
             this.UpdateNhanVienBtn.Name = "UpdateNhanVienBtn";
@@ -273,6 +288,7 @@
             // TimNhanVienBtn
             // 
             this.TimNhanVienBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.TimNhanVienBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimNhanVienBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.TimNhanVienBtn.Location = new System.Drawing.Point(12, 92);
             this.TimNhanVienBtn.Name = "TimNhanVienBtn";
@@ -295,6 +311,7 @@
             // ThayDoiThamSoBtn
             // 
             this.ThayDoiThamSoBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.ThayDoiThamSoBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThayDoiThamSoBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.ThayDoiThamSoBtn.Location = new System.Drawing.Point(627, 294);
             this.ThayDoiThamSoBtn.Name = "ThayDoiThamSoBtn";
@@ -302,12 +319,13 @@
             this.ThayDoiThamSoBtn.TabIndex = 38;
             this.ThayDoiThamSoBtn.Text = "Thay đổi tham số";
             this.ThayDoiThamSoBtn.UseVisualStyleBackColor = false;
+            this.ThayDoiThamSoBtn.Click += new System.EventHandler(this.ThayDoiThamSoBtn_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 465);
+            this.ClientSize = new System.Drawing.Size(886, 465);
             this.Controls.Add(this.ThayDoiThamSoBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -331,6 +349,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.YC1btn);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "MainMenu";
             this.Text = " Main Menu";

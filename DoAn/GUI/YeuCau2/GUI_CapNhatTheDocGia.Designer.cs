@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_CapNhatTheDocGia));
             this.SubmitBtn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.LoaiDocGiaCombo = new System.Windows.Forms.ComboBox();
@@ -349,6 +350,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GUI_CapNhatTheDocGia";
             this.Text = "Cập nhật thẻ độc giả";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);

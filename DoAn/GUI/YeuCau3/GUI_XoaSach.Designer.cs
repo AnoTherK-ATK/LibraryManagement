@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_XoaSach));
             this.label1 = new System.Windows.Forms.Label();
             this.MaSachTxt = new System.Windows.Forms.TextBox();
             this.SearchBtn = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 28);
+            this.label1.Size = new System.Drawing.Size(107, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sách";
             // 
@@ -49,7 +50,7 @@
             // 
             this.MaSachTxt.Location = new System.Drawing.Point(16, 33);
             this.MaSachTxt.Name = "MaSachTxt";
-            this.MaSachTxt.Size = new System.Drawing.Size(124, 34);
+            this.MaSachTxt.Size = new System.Drawing.Size(124, 39);
             this.MaSachTxt.TabIndex = 1;
             // 
             // SearchBtn
@@ -93,7 +94,7 @@
             // 
             // GUI_XoaSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 136);
             this.Controls.Add(this.ExitBtn);
@@ -102,6 +103,7 @@
             this.Controls.Add(this.MaSachTxt);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_XoaSach";
             this.Text = "Xoá sách";

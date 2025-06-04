@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeuCau2));
             this.ExitBtn = new System.Windows.Forms.Button();
             this.EmailTxt = new System.Windows.Forms.TextBox();
             this.DiaChiTxt = new System.Windows.Forms.TextBox();
@@ -366,6 +367,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "YeuCau2";
             this.Text = "Tiếp nhận thẻ độc giả";
             this.Load += new System.EventHandler(this.YeuCau2_Load);
